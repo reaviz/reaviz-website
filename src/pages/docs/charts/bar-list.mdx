@@ -1,0 +1,26 @@
+# Bar List
+
+Horizontal bars with a label.
+
+## Quick Start
+To create a Bar List, use import the `BarList` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+```jsx
+import { BarList } from 'reaviz';
+
+const MyChart = () => (
+  <BarList
+    data={[
+      { key: 'DLP', data: 13 },
+      { key: 'SIEM', data: 2 },
+      { key: 'Endpoint', data: 7 }
+    ]}
+  />
+);
+```
+
+## API
+### [BarList](https://github.com/reaviz/reaviz/blob/master/src/BarList/BarList.tsx)
+
+### [BarListSeries](https://github.com/reaviz/reaviz/blob/master/src/BarList/BarListSeries.tsx)

@@ -1,18 +1,4 @@
-import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
-import { BarChart, BarSeries, Bar, RangeLines, BarLabel } from '../../src';
-import * as BarChartVerticalStory from '../../src/BarChart/BarChartVertical.story';
-
-<Meta title="Docs/Chart Types/Bar Chart" />
-
 # Bar Chart
-
----
-<br />
-<div className="doc-story">
-  <Canvas sourceState="shown" of={BarChartVerticalStory.Simple} />
-</div>
-<br />
-
 A bar chart is a chart with rectangular bars with lengths proportional to the
 values that they represent. One axis of the chart shows the specific categories being compared,
 and the other axis represents a discrete value.
@@ -56,48 +42,11 @@ const MyChart = () => (
 
 ## API
 ### [BarChart](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarChart.tsx)
-<ArgTypes of={BarChart} />
 
 ### [BarSeries](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/BarSeries.tsx)
-<ArgTypes of={BarSeries} />
 
 ### [Bar](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/Bar.tsx)
-<ArgTypes of={Bar} />
 
 ### [RangeLines](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/RangeLines.tsx)
-<ArgTypes of={RangeLines} />
 
 ### [BarLabel](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/BarLabel.tsx)
-<ArgTypes of={BarLabel} />
-
-## Demo
-
-```jsx codesandbox=reaviz
-import React from 'react';
-import { BarChart } from 'reaviz';
-
-export const data = [
-  {
-    key: 'Phishing Attack',
-    data: 10
-  },
-  {
-    key: 'IDS',
-    data: 14
-  },
-  {
-    key: 'Malware',
-    data: 5
-  },
-  {
-    key: 'DLP',
-    data: 18
-  }
-];
-
-export default () => (
-  <div style={{ margin: '55px', textAlign: 'center' }}>
-    <BarChart width={350} height={250} data={data} />
-  </div>
-);
-```
