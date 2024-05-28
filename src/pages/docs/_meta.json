@@ -1,0 +1,16 @@
+{
+  "index": {
+    "title": "👋 ⏐ Introduction",
+    "theme": {
+      "timestamp": false,
+      "layout": "full",
+      "pagination": false
+    }
+  },
+  "changelog": {
+    "title": "📓 ⏐ Changelog",
+    "theme": {
+      "timestamp": false
+    }
+  }
+}
