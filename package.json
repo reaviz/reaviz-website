@@ -5,7 +5,9 @@
   "packageManager": "pnpm@9.1.2",
   "scripts": {
     "dev": "next dev",
+    "copy:stories": "cpx \"node_modules/reablocks/dist/stories/*.tsx\" \"src/stories/components\" -C",
     "build": "next build",
+    "postinstall": "pnpm run copy:stories",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
@@ -21,10 +23,10 @@
     "nextra": "^2.13.4",
     "posthog-js": "^1.131.4",
     "reablocks": "^7.9.2",
+    "reaviz": "^15.15.4",
     "reablocks-docs-theme": "^0.0.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.51.4",
     "react-syntax-highlighter": "^15.5.0",
     "sharp": "^0.33.3",
     "tailwind-merge": "^2.2.2"
