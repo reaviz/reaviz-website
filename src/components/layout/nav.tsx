@@ -37,7 +37,7 @@ export const Nav: FC = () => {
     >
       <div className="absolute left-4 top-3 flex-1 md:left-24 md:top-7">
         <a href="#">
-          <span className="sr-only">reablocks</span>
+          <span className="sr-only">Reaviz</span>
           <Image
             draggable={false}
             src="/logo.svg"

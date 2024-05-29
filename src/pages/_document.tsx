@@ -4,22 +4,22 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta property="og:image" content="https://reablocks.dev/preview.png" />
+        <meta property="og:image" content="https://reaviz-website.netlify.app/preview.png" />
         <meta
           property="og:title"
-          content="Reablocks - Open Source ReactJS Component Library"
+          content="Reaviz - Open Source ReactJS Chart Component Library"
         />
         <meta
           property="og:description"
-          content="Beautifully designed, highly customizable, Open Source React components based on Tailwind and Framer Motion."
+          content="Modular chart component library that leverages React natively for rendering the components while using D3js under the hood for calculations."
         />
         <meta
           name="twitter:title"
-          content="Reablocks - Open Source ReactJS Component Library"
+          content="Reaviz - Open Source ReactJS Chart Component Library"
         />
         <meta
           name="twitter:description"
-          content="Beautifully designed, highly customizable, Open Source React components based on Tailwind and Framer Motion."
+          content="Modular chart component library that leverages React natively for rendering the components while using D3js under the hood for calculations."
         />
       </Head>
       <body>
