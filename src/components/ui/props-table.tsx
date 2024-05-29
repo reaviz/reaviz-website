@@ -1,4 +1,4 @@
-import metadata from 'reablocks/stories/docs.json';
+import metadata from 'reaviz/docs.json';
 import { Card } from 'reablocks';
 
 export const PropsTable = ({ name }) => {
