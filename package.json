@@ -5,7 +5,7 @@
   "packageManager": "pnpm@9.1.2",
   "scripts": {
     "dev": "next dev",
-    "copy:stories": "cpx \"node_modules/reablocks/dist/stories/*.tsx\" \"src/stories/components\" -C",
+    "copy:stories": "cpx \"node_modules/reaviz/dist/stories/*.tsx\" \"src/stories/components\" -C",
     "build": "next build",
     "postinstall": "pnpm run copy:stories",
     "start": "next start",

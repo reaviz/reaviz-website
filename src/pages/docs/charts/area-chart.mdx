@@ -1,5 +1,12 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import * as AreaChartStories from '../../../stories/components/AreaChartSingleSeries.story.tsx';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 
 # Area Chart
+
+<Meta of={AreaChartStories} />
+
 
 An Area Chart or area graph are basically a line graph with the area
 below the lined filled with colors or textures. Like line graphs area charts are
@@ -15,7 +22,10 @@ Types supported by reaviz:
 - Stacked
 - Stacked Normalized
 
-## Quick Start
+## Examples
+
+<ToggleCanvas of={AreaChartStories.Simple} storybook="charts-area-chart-single-series--simple" />
+
 To create a area chart, use import the `AreaChart` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
@@ -37,11 +47,16 @@ const MyChart = () => (
 
 ## API
 ### [AreaChart](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaChart.tsx)
+<PropsTable name="AreaChart" />
 
 ### [AreaSeries](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/AreaSeries.tsx)
+<PropsTable name="AreaSeries" />
 
 ### [Area](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/Area.tsx)
+<PropsTable name="Area" />
 
 ### [Line](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/Line.tsx)
+<PropsTable name="Line" />
 
 ### [PointSeries](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/PointSeries.tsx)
+<PropsTable name="PointSeries" />
