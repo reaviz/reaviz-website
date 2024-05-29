@@ -1,16 +1,4 @@
-import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
-import { SparklineChart, SonarChart, BarSparklineChart, AreaSparklineChart } from '../../src';
-import * as SparklineStory from '../../src/Sparkline/SparklineChart.story';
-
-<Meta title="Docs/Chart Types/Sparkline" />
-
 # Sparkline
-
----
-<br />
-<div className="doc-story">
-  <Canvas sourceState="shown" of={SparklineStory.Line} />
-</div>
 
 **Sparkline:**
 A Sparkline is a small, condensed, and simplified line chart, providing a snapshot of data trends within a compact space without axes or labels.
@@ -65,10 +53,9 @@ const MyChart = () => (
 
 ## API
 ### [Sparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/SparklineChart/SparklineChart.tsx)
-<ArgTypes of={SparklineChart} />
+
 ### [Sonar Chart](https://github.com/reaviz/reaviz/blob/master/src/SonarChart/SonarChart.tsx)
-<ArgTypes of={SonarChart} />
+
 ### [BarSparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/BarSparklineChart/BarSparklineChart.tsx)
-<ArgTypes of={BarSparklineChart} />
+
 ### [AreaSparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/AreaSparklineChart/AreaSparklineChart.tsx)
-<ArgTypes of={AreaSparklineChart} />

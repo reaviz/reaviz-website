@@ -1,15 +1,4 @@
-import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
-import { LineChart, LineSeries} from '../../src';
-
-import * as LineChartSingleSeriesStories from '../../src/LineChart/LineChartSingleSeries.story.tsx'
-
-<Meta title="Docs/Chart Types/Line Chart" />
 # Line Chart
----
-
-<div className="doc-story">
-  <Canvas sourceState="shown" of={LineChartSingleSeriesStories.Simple} />
-</div>
 
 A Line chart depicts data using points connected by lines, emphasizing trends and changes over a continuous set of values,
 typically along an x-axis and a y-axis.
@@ -46,40 +35,5 @@ const MyChart = () => (
 
 ## API
 ### [LineChart](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaChart.tsx)
-<ArgTypes of={LineChart} />
 
 ### [LineSeries](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/AreaSeries.tsx)
-<ArgTypes of={LineSeries} />
-
-
-## Demo
-
-```js codesandbox=reaviz
-import React from 'react';
-import { LineChart } from 'reaviz';
-
-export const data = [
-  {
-    key: new Date('11/29/2019'),
-    data: 10
-  },
-  {
-    key: new Date('11/30/2019'),
-    data: 14
-  },
-  {
-    key: new Date('12/01/2019'),
-    data: 5
-  },
-  {
-    key: new Date('12/02/2019'),
-    data: 18
-  }
-];
-
-export default () => (
-  <div style={{ margin: '55px', textAlign: 'center' }}>
-    <LineChart width={350} height={250} data={data} />
-  </div>
-);
-```

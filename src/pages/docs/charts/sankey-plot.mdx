@@ -1,17 +1,4 @@
-import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
-import { Sankey, SankeyLink, SankeyNode } from '../../src';
-import * as SankeyStory from '../../src/Sankey/Sankey.story';
-
-<Meta title="Docs/Chart Types/Sankey Plot" />
-
 # Sankey Chart
-
----
-<br />
-<div className="doc-story">
-  <Canvas sourceState="shown" of={SankeyStory.Simple} />
-</div>
-<br />
 
 Sankey diagrams are a specific type of flow diagram, in which the width of the
 arrows is shown proportionally to the flow quantity. They are typically used to
@@ -62,37 +49,7 @@ the index of the nodes' array or the node's `id` if it's assigned.
 
 ## API
 ### [Sankey](https://github.com/reaviz/reaviz/blob/master/src/Sankey/Sankey.tsx)
-<ArgTypes of={Sankey} />
 
 ### [SankeyLink](https://github.com/reaviz/reaviz/blob/master/src/Sankey/SankeyLink/SankeyLink.tsx)
-<ArgTypes of={SankeyLink} />
 
 ### [SankeyNode](https://github.com/reaviz/reaviz/blob/master/src/Sankey/SankeyNode/SankeyNode.tsx)
-<ArgTypes of={SankeyNode} />
-
-## Demo
-
-```jsx codesandbox=reaviz
-import React from 'react';
-import { Sankey, SankeyNode, SankeyLink } from 'reaviz';
-
-export default () => (
-  <div style={{ margin: '55px', textAlign: 'center' }}>
-    <Sankey
-      height={300}
-      width={500}
-      nodes={[
-        <SankeyNode title="A1" id="1" />,
-        <SankeyNode title="A2" id="2" />,
-        <SankeyNode title="B1" id="3" />,
-        <SankeyNode title="B2" id="4" />
-      ]}
-      links={[
-        <SankeyLink source="1" target="3" value="8" gradient={false} />,
-        <SankeyLink source="2" target="4" value="4" gradient={false} />,
-        <SankeyLink source="1" target="4" value="2" gradient={false} />
-      ]}
-    />
-  </div>
-);
-```

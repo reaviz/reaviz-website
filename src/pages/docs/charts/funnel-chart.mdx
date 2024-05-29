@@ -1,16 +1,4 @@
-import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
-import { FunnelChart, FunnelArc, FunnelAxis, FunnelAxisLabel, FunnelAxisLine, FunnelSeries } from '../../src';
-import * as FunnelChartStory from '../../src/FunnelChart/FunnelChart.story';
-
-<Meta title="Docs/Chart Types/Funnel Chart" />
-
 # Funnel Chart
-
----
-<br />
-<div className="doc-story">
-  <Canvas of={FunnelChartStory.Basic} />
-</div>
 
 A funnel chart is used to show streamlined data; each slice in the
 funnel represents a process that has filtered out data. The last funnel
@@ -49,19 +37,13 @@ const MyChart = () => (
 ## API
 
 ### [FunnelChart](https://github.com/reaviz/reaviz/blob/master/src/FunnelChart/FunnelChart.tsx)
-<ArgTypes of={FunnelChart} />
 
 ### [FunnelSeries](https://github.com/reaviz/reaviz/blob/master/src/FunnelChart/FunnelSeries/FunnelSeries.tsx)
-<ArgTypes of={FunnelSeries} />
 
 ### [FunnelArc](https://github.com/reaviz/reaviz/blob/master/src/FunnelChart/FunnelSeries/FunnelArc.tsx)
-<ArgTypes of={FunnelArc} />
 
 ### [FunnelAxis](https://github.com/reaviz/reaviz/blob/master/src/FunnelChart/FunnelSeries/FunnelAxis/FunnelAxis.tsx)
-<ArgTypes of={FunnelAxis} />
 
 ### [FunnelAxisLabel](https://github.com/reaviz/reaviz/blob/master/src/FunnelChart/FunnelSeries/FunnelAxis/FunnelAxisLabel.tsx)
-<ArgTypes of={FunnelAxisLabel} />
 
 ### [FunnelAxisLine](https://github.com/reaviz/reaviz/blob/master/src/FunnelChart/FunnelSeries/FunnelAxis/FunnelAxisLine.tsx)
-<ArgTypes of={FunnelAxisLine} />
