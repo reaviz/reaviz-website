@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as SankeyStory from '../../../stories/components/Sankey.story.tsx';
+
+<Meta of={SankeyStory} />
+
 # Sankey Chart
 
 Sankey diagrams are a specific type of flow diagram, in which the width of the
@@ -6,6 +13,10 @@ visualize energy or material or cost transfers between processes. They can also 
 the energy accounts or material flow accounts on a community level. Sankey diagrams put a
 visual emphasis on the major transfers or flows within a system. They are helpful in
 locating dominant contributions to an overall flow.
+
+## Examples
+
+<ToggleCanvas of={SankeyStory.Simple} storybook="charts-sankey-plot--simple" />
 
 ## Quick Start
 To create Sankey Chart, import the Sankey, SankeyNode and SankeyLink and then define the nodes and then links.
@@ -49,7 +60,10 @@ the index of the nodes' array or the node's `id` if it's assigned.
 
 ## API
 ### [Sankey](https://github.com/reaviz/reaviz/blob/master/src/Sankey/Sankey.tsx)
+<PropsTable name="Sankey" />
 
 ### [SankeyLink](https://github.com/reaviz/reaviz/blob/master/src/Sankey/SankeyLink/SankeyLink.tsx)
+<PropsTable name="SankeyLink" />
 
 ### [SankeyNode](https://github.com/reaviz/reaviz/blob/master/src/Sankey/SankeyNode/SankeyNode.tsx)
+<PropsTable name="SankeyNode" />

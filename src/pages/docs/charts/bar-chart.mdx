@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as BarChartVerticalStory from '../../../stories/components/BarChartVertical.story.tsx';
+
+<Meta of={BarChartVerticalStory} />
+
 # Bar Chart
 A bar chart is a chart with rectangular bars with lengths proportional to the
 values that they represent. One axis of the chart shows the specific categories being compared,
@@ -19,6 +26,10 @@ Types supported by reaviz:
 - Sparkline
 - Waterfall
 - Histograms
+
+## Examples
+
+<ToggleCanvas of={BarChartVerticalStory.Simple} storybook="charts-area-chart-single-series--simple" />
 
 ## Quick Start
 To create a Bar chart, use import the `BarChart` and give it `data`. The chart
@@ -42,11 +53,16 @@ const MyChart = () => (
 
 ## API
 ### [BarChart](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarChart.tsx)
+<PropsTable name="BarChart" />
 
 ### [BarSeries](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/BarSeries.tsx)
+<PropsTable name="BarSeries" />
 
 ### [Bar](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/Bar.tsx)
+<PropsTable name="Bar" />
 
 ### [RangeLines](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/RangeLines.tsx)
+<PropsTable name="RangeLines" />
 
 ### [BarLabel](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/BarLabel.tsx)
+<PropsTable name="BarLabel" />

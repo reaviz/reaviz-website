@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as PieChartStory from '../../../stories/components/PieChart.story.tsx';
+
+<Meta of={PieChartStory} />
+
 # Pie Chart
 
 A pie chart is divided into sectors, illustrating numerical proportion.
@@ -9,6 +16,10 @@ Types supported by reaviz:
 
 - Pie
 - Donut
+
+## Examples
+
+<ToggleCanvas of={PieChartStory.Simple} storybook="charts-pie-chart-pie--simple" />
 
 ## Quick Start
 To create a Pie chart, use import the `PieChart` and give it `data`. The chart
@@ -32,9 +43,13 @@ const MyChart = () => (
 
 ## API
 ### [PieChart](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieChart.tsx)
+<PropsTable name="PieChart" />
 
 ### [PieArcSeries](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieArcSeries/PieArcSeries.tsx)
+<PropsTable name="PieArcSeries" />
 
 ### [PieArcLabel](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieArcSeries/PieArcLabel.tsx)
+<PropsTable name="PieArcLabel" />
 
 ### [PieArc](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieArcSeries/PieArc/PieArc.tsx)
+<PropsTable name="PieArc" />

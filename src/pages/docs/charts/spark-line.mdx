@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as SparklineStory from '../../../stories/components/SparklineChart.story.tsx';
+
+<Meta of={SparklineStory} />
+
 # Sparkline
 
 **Sparkline:**
@@ -13,6 +20,10 @@ Types supported in reaviz:
 - Area
 - Bar
 - Sonar
+
+## Examples
+
+<ToggleCanvas of={SparklineStory.Line} storybook="charts-sparkline--line" />
 
 ## Quick Start
 To create a Sparkline, import the chart of your choice `SparklineChart`, `AreaSparklineChart`, `BarSparklineChart` or `SonarChart` and
@@ -53,9 +64,13 @@ const MyChart = () => (
 
 ## API
 ### [Sparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/SparklineChart/SparklineChart.tsx)
+<PropsTable name="SparklineChart" />
 
 ### [Sonar Chart](https://github.com/reaviz/reaviz/blob/master/src/SonarChart/SonarChart.tsx)
+<PropsTable name="SonarChart" />
 
 ### [BarSparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/BarSparklineChart/BarSparklineChart.tsx)
+<PropsTable name="BarSparklineChart" />
 
 ### [AreaSparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/AreaSparklineChart/AreaSparklineChart.tsx)
+<PropsTable name="AreaSparklineChart" />

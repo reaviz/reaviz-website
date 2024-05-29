@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as TreeMapStory from '../../../stories/components/TreeMap.story.tsx';
+
+<Meta of={TreeMapStory} />
+
 # TreeMap
 
 Treemaps display hierarchical data as a set of nested rectangles.
@@ -5,6 +12,9 @@ Each branch of the tree is given a rectangle, which is then tiled with smaller r
 representing sub-branches. A leaf node’s rectangle has an area proportional to a specified
 dimension on the data and often colored to show a separate dimension of the data.
 
+## Examples
+
+<ToggleCanvas of={TreeMapStory.Simple} storybook="charts-treemap--simple" />
 
 ## Quick Start
 To create a treemap chart, use import the `TreeMap` and give it `data`. The chart
@@ -29,9 +39,13 @@ const MyChart = () => (
 
 ## API
 ### [TreeMap](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMap.tsx)
+<PropsTable name="TreeMap" />
 
 ### [TreeMapSeries](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMapSeries.tsx)
+<PropsTable name="TreeMapSeries" />
 
 ### [TreeMapLabel](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMapLabel.tsx)
+<PropsTable name="TreeMapLabel" />
 
 ### [TreeMapRect](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMapRect.tsx)
+<PropsTable name="TreeMapRect" />

@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+// import * as LineChartSingleSeriesStories from '../../../stories/components/LineChartSingleSeries.story.tsx';
+
+{/* <Meta of={LineChartSingleSeriesStories} /> */}
+
 # Line Chart
 
 A Line chart depicts data using points connected by lines, emphasizing trends and changes over a continuous set of values,
@@ -12,6 +19,10 @@ Types supported by reaviz:
 - Single Series
 - Multi Series
 - Radial
+
+## Examples
+{/* TODO Module not found "moment" */}
+{/* <ToggleCanvas of={LineChartSingleSeriesStories.Simple} storybook="charts-line-chart-single-series--simple" /> */}
 
 ## Quick Start
 To create a line chart, use import the `LineChart` and give it `data`. The chart
@@ -35,5 +46,7 @@ const MyChart = () => (
 
 ## API
 ### [LineChart](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaChart.tsx)
+<PropsTable name="LineChart" />
 
 ### [LineSeries](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/AreaSeries.tsx)
+<PropsTable name="LineSeries" />

@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as VennDiagramStory from '../../../stories/components/VennDiagram.story.tsx';
+
+<Meta of={VennDiagramStory} />
+
 # Venn Diagram
 
 A Venn diagram or set diagram is a diagram that shows all possible logical relations
@@ -7,6 +14,10 @@ The chart supports 3 layout types:
 - Venn
 - Euler
 - Star Euler
+
+## Examples
+
+<ToggleCanvas of={VennDiagramStory.Simple} storybook="charts-venn-diagram--simple" />
 
 ## Quick Start
 To create a venn diagram, import the `VennDiagram` and give it `data`. The chart
@@ -34,11 +45,16 @@ of relationships.
 
 ## API
 ### [VennDiagram](https://github.com/reaviz/reaviz/blob/master/src/VennDiagram/VennDiagram.tsx)
+<PropsTable name="VennDiagram" />
 
 ### [VennSeries](https://github.com/reaviz/reaviz/blob/master/src/VennDiagram/VennSeries.tsx)
+<PropsTable name="VennSeries" />
 
 ### [VennArc](https://github.com/reaviz/reaviz/blob/master/src/VennDiagram/VennArc.tsx)
+<PropsTable name="VennArc" />
 
 ### [VennLabel](https://github.com/reaviz/reaviz/blob/master/src/VennDiagram/VennLabel.tsx)
+<PropsTable name="VennLabel" />
 
 ### [VennOuterLabel](https://github.com/reaviz/reaviz/blob/master/src/VennDiagram/VennOuterLabel.tsx)
+<PropsTable name="VennOuterLabel" />

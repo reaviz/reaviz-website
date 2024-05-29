@@ -1,8 +1,19 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as RadialBarChartStory from '../../../stories/components/RadialBarChart.story.tsx';
+
+<Meta of={RadialBarChartStory} />
+
 # Radial Bar Chart
 
 A Radial or Circular Bar Chart is used for displaying the circular data, which involves the
 wrapping of the usual bar chart or histogram around a circle. Each bar in the chart is centered at
 the middle of the group period with the length of the bar proportional to the frequency in the group.
+
+## Examples
+
+<ToggleCanvas of={RadialBarChartStory.Simple} storybook="charts-bar-chart-radial--simple" />
 
 ## Quick Start
 To create a Radial Bar chart, use import the `RadialBarChart` and give it `data`. The chart
@@ -26,7 +37,10 @@ const MyChart = () => (
 
 ## API
 ### [RadialBarChart](https://github.com/reaviz/reaviz/blob/master/src/RadialAreaChart/RadialAreaChart.tsx)
+<PropsTable name="RadialBarChart" />
 
 ### [RadialBarSeries](https://github.com/reaviz/reaviz/blob/master/src/RadialAreaChart/RadialBarSeries/RadialBarSeries.tsx)
+<PropsTable name="RadialBarSeries" />
 
 ### [RadialBar](https://github.com/reaviz/reaviz/blob/master/src/RadialAreaChart/RadialBarSeries/RadialBar.tsx)
+<PropsTable name="RadialBar" />

@@ -1,6 +1,17 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as RadialGaugeStory from '../../../stories/components/RadialGauge.story.tsx';
+
+<Meta of={RadialGaugeStory} />
+
 # Radial Gauge
 
 Radial Gauge uses a radial scale to display a specific data point using a dial over a radial scale with defined limits.
+
+## Examples
+
+<ToggleCanvas of={RadialGaugeStory.Simple} storybook="charts-gauge-radial--single" />
 
 ## Quick Start
 To create a Radial Gauge, use import the `RadialGauge` and give it `data`. The chart
@@ -23,17 +34,25 @@ distribute the values across them.
 
 ## API
 ### [RadialGauge](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/RadialGauge.tsx)
+<PropsTable name="RadialGauge" />
 
 ### [RadialGaugeSeries](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/RadialGaugeSeries/RadialGaugeSeries.tsx)
+<PropsTable name="RadialGaugeSeries" />
 
 ### [StackedRadialGaugeSeries](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/StackedRadialGaugeSeries.tsx)
+<PropsTable name="StackedRadialGaugeSeries" />
 
 ### [RadialGaugeArc](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/RadialGaugeSeries/RadialGaugeArc.tsx)
+<PropsTable name="RadialGaugeArc" />
 
 ### [RadialGaugeLabel](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/RadialGaugeSeries/RadialGaugeLabel.tsx)
+<PropsTable name="RadialGaugeLabel" />
 
 ### [StackedRadialGaugeValueLabel](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/RadialGaugeSeries/StackedRadialGaugeValueLabel.tsx)
+<PropsTable name="StackedRadialGaugeValueLabel" />
 
 ### [StackedRadialGaugeDescriptionLabel](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/RadialGaugeSeries/StackedRadialGaugeDescriptionLabel.tsx)
+<PropsTable name="StackedRadialGaugeDescriptionLabel" />
 
 ### [RadialGaugeValueLabel](https://github.com/reaviz/reaviz/blob/master/src/RadialGauge/RadialGaugeSeries/RadialGaugeValueLabel.tsx)
+<PropsTable name="RadialGaugeValueLabel" />
