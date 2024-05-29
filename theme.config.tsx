@@ -46,10 +46,10 @@ const config: DocsThemeConfig = {
       <path d="M542.352 88.5602L568.543 47.2502V37.4402H527.141V49.3202H552.703L526.512 90.5402V100.44H569.082V88.5602H542.352Z" fill="white"/>
       <defs>
       <linearGradient id="paint0_linear_1_121" x1="24.8723" y1="120.722" x2="126.082" y2="-32.0457" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#105EFF"/>
-        <stop offset="0.413357" stop-color="#009BFF"/>
-        <stop offset="0.735652" stop-color="#105EFF"/>
-        <stop offset="1" stop-color="#090E43"/>
+        <stop stopColor="#105EFF"/>
+        <stop offset="0.413357" stopColor="#009BFF"/>
+        <stop offset="0.735652" stopColor="#105EFF"/>
+        <stop offset="1" stopColor="#090E43"/>
       </linearGradient>
       </defs>
     </svg>
