@@ -1,5 +1,5 @@
 import { Heatmap } from 'reaviz';
-import { heatmapSimpleData } from 'reaviz';
+import { heatmapSimpleData } from 'reaviz-data-utils';
 import { SequentialLegend } from 'reaviz';
 import { HeatmapCell, HeatmapSeries } from 'reaviz';
 import { getYScale } from 'reaviz';

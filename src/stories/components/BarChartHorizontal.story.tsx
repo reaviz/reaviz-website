@@ -14,7 +14,7 @@ import {
   largeCategoryData,
   nonZeroCategoryData,
   durationCategoryData
-} from 'reaviz';
+} from 'reaviz-data-utils';
 import {
   HistogramBarSeries,
   MarimekkoBarSeries,

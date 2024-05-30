@@ -1,4 +1,4 @@
-import { multiCategory } from 'reaviz';
+import { multiCategory } from 'reaviz-data-utils';
 import { RadialArea } from 'reaviz';
 import { GradientStop } from 'reaviz';
 import { RadialGradient } from 'reaviz';

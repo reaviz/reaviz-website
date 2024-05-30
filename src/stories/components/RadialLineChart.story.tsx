@@ -1,4 +1,4 @@
-import { categoryData, medDateData, multiCategory } from 'reaviz';
+import { categoryData, medDateData, multiCategory } from 'reaviz-data-utils';
 import {
   RadialAxis,
   RadialAxisArcSeries,

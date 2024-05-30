@@ -1,7 +1,10 @@
 import React, { Fragment, useState } from 'react';
 import { ScatterPlot } from 'reaviz';
-import { largeSignalChartData } from 'reaviz';
-import { randomNumber, singleDateData } from 'reaviz';
+import {
+  randomNumber,
+  singleDateData,
+  largeSignalChartData
+} from 'reaviz-data-utils';
 import { ScatterSeries, ScatterPoint } from 'reaviz';
 import {
   LinearYAxis,

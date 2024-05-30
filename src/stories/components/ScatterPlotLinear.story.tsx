@@ -6,8 +6,8 @@ import {
   medSignalChartData,
   signalStageData,
   signalStages
-} from 'reaviz';
-import { randomNumber } from 'reaviz';
+} from 'reaviz-data-utils';
+import { randomNumber } from 'reaviz-data-utils';
 import { range } from 'd3-array';
 import { GridlineSeries, Gridline, GridStripe } from 'reaviz';
 import { ScatterSeries, ScatterPoint } from 'reaviz';

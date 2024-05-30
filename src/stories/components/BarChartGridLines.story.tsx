@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart } from 'reaviz';
-import { categoryData } from 'reaviz';
+import { categoryData } from 'reaviz-data-utils';
 import { GridlineSeries, Gridline } from 'reaviz';
 import {
   Bar,

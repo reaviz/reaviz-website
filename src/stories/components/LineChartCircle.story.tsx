@@ -1,5 +1,5 @@
 import React from 'react';
-import { singleDateData } from 'reaviz';
+import { singleDateData } from 'reaviz-data-utils';
 import { LineChart } from 'reaviz';
 import { PointSeries } from 'reaviz';
 import { ScatterPoint } from 'reaviz';

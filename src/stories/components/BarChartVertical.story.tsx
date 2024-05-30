@@ -4,7 +4,7 @@ import {
   categoryData,
   largeCategoryData,
   nonZeroCategoryData
-} from 'reaviz';
+} from 'reaviz-data-utils';
 import { BarSeries, Bar, BarLabel, GuideBar } from 'reaviz';
 import { schemes } from 'reaviz';
 import chroma from 'chroma-js';

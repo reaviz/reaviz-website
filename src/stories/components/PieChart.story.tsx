@@ -1,6 +1,11 @@
 import React, { useState, Fragment } from 'react';
 import { PieChart } from 'reaviz';
-import { categoryData, randomNumber, browserData, icons } from 'reaviz';
+import {
+  categoryData,
+  randomNumber,
+  browserData,
+  icons
+} from 'reaviz-data-utils';
 import { PieArc, PieArcLabel, PieArcSeries } from 'reaviz';
 import { ChartShallowDataShape } from 'reaviz';
 import { Gradient } from 'reaviz';
