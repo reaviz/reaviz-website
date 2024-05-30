@@ -1,6 +1,10 @@
 import { Fragment, useState } from 'react';
 import chroma from 'chroma-js';
-import { multiDateData, randomNumber, longMultiDateData } from 'reaviz';
+import {
+  multiDateData,
+  randomNumber,
+  longMultiDateData
+} from 'reaviz-data-utils';
 import { AreaChart } from 'reaviz';
 import { StackedNormalizedAreaChart } from 'reaviz';
 import { StackedAreaChart } from 'reaviz';
@@ -79,7 +83,7 @@ export const StackedNormalized = () => (
 );
 
 const LiveUpdatingStory = () => {
-  const [data, setData] = useState(multiDateData.map(d => ({ ...d })));
+  const [data, setData] = useState(multiDateData.map((d) => ({ ...d })));
 
   const updateData = () => {
     const newData = [...data];

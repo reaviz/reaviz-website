@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { medDateData, multiCategory } from 'reaviz';
+import { medDateData, multiCategory } from 'reaviz-data-utils';
 import {
   RadialAxis,
   RadialAxisArcSeries,

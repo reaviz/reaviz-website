@@ -1,9 +1,20 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as RadarChartStory from '../../../stories/components/RadarChart.story.tsx';
+
+<Meta of={RadarChartStory} />
+
 # Radar
 
 A radar chart is a graphical method of displaying multivariate
 data in the form of a two-dimensional chart of three or more quantitative
 variables represented on axes starting from the same point. The relative
 position and angle of the axes is typically uninformative.
+
+## Examples
+
+<ToggleCanvas of={RadarChartStory.Filled} storybook="charts-radar-chart--simple" />
 
 ## Quick Start
 To create a radar, use import the `RadarChart` and give it `value` point.
@@ -56,3 +67,4 @@ const MyChart = () => (
 ## API
 
 ### [RadarChart](https://github.com/reaviz/reaviz/blob/master/src/RadarChart/RadarChart.tsx)
+<PropsTable name="RadarChart" />

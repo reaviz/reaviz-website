@@ -3,7 +3,7 @@ import {
   singleDateData,
   singleDateBigIntData,
   nonZeroDateData
-} from 'reaviz';
+} from 'reaviz-data-utils';
 import { AreaChart } from 'reaviz';
 import { range } from 'd3-array';
 import {

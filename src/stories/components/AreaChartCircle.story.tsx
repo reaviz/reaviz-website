@@ -1,5 +1,5 @@
 import React from 'react';
-import { singleDateData } from 'reaviz';
+import { singleDateData } from 'reaviz-data-utils';
 import { AreaChart } from 'reaviz';
 import {
   Area,

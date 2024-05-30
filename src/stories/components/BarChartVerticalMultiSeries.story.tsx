@@ -2,7 +2,7 @@ import { BarChart } from 'reaviz';
 import { MarimekkoChart } from 'reaviz';
 import { StackedBarChart } from 'reaviz';
 import { StackedNormalizedBarChart } from 'reaviz';
-import { multiCategory, binnedDateData } from 'reaviz';
+import { multiCategory, binnedDateData } from 'reaviz-data-utils';
 import chroma from 'chroma-js';
 import {
   BarSeries,

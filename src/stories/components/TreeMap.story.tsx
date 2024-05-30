@@ -4,7 +4,7 @@ import { ChartNestedDataShape, ChartShallowDataShape } from 'reaviz';
 import { TreeMap } from 'reaviz';
 import { TreeMapRect } from 'reaviz';
 import { range } from 'd3-array';
-import { randomNumber } from 'reaviz';
+import { randomNumber } from 'reaviz-data-utils';
 import { TreeMapLabel } from 'reaviz';
 
 export default {

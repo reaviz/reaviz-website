@@ -1,5 +1,5 @@
 import React from 'react';
-import { largeSignalChartData, categoryData } from 'reaviz';
+import { largeSignalChartData, categoryData } from 'reaviz-data-utils';
 import { ScatterPlot } from 'reaviz';
 import { BarChart } from 'reaviz';
 import {

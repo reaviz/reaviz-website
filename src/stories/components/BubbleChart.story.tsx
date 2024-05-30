@@ -2,16 +2,13 @@ import { BubbleChart } from 'reaviz';
 import { ChartShallowDataShape } from 'reaviz';
 import { BubbleSeries } from 'reaviz';
 import { range } from 'd3-array';
-import { randomNumber } from 'reaviz';
+import { randomNumber } from 'reaviz-data-utils';
 import { Bubble } from 'reaviz';
 import { Gradient as GradientBG } from 'reaviz';
 import { Stripes } from 'reaviz';
 import { BubbleLabel } from 'reaviz';
 
-import oktaLogo from 'reaviz';
-import awsLogo from 'reaviz';
-import twilloLogo from 'reaviz';
-import sendgridLogo from 'reaviz';
+import { icons } from 'reaviz-data-utils';
 
 const simpleData: ChartShallowDataShape[] = [
   { key: 'AWS', data: 100 },
@@ -78,16 +75,16 @@ export const Icons = () => (
           <BubbleLabel
             format={(data) => {
               const logos = {
-                AWS: awsLogo,
-                SendGrid: sendgridLogo,
-                Okta: oktaLogo,
-                Twillo: twilloLogo
+                AWS: icons.AWS(),
+                SendGrid: icons.SendGrid(),
+                Okta: icons.Okta(),
+                Twillo: icons.Twillo()
               };
 
               return (
                 <g>
                   <foreignObject height={40} width={40} x={-40 / 2} y={-50 / 2}>
-                    <img src={logos[data.data.key]} width={40} height={40} />
+                    {logos[data.data.key]}
                   </foreignObject>
                   <text dy={35} fill="white" textAnchor="middle">
                     {data.data.key}

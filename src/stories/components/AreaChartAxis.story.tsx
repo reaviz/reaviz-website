@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import chroma from 'chroma-js';
-import { multiDateData, singleDateData, randomNumber } from 'reaviz';
+import { multiDateData, singleDateData, randomNumber } from 'reaviz-data-utils';
 import { AreaChart } from 'reaviz';
 import {
   Area,

@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as ScatterPlotLinearStory from '../../../stories/components/ScatterPlotLinear.story.tsx';
+
+<Meta of={ScatterPlotLinearStory} />
+
 # Scatter Plot
 
 A scatter plot is a type of mathematical diagram using Cartesian coordinates to
@@ -9,6 +16,10 @@ Types supported by reaviz:
 
 - Scatter
 - Bubble
+
+## Examples
+
+<ToggleCanvas of={ScatterPlotLinearStory.Simple} storybook="charts-scatter-plot-linear--simple" />
 
 ## Quick Start
 To create a Bar chart, use import the `ScatterPlot` and give it `data`. The chart
@@ -32,7 +43,10 @@ const MyChart = () => (
 
 ## API
 ### [ScatterPlot](https://github.com/reaviz/reaviz/blob/master/src/ScatterPlot/ScatterPlot.tsx)
+<PropsTable name="ScatterPlot" />
 
 ### [ScatterSeries](https://github.com/reaviz/reaviz/blob/master/src/ScatterPlot/ScatterSeries/ScatterSeries.tsx)
+<PropsTable name="ScatterSeries" />
 
 ### [ScatterPoint](https://github.com/reaviz/reaviz/blob/master/src/ScatterPlot/ScatterSeries/ScatterPoint.tsx)
+<PropsTable name="ScatterPoint" />

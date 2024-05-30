@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as RadialScatterPlotStory from '../../../stories/components/RadialScatterPlot.story.tsx';
+
+<Meta of={RadialScatterPlotStory} />
+
 # Radial Scatter Plot
 
 A Radial or Circular Scatter Plot is used for displaying the circular data, which involves the
@@ -8,6 +15,10 @@ Types supported by reaviz:
 
 - Scatter
 - Bubble
+
+## Examples
+
+<ToggleCanvas of={RadialScatterPlotStory.Simple} storybook="charts-scatter-plot-radial--simple" />
 
 ## Quick Start
 To create a Radial Scatter Plot, use import the `RadialScatterPlot` and give it `data`. The chart
@@ -31,7 +42,10 @@ const MyChart = () => (
 
 ## API
 ### [RadialScatterPlot](https://github.com/reaviz/reaviz/blob/master/src/RadialScatterPlot/RadialScatterPlot.tsx)
+<PropsTable name="RadialScatterPlot" />
 
 ### [RadialScatterSeries](https://github.com/reaviz/reaviz/blob/master/src/RadialScatterPlot/RadialScatterSeries/RadialScatterSeries.tsx)
+<PropsTable name="RadialScatterSeries" />
 
 ### [RadialScatterPoint](https://github.com/reaviz/reaviz/blob/master/src/RadialScatterPlot/RadialScatterSeries/RadialScatterPoint.tsx)
+<PropsTable name="RadialScatterPoint" />

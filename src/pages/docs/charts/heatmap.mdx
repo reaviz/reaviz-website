@@ -1,3 +1,10 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as HeatmapStory from '../../../stories/components/Heatmap.story.tsx';
+
+<Meta of={HeatmapStory} />
+
 # Heatmap
 
 A heat map is a data visualization type where the individual values
@@ -13,6 +20,10 @@ Types supported by reaviz:
 
 - Heatmap
 - Calendar Heatmap
+
+## Examples
+
+<ToggleCanvas of={HeatmapStory.Basic} storybook="charts-heatmap-simple--basic" />
 
 ## Quick Start
 To create a Heatmap, use import the `Heatmap` and give it `data`. The chart
@@ -69,9 +80,13 @@ const MyChart = () => (
 
 ## API
 ### [Heatmap](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/Heatmap.tsx)
+<PropsTable name="Heatmap" />
 
 ### [CalendarHeatmap](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/CalendarHeatmap.tsx)
+<PropsTable name="CalendarHeatmap" />
 
 ### [HeatmapSeries](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/HeatmapSeries/HeatmapSeries.tsx)
+<PropsTable name="HeatmapSeries" />
 
 ### [HeatmapCell](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/HeatmapSeries/HeatmapCell.tsx)
+<PropsTable name="HeatmapCell" />

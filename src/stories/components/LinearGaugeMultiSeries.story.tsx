@@ -1,7 +1,7 @@
 import React from 'react';
 import { LinearGauge } from 'reaviz';
 import { DiscreteLegend, DiscreteLegendEntry } from 'reaviz';
-import { mitreData } from 'reaviz';
+import { mitreData } from 'reaviz-data-utils';
 import { LinearGaugeSeries } from 'reaviz';
 import chroma from 'chroma-js';
 import { LinearGaugeBar } from 'reaviz';

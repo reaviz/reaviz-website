@@ -1,7 +1,19 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as MeterStory from '../../../stories/components/Meter.story.tsx';
+
+<Meta of={MeterStory} />
+
 # Meter
 
 Meter chart is a visual to show a single value on a meter scale which is in this cases is a linear gauge like chart divided in sections.
 It is designed to indicate a single value within a set range or target threshold.
+
+## Examples
+
+<ToggleCanvas of={MeterStory.Basic} storybook="charts-meter--basic" />
+
 
 ## Quick Start
 To create a meter, use import the `Meter` and give it `value` point.
@@ -16,5 +28,7 @@ const MyChart = () => (
 
 ## API
 ### [Meter](https://github.com/reaviz/reaviz/blob/master/src/Meter/Meter.tsx)
+<PropsTable name="Meter" />
 
 ### [MeterColumn](https://github.com/reaviz/reaviz/blob/master/src/Meter/MeterColumn.tsx)
+<PropsTable name="MeterColumn" />

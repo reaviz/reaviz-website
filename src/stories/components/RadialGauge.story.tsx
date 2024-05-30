@@ -1,5 +1,5 @@
 import { RadialGauge } from 'reaviz';
-import { categoryData, categoryDataStackedArcs } from 'reaviz';
+import { categoryData, categoryDataStackedArcs } from 'reaviz-data-utils';
 import {
   RadialGaugeArc,
   RadialGaugeSeries,

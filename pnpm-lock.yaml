@@ -17,6 +17,12 @@ importers:
       clsx:
         specifier: ^2.1.0
         version: 2.1.1
+      d3-array:
+        specifier: ^3.2.4
+        version: 3.2.4
+      d3-time:
+        specifier: ^3.1.0
+        version: 3.1.0
       framer-motion:
         specifier: ^11.0.28
         version: 11.1.9(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -45,14 +51,23 @@ importers:
         specifier: ^15.5.0
         version: 15.5.0(react@18.2.0)
       reaviz:
-        specifier: ^15.15.4
-        version: 15.15.4(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^15.15.6
+        version: 15.15.6(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      reaviz-data-utils:
+        specifier: ^0.0.4
+        version: 0.0.4(react@18.2.0)
       sharp:
         specifier: ^0.33.3
         version: 0.33.3
       tailwind-merge:
         specifier: ^2.2.2
         version: 2.3.0
+      topojson-client:
+        specifier: ^3.1.0
+        version: 3.1.0
+      world-atlas:
+        specifier: ^2.0.2
+        version: 2.0.2
     devDependencies:
       '@storybook/addon-essentials':
         specifier: 7.6.3
@@ -1750,6 +1765,11 @@ packages:
     peerDependencies:
       fuse.js: ^6.6.2
       react: '>= 16'
+
+  '@rollup/rollup-linux-x64-gnu@4.18.0':
+    resolution: {integrity: sha512-xuglR2rBVHA5UsI8h8UbX4VJ470PtGCf5Vpswh7p2ukaqBGFTnsfzxUBetoWBWymHMxbIG0Cmx7Y9qDZzr648w==}
+    cpu: [x64]
+    os: [linux]
 
   '@rushstack/eslint-patch@1.10.2':
     resolution: {integrity: sha512-hw437iINopmQuxWPSUEvqE56NCPsiU8N4AYtfHmJFckclktzK9YQJieD3XkDCDH4OjL+C7zgPUh73R/nrcHrqw==}
@@ -5805,6 +5825,9 @@ packages:
     resolution: {integrity: sha512-2emPTb1reeLLYwHxyVx993iYyCHEiRRO+y8NFXFPL5kl5q14sgTK76cXyEKkeKCHeRw35SfdkUJ10Q1KfHuiIQ==}
     engines: {node: '>= 0.4'}
 
+  moment@2.30.1:
+    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
+
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -6714,8 +6737,18 @@ packages:
   reading-time@1.5.0:
     resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
 
-  reaviz@15.15.4:
-    resolution: {integrity: sha512-8PcXI2hHBGcnyQdkH+Gy/61XzCW0BvOmX0AjNgePRg1WIcBEbAZirCqBG8S8qHiMZ04ojSs3VNEQvfQeUPfF1w==}
+  reaviz-data-utils@0.0.2:
+    resolution: {integrity: sha512-jYatPHknYyEYG7MlLPTl2x6nKb0q2v9Xp99U6K1eJJZ3f3i3cHAhpjO4EuashYdROl5GyyuGaYxJ+AQs6/HqZA==}
+    peerDependencies:
+      react: ^18.3.1
+
+  reaviz-data-utils@0.0.4:
+    resolution: {integrity: sha512-GRuA88TTkpHFLE8rNRWQcnKC2E6adUaxVTtwJT80XldxSpZ0XQ4h0n5JdhnjCw5SJ7Zj3fXTK+OX7doLzitSmA==}
+    peerDependencies:
+      react: ^18.3.1
+
+  reaviz@15.15.6:
+    resolution: {integrity: sha512-Efi0N7LEf+cPGkFtCjkt0WsxX5ujSUJreneuYTHudaGertOKoysc6/Krxwr40cIPMr+UQHjQ7nnNscd+IC0OZw==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -7529,6 +7562,10 @@ packages:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
 
+  topojson-client@3.1.0:
+    resolution: {integrity: sha512-605uxS6bcYxGXw9qi62XyrV6Q3xwbndjachmNxu8HWTtVPxZfEJN9fd/SZS1Q54Sn2y0TMyMxFj/cJINqGHrKw==}
+    hasBin: true
+
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
@@ -8006,6 +8043,9 @@ packages:
 
   wordwrap@1.0.0:
     resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
+
+  world-atlas@2.0.2:
+    resolution: {integrity: sha512-IXfV0qwlKXpckz1FhwXVwKRjiIhOnWttOskm5CtxMsjgE/MXAYRHWJqgXOpM8IkcPBoXnyTU5lFHcYa5ChG0LQ==}
 
   wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
@@ -9801,6 +9841,9 @@ snapshots:
     dependencies:
       fuse.js: 6.6.2
       react: 18.2.0
+
+  '@rollup/rollup-linux-x64-gnu@4.18.0':
+    optional: true
 
   '@rushstack/eslint-patch@1.10.2': {}
 
@@ -15464,6 +15507,8 @@ snapshots:
       hasown: 2.0.2
       isarray: 2.0.5
 
+  moment@2.30.1: {}
+
   mri@1.2.0: {}
 
   ms@2.0.0: {}
@@ -16513,7 +16558,23 @@ snapshots:
 
   reading-time@1.5.0: {}
 
-  reaviz@15.15.4(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  reaviz-data-utils@0.0.2(react@18.2.0):
+    dependencies:
+      big-integer: 1.6.52
+      d3-array: 3.2.4
+      moment: 2.30.1
+      react: 18.2.0
+
+  reaviz-data-utils@0.0.4(react@18.2.0):
+    dependencies:
+      big-integer: 1.6.52
+      d3-array: 3.2.4
+      date-fns: 3.6.0
+      react: 18.2.0
+    optionalDependencies:
+      '@rollup/rollup-linux-x64-gnu': 4.18.0
+
+  reaviz@15.15.6(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@upsetjs/venn.js': 1.4.2
       big-integer: 1.6.52
@@ -16539,6 +16600,7 @@ snapshots:
       react-cool-dimensions: 3.0.1(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
       react-fast-compare: 3.2.2
+      reaviz-data-utils: 0.0.2(react@18.2.0)
       safe-identifier: 0.4.2
       transformation-matrix: 2.16.1
     transitivePeerDependencies:
@@ -17573,6 +17635,10 @@ snapshots:
 
   toidentifier@1.0.1: {}
 
+  topojson-client@3.1.0:
+    dependencies:
+      commander: 2.20.3
+
   tr46@0.0.3: {}
 
   transformation-matrix@2.16.1: {}
@@ -18136,6 +18202,8 @@ snapshots:
   wordwrap@0.0.2: {}
 
   wordwrap@1.0.0: {}
+
+  world-atlas@2.0.2: {}
 
   wrap-ansi@7.0.0:
     dependencies:
