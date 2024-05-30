@@ -1,9 +1,9 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
-// import * as LineChartSingleSeriesStories from '../../../stories/components/LineChartSingleSeries.story.tsx';
+import * as LineChartSingleSeriesStories from '../../../stories/components/LineChartSingleSeries.story.tsx';
 
-{/* <Meta of={LineChartSingleSeriesStories} /> */}
+<Meta of={LineChartSingleSeriesStories} />
 
 # Line Chart
 
@@ -21,8 +21,7 @@ Types supported by reaviz:
 - Radial
 
 ## Examples
-{/* TODO Module not found "moment" */}
-{/* <ToggleCanvas of={LineChartSingleSeriesStories.Simple} storybook="charts-line-chart-single-series--simple" /> */}
+<ToggleCanvas of={LineChartSingleSeriesStories.Simple} storybook="charts-line-chart-single-series--simple" />
 
 ## Quick Start
 To create a line chart, use import the `LineChart` and give it `data`. The chart

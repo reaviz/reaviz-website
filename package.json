@@ -17,18 +17,21 @@
     "@mdx-js/mdx": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.1.0",
+    "d3-array": "^3.2.4",
     "framer-motion": "^11.0.28",
     "next": "^14",
     "nextra": "^2.13.4",
     "posthog-js": "^1.131.4",
     "reablocks": "^7.9.2",
-    "reaviz": "^15.15.4",
     "reablocks-docs-theme": "^0.0.2",
     "react": "^18",
     "react-dom": "^18",
     "react-syntax-highlighter": "^15.5.0",
+    "reaviz": "^15.15.4",
     "sharp": "^0.33.3",
-    "tailwind-merge": "^2.2.2"
+    "tailwind-merge": "^2.2.2",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.6.3",

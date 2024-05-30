@@ -1,9 +1,9 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
-// import * as MapStory from '../../../stories/components/Map.story.tsx';
+import * as MapStory from '../../../stories/components/Map.story.tsx';
 
-{/* <Meta of={MapStory} /> */}
+<Meta of={MapStory} />
 
 # Map
 
@@ -13,8 +13,7 @@ density or per-capita income. The choropleth map provides an easy way to visuali
 varies across a geographic area or it shows the level of variability within a region.
 
 ## Examples
-{/* TODO Module not found: Can't resolve 'topojson-client' */}
-{/* <ToggleCanvas of={MapStory.Simple} storybook="charts-map--simple" /> */}
+<ToggleCanvas of={MapStory.Simple} storybook="charts-map--simple" />
 
 ## Quick Start
 To get started with the map chart, you need to add some extra depedencies to your application:
