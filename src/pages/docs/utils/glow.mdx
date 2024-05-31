@@ -1,3 +1,5 @@
+import { PropsTable } from '@/components/ui/props-table';
+
 # Glow
 
 Add a glow to various charts. This is passed as a prop at the level of the component rendered within the series.
@@ -5,31 +7,5 @@ For example, if you want to add a glow to a bar chart, you would add the glow pr
 
 ## API
 
-```ts
-interface Glow {
-  /**
-   * The color of the glow.
-   */
-  color?: string;
-
-  /**
-   * The x offset of the glow.
-   */
-  x?: number;
-
-  /**
-   * The y offset of the glow.
-   */
-  y?: number;
-
-  /**
-   * The blur radius of the glow.
-   */
-  blur?: number;
-
-  /**
-   * The opacity of the glow.
-   */
-  opacity?: number;
-}
-```
+### [Glow](https://github.com/reaviz/reaviz/blob/master/src/common/Glow/Glow.tsx)
+<PropsTable name="Glow" />
