@@ -29,7 +29,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-syntax-highlighter": "^15.5.0",
-    "reaviz": "^15.15.7",
+    "reaviz": "^15.16.0",
     "reaviz-data-utils": "^0.0.4",
     "sharp": "^0.33.3",
     "tailwind-merge": "^2.2.2",

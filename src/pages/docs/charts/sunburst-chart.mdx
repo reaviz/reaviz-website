@@ -1,0 +1,36 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Canvas, Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as Stories from '../../../stories/components/SunburstChart.story.tsx';
+import { SunburstChart, SunburstSeries, SunburstArc, SunburstArcLabel } from 'reaviz';
+
+<Meta of={Stories} />
+
+# Subburst Chart
+
+A Sunburst Diagram is designed to display hierarchical data through the use
+of concentric circles. The central circle symbolizes the root node, with the
+hierarchy expanding outwards from this point. A segment of the inner circle has a
+hierarchical connection to those segments of the outer circle that fall within the
+angular range of the parent segment.
+
+A sunburst chart, when devoid of any hierarchical data (only one level of categories),
+bears a resemblance to a doughnut chart. However, when a sunburst chart has
+multiple levels of categories, it demonstrates the relationships between the outer and
+inner rings.
+
+## Examples
+<ToggleCanvas of={Stories.Simple} storybook="charts-meter--basic" />
+
+## API
+### [SunburstChart](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstChart.tsx)
+<PropsTable of={SunburstChart} />
+
+### [SunburstSeries](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstSeries.tsx)
+<PropsTable of={SunburstSeries} />
+
+### [SunburstArc](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstArc.tsx)
+<PropsTable of={SunburstArc} />
+
+### [SunburstArcLabel](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstArcLabel.tsx)
+<PropsTable of={SunburstArcLabel} />
