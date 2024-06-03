@@ -1,0 +1,156 @@
+import { Tabs, Tab, TabList, TabPanel } from 'reablocks'
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as XsLightStories from '../../stories/blocks/AreaChartBlocksLightXSmall.story';
+import * as XsDarkStories from '../../stories/blocks/AreaChartBlocksDarkXSmall.story';
+
+import * as SmLightStories from '../../stories/blocks/AreaChartBlocksLightSmall.story';
+import * as SmDarkStories from '../../stories/blocks/AreaChartBlocksDarkSmall.story';
+
+import * as MdLightStories from '../../stories/blocks/AreaChartBlocksLightMedium.story';
+import * as MdDarkStories from '../../stories/blocks/AreaChartBlocksDarkMedium.story';
+
+import * as LgLightStories from '../../stories/blocks/AreaChartBlocksLightLarge.story';
+import * as LgDarkStories from '../../stories/blocks/AreaChartBlocksDarkLarge.story';
+
+# Area Chart
+
+## Simple
+
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <Meta of={XsLightStories} />
+    <Canvas of={XsLightStories.Simple} />
+    <Meta of={XsDarkStories} />
+    <Canvas of={XsDarkStories.Simple} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={SmLightStories} />
+    <Canvas of={SmLightStories.Simple} />
+    <Meta of={SmDarkStories} />
+    <Canvas of={SmDarkStories.Simple} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={MdLightStories} />
+    <Canvas of={MdLightStories.Simple} />
+    <Meta of={MdDarkStories} />
+    <Canvas of={MdDarkStories.Simple} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={LgLightStories} />
+    <Canvas of={LgLightStories.Simple} />
+    <Meta of={LgDarkStories} />
+    <Canvas of={LgDarkStories.Simple} />
+  </TabPanel>
+</Tabs>
+
+## Multi Series
+
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <Meta of={XsLightStories} />
+    <Canvas of={XsLightStories.MultiSeriesInterpolationSmooth} />
+    <Meta of={XsDarkStories} />
+    <Canvas of={XsDarkStories.MultiSeriesInterpolationSmooth} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={SmLightStories} />
+    <Canvas of={SmLightStories.MultiSeriesInterpolationSmooth} />
+    <Meta of={SmDarkStories} />
+    <Canvas of={SmDarkStories.MultiSeriesInterpolationSmooth} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={MdLightStories} />
+    <Canvas of={MdLightStories.MultiSeriesInterpolationSmooth} />
+    <Meta of={MdDarkStories} />
+    <Canvas of={MdDarkStories.MultiSeriesInterpolationSmooth} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={LgLightStories} />
+    <Canvas of={LgLightStories.MultiSeriesInterpolationSmooth} />
+    <Meta of={LgDarkStories} />
+    <Canvas of={LgDarkStories.MultiSeriesInterpolationSmooth} />
+  </TabPanel>
+</Tabs>
+
+## Stacked
+
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <Meta of={XsLightStories} />
+    <Canvas of={XsLightStories.Stacked} />
+    <Meta of={XsDarkStories} />
+    <Canvas of={XsDarkStories.Stacked} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={SmLightStories} />
+    <Canvas of={SmLightStories.Stacked} />
+    <Meta of={SmDarkStories} />
+    <Canvas of={SmDarkStories.Stacked} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={MdLightStories} />
+    <Canvas of={MdLightStories.Stacked} />
+    <Meta of={MdDarkStories} />
+    <Canvas of={MdDarkStories.Stacked} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={LgLightStories} />
+    <Canvas of={LgLightStories.Stacked} />
+    <Meta of={LgDarkStories} />
+    <Canvas of={LgDarkStories.Stacked} />
+  </TabPanel>
+</Tabs>
+
+## Stacked Normalized
+
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <Meta of={XsLightStories} />
+    <Canvas of={XsLightStories.StackedNormalized} />
+    <Meta of={XsDarkStories} />
+    <Canvas of={XsDarkStories.StackedNormalized} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={SmLightStories} />
+    <Canvas of={SmLightStories.StackedNormalized} />
+    <Meta of={SmDarkStories} />
+    <Canvas of={SmDarkStories.StackedNormalized} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={MdLightStories} />
+    <Canvas of={MdLightStories.StackedNormalized} />
+    <Meta of={MdDarkStories} />
+    <Canvas of={MdDarkStories.StackedNormalized} />
+  </TabPanel>
+  <TabPanel>
+    <Meta of={LgLightStories} />
+    <Canvas of={LgLightStories.StackedNormalized} />
+    <Meta of={LgDarkStories} />
+    <Canvas of={LgDarkStories.StackedNormalized} />
+  </TabPanel>
+</Tabs>

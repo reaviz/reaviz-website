@@ -6,5 +6,6 @@
       "layout": "full",
       "pagination": false
     }
-  }
+  },
+  "area-chart": "Area Chart"
 }

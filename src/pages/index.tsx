@@ -68,17 +68,7 @@ export default function Home() {
           <Nav />
         </header>
         <TracingBeams className="hidden md:block">
-
-          <section className="container mt-20 px-4 md:px-24">
-            <div className="flex w-full items-center gap-2">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-secondary" />
-              <SparklesIcon className="h-3 w-3" />
-              <SparklesIcon className="h-4 w-4" />
-              <SparklesIcon className="h-3 w-3" />
-              <div className="h-px flex-1 bg-gradient-to-r from-secondary to-transparent" />
-            </div>
-          </section>
-          <section className="container mt-20 px-4 md:px-24">
+          <section className="container mt-40 px-4 md:px-24">
             <div className="mb-4 flex flex-col items-start gap-4 md:mb-20 md:max-w-[50%]">
               <a href="https://github.com/reaviz/reaviz" target="_blank">
                 <img
@@ -88,12 +78,11 @@ export default function Home() {
               </a>
               <h3 className="text-content text-4xl font-bold !leading-[150%] md:text-6xl md:!leading-[120%]">
                 Enterprise ready{" "}
-                <span className="text-secondary">Open-Source</span> data visualizations
+                <span className="text-secondary">Open-Source</span> Data Visualizations
               </h3>
               <p className="mt-4 text-base text-content-secondary md:text-lg">
-                Our collection of enterprise-grade, open-source components
-                provide the building blocks you need to create beautifully
-                designed, scalable, high-performance applications.
+                Our collection of 22+ enterprise-grade, open-source data visualization components for React
+                provide the building blocks you need to bring your data to life.
               </p>
             </div>
           </section>
