@@ -2,8 +2,10 @@ import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 import * as PieChartStory from '../../../stories/components/PieChart.story.tsx';
+import * as DonutChartStory from '../../../stories/components/DonutChart.story.tsx';
 
 <Meta of={PieChartStory} />
+<Meta of={DonutChartStory} />
 
 # Pie Chart
 
@@ -14,12 +16,16 @@ which has been sliced, there are variations on the way it can be presented.
 
 Types supported by reaviz:
 
-- Pie
-- Donut
+- [Pie](/docs/charts/pie-chart#pie)
+- [Donut](/docs/charts/pie-chart#donut)
 
 ## Examples
 
+### Pie
 <ToggleCanvas of={PieChartStory.Simple} storybook="charts-pie-chart-pie--simple" />
+
+### Donut
+<ToggleCanvas of={DonutChartStory.Simple} storybook="charts-pie-chart-donut--simple" />
 
 ## Quick Start
 To create a Pie chart, use import the `PieChart` and give it `data`. The chart

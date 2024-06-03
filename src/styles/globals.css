@@ -10,17 +10,24 @@
 
 html.light {
   --background: #ffffff;
+  --tooltip-background: #F7F7FA;
+  --tooltip-color: #3D3D4D;
   --foreground-rgb: 0, 0, 0;
 }
 
 html.dark {
   --background: #11101f;
+  --tooltip-background: #00050be6;
+  --tooltip-color: #fff;
   --foreground-rgb: 255, 255, 255;
 }
+
 
 body {
   color: rgb(var(--foreground-rgb)) !important;
   background-color: var(--background) !important;
+  --tooltip-spacing: 5px;
+  --tooltip-border-radius: 5px;
 }
 
 .nextra-nav-container > nav {

@@ -2,8 +2,18 @@ import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 import * as BarChartVerticalStory from '../../../stories/components/BarChartVertical.story.tsx';
+import * as BarChartHorizontal from '../../../stories/components/BarChartHorizontal.story.tsx';
+import * as BarChartHorizontalMultiSeries from '../../../stories/components/BarChartHorizontalMultiSeries.story.tsx';
+import * as BarChartVerticalMultiSeries from '../../../stories/components/BarChartVerticalMultiSeries.story.tsx';
+import * as SparklineChart from '../../../stories/components/SparklineChart.story.tsx';
+import * as BarChartVerticalHistogram from '../../../stories/components/BarChartVerticalHistogram.story.tsx';
 
 <Meta of={BarChartVerticalStory} />
+<Meta of={BarChartHorizontal} />
+<Meta of={BarChartHorizontalMultiSeries} />
+<Meta of={BarChartVerticalMultiSeries} />
+<Meta of={SparklineChart} />
+<Meta of={BarChartVerticalHistogram} />
 
 # Bar Chart
 A bar chart is a chart with rectangular bars with lengths proportional to the
@@ -17,19 +27,54 @@ Bars on the chart may be arranged in any order. Bar charts are useful for compar
 
 Types supported by reaviz:
 
-- Single Series Vertical / Horizontal
-- Multi Series Vertical / Horizontal
-- Stacked Vertical / Horizontal
-- Stacked Normalized Vertical / Horizontal
-- Stacked Diverging Vertical / Horizontal
-- Marimekko
-- Sparkline
-- Waterfall
-- Histograms
+- Single Series [Vertical](/docs/charts/bar-chart#single-series-vertical) / [Horizontal](/docs/charts/bar-chart#single-series-horizontal)
+- Multi Series [Vertical](/docs/charts/bar-chart#multi-series-vertical) / [Horizontal](/docs/charts/bar-chart#multi-series-horizontal)
+- Stacked [Vertical](/docs/charts/bar-chart#stacked-vertical) / [Horizontal](/docs/charts/bar-chart#stacked-horizontal)
+- Stacked Normalized [Vertical](/docs/charts/bar-chart#stacked-normalized-vertical) / [Horizontal](/docs/charts/bar-chart#stacked-normalized-horizontal)
+- Stacked Diverging [Vertical](/docs/charts/bar-chart#stacked-diverging-vertical) / [Horizontal](/docs/charts/bar-chart#stacked-diverging-horizontal)
+- [Marimekko](/docs/charts/bar-chart#marimekko)
+- [Sparkline](/docs/charts/bar-chart#sparkline)
+- [Waterfall](/docs/charts/bar-chart#waterfall)
+- [Histograms](/docs/charts/bar-chart#histograms)
 
 ## Examples
 
+### Single Series Vertical
 <ToggleCanvas of={BarChartVerticalStory.Simple} storybook="charts-bar-chart-vertical-single-series--simple" />
+### Single Series Horizontal
+<ToggleCanvas of={BarChartHorizontal.Simple} storybook="charts-bar-chart-horizontal-single-series--simple" />
+
+### Multi Series Vertical
+<ToggleCanvas of={BarChartVerticalMultiSeries.Simple} storybook="charts-bar-chart-vertical-multi-series--simple" />
+### Multi Series Horizontal
+<ToggleCanvas of={BarChartHorizontalMultiSeries.Simple} storybook="charts-bar-chart-horizontal-multi-series--simple" />
+
+### Stacked Vertical
+<ToggleCanvas of={BarChartVerticalMultiSeries.Stacked} storybook="charts-bar-chart-vertical-multi-series--stacked" />
+### Stacked Horizontal
+<ToggleCanvas of={BarChartHorizontalMultiSeries.Stacked} storybook="charts-bar-chart-horizontal-multi-series--stacked" />
+
+### Stacked Normalized Vertical
+<ToggleCanvas of={BarChartVerticalMultiSeries.StackedNormalized} storybook="charts-bar-chart-vertical-multi-series--stacked-normalized" />
+### Stacked Normalized Horizontal
+<ToggleCanvas of={BarChartHorizontalMultiSeries.StackedNormalized} storybook="charts-bar-chart-horizontal-multi-series--stacked-normalized" />
+
+### Stacked Diverging Vertical
+<ToggleCanvas of={BarChartVerticalMultiSeries.StackedDiverging} storybook="charts-bar-chart-vertical-multi-series--stacked-diverging" />
+### Stacked Diverging Horizontal
+<ToggleCanvas of={BarChartHorizontalMultiSeries.StackedDiverging} storybook="charts-bar-chart-horizontal-multi-series--stacked-diverging" />
+
+### Marimekko
+<ToggleCanvas of={BarChartVerticalMultiSeries.Marimekko} storybook="charts-bar-chart-vertical-multi-series--marimekko" />
+
+### Sparkline
+<ToggleCanvas of={SparklineChart.Bar} storybook="charts-sparkline--bar" />
+
+### Waterfall
+<ToggleCanvas of={BarChartHorizontal.Waterfall} storybook="charts-bar-chart-horizontal-single-series--waterfall" />
+
+### Histograms
+<ToggleCanvas of={BarChartVerticalHistogram.Dates} storybook="charts-bar-chart-vertical-histogram--dates" />
 
 ## Quick Start
 To create a Bar chart, use import the `BarChart` and give it `data`. The chart

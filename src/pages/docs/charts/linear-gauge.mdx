@@ -2,8 +2,10 @@ import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 import * as LinearGaugeSingleSeriesStory from '../../../stories/components/LinearGaugeSingleSeries.story.tsx';
+import * as LinearGaugeMultiSeriesStory from '../../../stories/components/LinearGaugeMultiSeries.story.tsx';
 
 <Meta of={LinearGaugeSingleSeriesStory} />
+<Meta of={LinearGaugeMultiSeriesStory} />
 
 # Linear Gauge
 
@@ -11,12 +13,16 @@ Linear Gauge uses a linear scale to display a specific data point using a dial o
 
 REAVIZ supports:
 
-- Single-series gauges
-- Multi-series gauges
+- [Single-series gauges](/docs/charts/linear-gauge#single-series-gauges)
+- [Multi-series gauges](/docs/charts/linear-gauge#multi-series-gauges)
 
 ## Examples
 
+### Single-series gauges
 <ToggleCanvas of={LinearGaugeSingleSeriesStory.Simple} storybook="charts-gauge-linear-single-series--simple" />
+
+### Multi-series gauges
+<ToggleCanvas of={LinearGaugeMultiSeriesStory._Simple} storybook="charts-gauge-linear-multi-series--simple" />
 
 ## Quick Start
 To create a Linear Gauge, use import the `LinearGauge` and give it `data`. The chart

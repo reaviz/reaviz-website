@@ -1,11 +1,13 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
-import * as AreaChartStories from '../../../stories/components/AreaChartSingleSeries.story.tsx';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as AreaChartStories from '../../../stories/components/AreaChartSingleSeries.story.tsx';
+import * as AreaChartMultiSeries from '../../../stories/components/AreaChartMultiSeries.story.tsx';
 
 # Area Chart
 
 <Meta of={AreaChartStories} />
+<Meta of={AreaChartMultiSeries} />
 
 
 An Area Chart or area graph are basically a line graph with the area
@@ -17,14 +19,24 @@ Area charts often used to show overall trends over time rather than specific val
 
 Types supported by reaviz:
 
-- Single Series
-- Multi Series
-- Stacked
-- Stacked Normalized
+- [Single Series](/docs/charts/area-chart#single-series)
+- [Multi Series](/docs/charts/area-chart#multi-series)
+- [Stacked](/docs/charts/area-chart#stacked)
+- [Stacked Normalized](/docs/charts/area-chart#stacked-normalized)
 
 ## Examples
 
+### Single Series
 <ToggleCanvas of={AreaChartStories.Simple} storybook="charts-area-chart-single-series--simple" />
+
+### Multi Series
+<ToggleCanvas of={AreaChartMultiSeries.Simple} storybook="charts-area-chart-multi-series--simple" />
+
+### Stacked
+<ToggleCanvas of={AreaChartMultiSeries.Stacked} storybook="charts-area-chart-multi-series--stacked" />
+
+### Stacked Normalized
+<ToggleCanvas of={AreaChartMultiSeries.StackedNormalized} storybook="charts-area-chart-multi-series--stacked-normalized" />
 
 To create a area chart, use import the `AreaChart` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.

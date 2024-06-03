@@ -2,8 +2,11 @@ import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 import * as HeatmapStory from '../../../stories/components/Heatmap.story.tsx';
+import * as HeatmapCalendarStory from '../../../stories/components/HeatmapCalendar.story.tsx';
+import { CalendarHeatmap } from 'reaviz';
 
 <Meta of={HeatmapStory} />
+<Meta of={HeatmapCalendarStory} />
 
 # Heatmap
 
@@ -18,12 +21,16 @@ variables to display patterns in correlations.
 
 Types supported by reaviz:
 
-- Heatmap
-- Calendar Heatmap
+- [Heatmap](/docs/charts/heatmap#heatmap)
+- [Calendar Heatmap](/docs/charts/heatmap#calendar-heatmap)
 
 ## Examples
 
+### Heatmap
 <ToggleCanvas of={HeatmapStory.Basic} storybook="charts-heatmap-simple--basic" />
+
+### Calendar Heatmap
+<ToggleCanvas of={HeatmapCalendarStory.YearCalendar} storybook="charts-heatmap-calendar--year-calendar" />
 
 ## Quick Start
 To create a Heatmap, use import the `Heatmap` and give it `data`. The chart
