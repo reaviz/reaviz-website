@@ -7,7 +7,6 @@ import * as SparklineStory from '../../../stories/components/SparklineChart.stor
 
 # Sparkline
 
-**Sparkline:**
 A Sparkline is a small, condensed, and simplified line chart, providing a snapshot of data trends within a compact space without axes or labels.
 
 - Offers a concise visualization of data trends or variations within a small area, often within text or tables.
@@ -20,20 +19,6 @@ Types supported in reaviz:
 - [Area](/docs/charts/spark-line#area)
 - [Bar](/docs/charts/spark-line#bar)
 - [Sonar](/docs/charts/spark-line#sonar)
-
-## Examples
-
-### Line
-<ToggleCanvas of={SparklineStory.Line} storybook="charts-sparkline--line" />
-
-### Area
-<ToggleCanvas of={SparklineStory.Area} storybook="charts-sparkline--area" />
-
-### Bar
-<ToggleCanvas of={SparklineStory.Bar} storybook="charts-sparkline--bar" />
-
-### Sonar
-<ToggleCanvas of={SparklineStory.Sonar} storybook="charts-sparkline--sonar" />
 
 ## Quick Start
 To create a Sparkline, import the chart of your choice `SparklineChart`, `AreaSparklineChart`, `BarSparklineChart` or `SonarChart` and
@@ -71,6 +56,20 @@ const MyChart = () => (
   }]}/>
 );
 ```
+
+## Examples
+
+### Line
+<ToggleCanvas of={SparklineStory.Line} storybook="charts-sparkline--line" />
+
+### Area
+<ToggleCanvas of={SparklineStory.Area} storybook="charts-sparkline--area" />
+
+### Bar
+<ToggleCanvas of={SparklineStory.Bar} storybook="charts-sparkline--bar" />
+
+### Sonar
+<ToggleCanvas of={SparklineStory.Sonar} storybook="charts-sparkline--sonar" />
 
 ## API
 ### [Sparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/SparklineChart/SparklineChart.tsx)
