@@ -1,0 +1,51 @@
+import { Tabs, Tab, TabList, TabPanel } from 'reablocks'
+import { Canvas, Meta } from '@storybook/blocks';
+import { BlockCanvas } from '@/components/ui/block-canvas'
+
+import * as XsDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkXSmall.story';
+
+import * as SmDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkSmall.story';
+
+import * as MdDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkMedium.story';
+
+import * as LgLightStories from '../../../stories/blocks/FunnelChartBlocksLightLarge.story';
+import * as LgDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkLarge.story';
+
+# Funnel Chart
+
+## Simple
+
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={XsDarkStories.Simple}
+      darkMeta={XsDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={SmDarkStories.Simple}
+      darkMeta={SmDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={MdDarkStories.Simple}
+      darkMeta={MdDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={LgLightStories.Simple}
+      darkStory={MdDarkStories.Simple}
+      lightMeta={LgLightStories}
+      darkMeta={LgDarkStories}
+    />
+  </TabPanel>
+</Tabs>

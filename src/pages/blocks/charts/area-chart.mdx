@@ -2,21 +2,22 @@ import { Tabs, Tab, TabList, TabPanel } from 'reablocks'
 import { Canvas, Meta } from '@storybook/blocks';
 import { BlockCanvas } from '@/components/ui/block-canvas'
 
-import * as XsLightStories from '../../stories/blocks/BarChartBlocksLightXSmall.story';
-import * as XsDarkStories from '../../stories/blocks/BarChartBlocksDarkXSmall.story';
+import * as XsLightStories from '../../../stories/blocks/AreaChartBlocksLightXSmall.story';
+import * as XsDarkStories from '../../../stories/blocks/AreaChartBlocksDarkXSmall.story';
 
-import * as SmLightStories from '../../stories/blocks/BarChartBlocksLightSmall.story';
-import * as SmDarkStories from '../../stories/blocks/BarChartBlocksDarkSmall.story';
+import * as SmLightStories from '../../../stories/blocks/AreaChartBlocksLightSmall.story';
+import * as SmDarkStories from '../../../stories/blocks/AreaChartBlocksDarkSmall.story';
 
-import * as MdLightStories from '../../stories/blocks/BarChartBlocksLightMedium.story';
-import * as MdDarkStories from '../../stories/blocks/BarChartBlocksDarkMedium.story';
+import * as MdLightStories from '../../../stories/blocks/AreaChartBlocksLightMedium.story';
+import * as MdDarkStories from '../../../stories/blocks/AreaChartBlocksDarkMedium.story';
 
-import * as LgLightStories from '../../stories/blocks/BarChartBlocksLightLarge.story';
-import * as LgDarkStories from '../../stories/blocks/BarChartBlocksDarkLarge.story';
+import * as LgLightStories from '../../../stories/blocks/AreaChartBlocksLightLarge.story';
+import * as LgDarkStories from '../../../stories/blocks/AreaChartBlocksDarkLarge.story';
 
-# Bar Chart
+# Area Chart
 
 ## Simple
+
 <Tabs className="mt-4" size="small">
   <TabList>
     <Tab>XSmall</Tab>
@@ -58,49 +59,8 @@ import * as LgDarkStories from '../../stories/blocks/BarChartBlocksDarkLarge.sto
   </TabPanel>
 </Tabs>
 
-## Horizontal Simple
-<Tabs className="mt-4" size="small">
-  <TabList>
-    <Tab>XSmall</Tab>
-    <Tab>Small</Tab>
-    <Tab>Medium</Tab>
-    <Tab>Large</Tab>
-  </TabList>
-  <TabPanel>
-    <BlockCanvas
-      lightStory={XsLightStories.HorizontalSimple}
-      darkStory={XsDarkStories.HorizontalSimple}
-      lightMeta={XsLightStories}
-      darkMeta={XsDarkStories}
-    />
-  </TabPanel>
-  <TabPanel>
-    <BlockCanvas
-      lightStory={SmLightStories.HorizontalSimple}
-      darkStory={SmDarkStories.HorizontalSimple}
-      lightMeta={SmLightStories}
-      darkMeta={SmDarkStories}
-    />
-  </TabPanel>
-  <TabPanel>
-    <BlockCanvas
-      lightStory={MdLightStories.HorizontalSimple}
-      darkStory={MdDarkStories.HorizontalSimple}
-      lightMeta={MdLightStories}
-      darkMeta={MdDarkStories}
-    />
-  </TabPanel>
-  <TabPanel>
-    <BlockCanvas
-      lightStory={LgLightStories.HorizontalSimple}
-      darkStory={MdDarkStories.HorizontalSimple}
-      lightMeta={LgLightStories}
-      darkMeta={LgDarkStories}
-    />
-  </TabPanel>
-</Tabs>
-
 ## Multi Series
+
 <Tabs className="mt-4" size="small">
   <TabList>
     <Tab>XSmall</Tab>
@@ -110,32 +70,32 @@ import * as LgDarkStories from '../../stories/blocks/BarChartBlocksDarkLarge.sto
   </TabList>
   <TabPanel>
     <BlockCanvas
-      lightStory={XsLightStories.SimpleMulti}
-      darkStory={XsDarkStories.SimpleMulti}
+      lightStory={XsLightStories.MultiSeriesInterpolationSmooth}
+      darkStory={XsDarkStories.MultiSeriesInterpolationSmooth}
       lightMeta={XsLightStories}
       darkMeta={XsDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
-      lightStory={SmLightStories.SimpleMulti}
-      darkStory={SmDarkStories.SimpleMulti}
+      lightStory={SmLightStories.MultiSeriesInterpolationSmooth}
+      darkStory={SmDarkStories.MultiSeriesInterpolationSmooth}
       lightMeta={SmLightStories}
       darkMeta={SmDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
-      lightStory={MdLightStories.SimpleMulti}
-      darkStory={MdDarkStories.SimpleMulti}
+      lightStory={MdLightStories.MultiSeriesInterpolationSmooth}
+      darkStory={MdDarkStories.MultiSeriesInterpolationSmooth}
       lightMeta={MdLightStories}
       darkMeta={MdDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
-      lightStory={LgLightStories.SimpleMulti}
-      darkStory={MdDarkStories.SimpleMulti}
+      lightStory={LgLightStories.MultiSeriesInterpolationSmooth}
+      darkStory={MdDarkStories.MultiSeriesInterpolationSmooth}
       lightMeta={LgLightStories}
       darkMeta={LgDarkStories}
     />
@@ -143,6 +103,7 @@ import * as LgDarkStories from '../../stories/blocks/BarChartBlocksDarkLarge.sto
 </Tabs>
 
 ## Stacked
+
 <Tabs className="mt-4" size="small">
   <TabList>
     <Tab>XSmall</Tab>
@@ -184,7 +145,9 @@ import * as LgDarkStories from '../../stories/blocks/BarChartBlocksDarkLarge.sto
   </TabPanel>
 </Tabs>
 
-## Stacked Diverging
+
+## Stacked Normalized
+
 <Tabs className="mt-4" size="small">
   <TabList>
     <Tab>XSmall</Tab>
@@ -194,35 +157,34 @@ import * as LgDarkStories from '../../stories/blocks/BarChartBlocksDarkLarge.sto
   </TabList>
   <TabPanel>
     <BlockCanvas
-      lightStory={XsLightStories.StackedDiverging}
-      darkStory={XsDarkStories.StackedDiverging}
+      lightStory={XsLightStories.StackedNormalized}
+      darkStory={XsDarkStories.StackedNormalized}
       lightMeta={XsLightStories}
       darkMeta={XsDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
-      lightStory={SmLightStories.StackedDiverging}
-      darkStory={SmDarkStories.StackedDiverging}
+      lightStory={SmLightStories.StackedNormalized}
+      darkStory={SmDarkStories.StackedNormalized}
       lightMeta={SmLightStories}
       darkMeta={SmDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
-      lightStory={MdLightStories.StackedDiverging}
-      darkStory={MdDarkStories.StackedDiverging}
+      lightStory={MdLightStories.StackedNormalized}
+      darkStory={MdDarkStories.StackedNormalized}
       lightMeta={MdLightStories}
       darkMeta={MdDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
-      lightStory={LgLightStories.StackedDiverging}
-      darkStory={MdDarkStories.StackedDiverging}
+      lightStory={LgLightStories.StackedNormalized}
+      darkStory={MdDarkStories.StackedNormalized}
       lightMeta={LgLightStories}
       darkMeta={LgDarkStories}
     />
   </TabPanel>
 </Tabs>
-

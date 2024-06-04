@@ -19,8 +19,8 @@ export const BlockCanvas: FC<BlockCanvasProps> = ({
   ...props
 }) => {
   const { setTheme, ...rest } = useTheme();
-  const story = rest.theme === 'dark' ? darkStory : lightStory;
-  const meta = rest.theme === 'dark' ? darkMeta : lightMeta;
+  let story = rest.theme === 'light' ? lightStory : darkStory;
+  let meta = rest.theme === 'light' ? lightMeta : darkMeta;
 
   return (
     <>
@@ -29,13 +29,15 @@ export const BlockCanvas: FC<BlockCanvasProps> = ({
         of={story}
         {...props}
         additionalActions={[
-          {
-            title: 'Toggle Theme',
-            onClick: () => {
-              setTheme(rest.theme === 'dark' ? 'light' : 'dark');
-              rest.theme = rest.theme === 'dark' ? 'light' : 'dark';
+          ...((lightMeta && darkMeta) ? [
+            {
+              title: 'Toggle Theme',
+              onClick: () => {
+                setTheme(rest.theme === 'dark' ? 'light' : 'dark');
+                rest.theme = rest.theme === 'dark' ? 'light' : 'dark';
+              }
             }
-          },
+          ] : []),
           ...(
             storybook ? [{
               title: 'View Storybook',
