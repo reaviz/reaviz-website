@@ -17,7 +17,6 @@ import * as LgDarkStories from '../../../stories/blocks/HeatmapBlocksDarkLarge.s
 # Heatmap
 
 ## Simple
-
 <Tabs className="mt-4" size="small">
   <TabList>
     <Tab>XSmall</Tab>
@@ -59,3 +58,86 @@ import * as LgDarkStories from '../../../stories/blocks/HeatmapBlocksDarkLarge.s
   </TabPanel>
 </Tabs>
 
+## Circles
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={XsLightStories.SimpleCircle}
+      darkStory={XsDarkStories.SimpleCircle}
+      lightMeta={XsLightStories}
+      darkMeta={XsDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={SmLightStories.SimpleCircle}
+      darkStory={SmDarkStories.SimpleCircle}
+      lightMeta={SmLightStories}
+      darkMeta={SmDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={MdLightStories.SimpleCircle}
+      darkStory={MdDarkStories.SimpleCircle}
+      lightMeta={MdLightStories}
+      darkMeta={MdDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={LgLightStories.SimpleCircle}
+      darkStory={MdDarkStories.SimpleCircle}
+      lightMeta={LgLightStories}
+      darkMeta={LgDarkStories}
+    />
+  </TabPanel>
+</Tabs>
+
+## Hexagons
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={XsLightStories.SimpleHex}
+      darkStory={XsDarkStories.SimpleHex}
+      lightMeta={XsLightStories}
+      darkMeta={XsDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={SmLightStories.SimpleHex}
+      darkStory={SmDarkStories.SimpleHex}
+      lightMeta={SmLightStories}
+      darkMeta={SmDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={MdLightStories.SimpleHex}
+      darkStory={MdDarkStories.SimpleHex}
+      lightMeta={MdLightStories}
+      darkMeta={MdDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={LgLightStories.SimpleHex}
+      darkStory={MdDarkStories.SimpleHex}
+      lightMeta={LgLightStories}
+      darkMeta={LgDarkStories}
+    />
+  </TabPanel>
+</Tabs>
