@@ -10,8 +10,8 @@
 
 html.light {
   --background: #ffffff;
-  --tooltip-background: #F7F7FA;
-  --tooltip-color: #3D3D4D;
+  --tooltip-background: #f7f7fa;
+  --tooltip-color: #3d3d4d;
   --foreground-rgb: 0, 0, 0;
 }
 
@@ -21,7 +21,6 @@ html.dark {
   --tooltip-color: #fff;
   --foreground-rgb: 255, 255, 255;
 }
-
 
 body {
   color: rgb(var(--foreground-rgb)) !important;
@@ -102,7 +101,7 @@ body {
 }
 
 .nextra-cards > a {
-  @apply dark:hover:bg-gray-700/20 hover:bg-gray-100;
+  @apply hover:bg-gray-100 dark:hover:bg-gray-700/20;
 }
 
 .rb-code {
@@ -136,4 +135,8 @@ pre.highlighter code {
 input {
   --tw-ring-opacity: 0 !important;
   --tw-ring-offset-shadow: none !important;
+}
+
+svg {
+  overflow: visible;
 }
