@@ -1,2 +1,20 @@
+import { PropsTable } from '@/components/ui/props-table';
+import * as Stories from '../../../stories/components/ZoomPan.story.tsx';
+import { Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+
 # Zoom Pan
-TODO
+The zoom pan component allows you to zoom in and pan on various
+charts. This is useful for when you have a large dataset and want to
+allow users to zoom in on a specific area.
+
+## Examples
+<Meta of={Stories} />
+<ToggleCanvas of={Stories.Line} storybook="utils-zoom-pan--line" />
+
+## API
+#### [ChartZoomPan](https://github.com/reaviz/reaviz/blob/master/src/common/ZoomPan/ChartZoomPan.tsx)
+<PropsTable name="ChartZoomPan" />
+
+#### [ZoomPan](https://github.com/reaviz/reaviz/blob/master/src/common/ZoomPan/ZoomPan.tsx)
+<PropsTable name="ZoomPan" />
