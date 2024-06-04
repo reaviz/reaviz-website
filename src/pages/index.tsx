@@ -17,9 +17,9 @@ import { cn } from "@/utils/cn";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Reablocks - Open Source ReactJS Component Library",
+  title: "reaviz - Data visualization library for React",
   description:
-    "50+ Components for ReactJS based on Tailwind CSS and Framer Motion",
+    "22+ Data Visualization Components for ReactJS",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -45,11 +45,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Reablocks - Open Source ReactJS Component Library</title>
+        <title>reaviz - Data visualization library for React</title>
         <meta
           name="description"
           content={
-            "50+ Components for ReactJS based on Tailwind CSS and Framer Motion"
+            "22+ Data Visualization Components for ReactJS"
           }
         />
         <link rel="icon" href="/favicon.ico" />
