@@ -1,7 +1,16 @@
 import { PropsTable } from '@/components/ui/props-table';
+import { Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import * as Stories from '../../../stories/components/Brush.story.tsx';
 
 # Brush
+Brushing is the interactive specification a one- or two-dimensional selected 
+region using a pointing gesture, such as by clicking and dragging the mouse. 
+Brushing is often used to select discrete elements, such as dots in a scatterplot.
 
+## Examples
+<Meta of={Stories} />
+<ToggleCanvas of={Stories.Line} storybook="utils-brush--line" />
 
 ## API
 
