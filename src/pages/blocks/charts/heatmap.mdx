@@ -1,0 +1,61 @@
+import { Tabs, Tab, TabList, TabPanel } from 'reablocks'
+import { Canvas, Meta } from '@storybook/blocks';
+import { BlockCanvas } from '@/components/ui/block-canvas'
+
+import * as XsLightStories from '../../../stories/blocks/HeatmapBlocksLightXSmall.story';
+import * as XsDarkStories from '../../../stories/blocks/HeatmapBlocksDarkXSmall.story';
+
+import * as SmLightStories from '../../../stories/blocks/HeatmapBlocksLightSmall.story';
+import * as SmDarkStories from '../../../stories/blocks/HeatmapBlocksDarkSmall.story';
+
+import * as MdLightStories from '../../../stories/blocks/HeatmapBlocksLightMedium.story';
+import * as MdDarkStories from '../../../stories/blocks/HeatmapBlocksDarkMedium.story';
+
+import * as LgLightStories from '../../../stories/blocks/HeatmapBlocksLightLarge.story';
+import * as LgDarkStories from '../../../stories/blocks/HeatmapBlocksDarkLarge.story';
+
+# Heatmap
+
+## Simple
+
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={XsLightStories.Simple}
+      darkStory={XsDarkStories.Simple}
+      lightMeta={XsLightStories}
+      darkMeta={XsDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={SmLightStories.Simple}
+      darkStory={SmDarkStories.Simple}
+      lightMeta={SmLightStories}
+      darkMeta={SmDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={MdLightStories.Simple}
+      darkStory={MdDarkStories.Simple}
+      lightMeta={MdLightStories}
+      darkMeta={MdDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={LgLightStories.Simple}
+      darkStory={MdDarkStories.Simple}
+      lightMeta={LgLightStories}
+      darkMeta={LgDarkStories}
+    />
+  </TabPanel>
+</Tabs>
+
