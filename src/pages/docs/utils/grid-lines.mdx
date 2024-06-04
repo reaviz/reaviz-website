@@ -1,6 +1,15 @@
 import { PropsTable } from '@/components/ui/props-table';
+import * as Stories from '../../../stories/components/AreaChartGridLines.story.tsx';
+import { Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 
 # Gridlines
+The gridline component provides a visual representation of the value marks in a chart. You
+can customize the grid lines to render only x, y, or both.
+
+## Examples
+<Meta of={Stories} />
+<ToggleCanvas of={Stories.YAxis} storybook="charts-area-chart-gridlines--y-axis" />
 
 ## API
 
