@@ -17,7 +17,8 @@
   "radial-scatter-plot": "Radial Scatter Plot",
   "sankey-plot": "Sankey Plot",
   "scatter-plot": "Scatter Plot",
-  "spark-line": "Spark Line",
+  "sunburst-chart": "Sunburst Chart 🆕",
+  "spark-line": "Sparkline",
   "tree-map": "Tree Map",
   "venn-diagram": "Venn Diagram"
 }
