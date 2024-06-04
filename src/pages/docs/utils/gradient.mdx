@@ -1,0 +1,28 @@
+import { PropsTable } from '@/components/ui/props-table';
+import * as LinearGradientStories from '../../../stories/components/LinearGradient.story.tsx';
+import * as RadialGradientStories from '../../../stories/components/RadialGradient.story.tsx';
+import { Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+
+# Gradient
+Add gradient style to various charts. There are 2 types of gradients: linear and radial.
+
+## Examples
+### Linear Gradient
+<Meta of={LinearGradientStories} />
+<ToggleCanvas of={LinearGradientStories.Simple} storybook="utils-gradient-linear--simple" />
+
+### Radial Gradient
+<Meta of={RadialGradientStories} />
+<ToggleCanvas of={RadialGradientStories.Simple} storybook="utils-gradient-radial--simple" />
+
+## API
+
+#### [Gradient](https://github.com/reaviz/reaviz/blob/master/src/common/Gradient/Gradient.tsx)
+<PropsTable name="Gradient" />
+
+#### [GradientStop](https://github.com/reaviz/reaviz/blob/master/src/common/Gradient/GradientStop.tsx)
+<PropsTable name="GradientStop" />
+
+#### [RadialGradient](https://github.com/reaviz/reaviz/blob/master/src/common/Gradient/RadialGradient.tsx)
+<PropsTable name="RadialGradient" />
