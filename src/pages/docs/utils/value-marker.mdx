@@ -1,0 +1,24 @@
+import { PropsTable } from '@/components/ui/props-table';
+import * as Stories from '../../../stories/components/AreaChartMarkers.story.tsx';
+import { Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+
+
+# Value Marker
+Mark a specific value on a chart with a line. Supported on linear and radial charts.
+
+## Examples
+### Linear Marker
+<Meta of={Stories} />
+<ToggleCanvas of={Stories.LinearValueMarkers} storybook="charts-area-chart-markers--linear-value-markers" />
+
+### Radial Marker
+<ToggleCanvas of={Stories.RadialValueMarkers} storybook="charts-area-chart-markers--radial-value-markers" />
+
+## API
+
+#### [LinearValueMarker](https://github.com/reaviz/reaviz/blob/master/src/common/ValueMarker/LinearValueMarker.tsx)
+<PropsTable name="LinearValueMarker" />
+
+#### [RadialValueMarker](https://github.com/reaviz/reaviz/blob/master/src/common/ValueMarker/RadialValueMarker.tsx)
+<PropsTable name="RadialValueMarker" />
