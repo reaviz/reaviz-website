@@ -42,7 +42,7 @@ export const BlockCanvas: FC<BlockCanvasProps> = ({
             storybook ? [{
               title: 'View Storybook',
               onClick: () => {
-                window.open(`https://reaviz.io/?path=/story/${storybook}`, '_blank');
+                window.open(`https://storybook.reaviz.io/?path=/story/${storybook}`, '_blank');
               }
             }] : []
           )

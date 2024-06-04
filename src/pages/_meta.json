@@ -22,7 +22,7 @@
   "storybook": {
     "title": "Storybook",
     "type": "page",
-    "href": "https://reaviz.io",
+    "href": "https://storybook.reaviz.io",
     "newWindow": true
   },
   "support": {

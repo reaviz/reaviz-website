@@ -1,8 +1,30 @@
 import { PropsTable } from '@/components/ui/props-table';
+import * as Stories from '../../../stories/components/Count.story.tsx';
+import { Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 
 # Count
 
 Count from one number to another.
+
+## Quick Start
+To use the Count component, use import the `Count` and give it a number `to`. Optionally
+you can give the `from` number to start from.
+
+```jsx
+import { Count } from 'reaviz';
+ 
+const MyChart = () => (
+  <Count
+    from={0}
+    to={50}
+  />
+);
+```
+
+## Examples
+<Meta of={Stories} />
+<ToggleCanvas of={Stories.Simple} storybook="utils-count--simple" />
 
 ## API
 
