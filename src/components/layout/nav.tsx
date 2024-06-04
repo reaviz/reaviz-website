@@ -15,7 +15,7 @@ const navLinks = [
   },
   {
     label: "Storybook",
-    href: "https://storybook.reaviz.io",
+    href: "https://storybook.reaviz.dev",
   },
   {
     label: "GitHub",

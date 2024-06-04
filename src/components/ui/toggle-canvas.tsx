@@ -25,7 +25,7 @@ export const ToggleCanvas: FC<ToggleCanvasProps> = ({ storybook, ...props }) => 
           storybook ? [{
             title: 'View Storybook',
             onClick: () => {
-              window.open(`https://reaviz.io/?path=/story/${storybook}`, '_blank');
+              window.open(`https://reaviz.dev/?path=/story/${storybook}`, '_blank');
             }
           }] : []
         )

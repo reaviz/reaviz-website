@@ -7,7 +7,7 @@ import Link from "next/link";
 const config: DocsThemeConfig = {
   head: (
     <>
-      <meta property="og:image" content="https://reaviz.io/preview.png" />
+      <meta property="og:image" content="https://reaviz.dev/preview.png" />
       <meta
         property="og:title"
         content="reaviz - Open Source ReactJS Data Visualizations Library"
