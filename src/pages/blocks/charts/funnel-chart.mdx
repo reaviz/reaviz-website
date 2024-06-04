@@ -14,7 +14,6 @@ import * as LgDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkLar
 # Funnel Chart
 
 ## Simple
-
 <Tabs className="mt-4" size="small">
   <TabList>
     <Tab>XSmall</Tab>
@@ -44,6 +43,78 @@ import * as LgDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkLar
     <BlockCanvas
       lightStory={LgLightStories.Simple}
       darkStory={MdDarkStories.Simple}
+      lightMeta={LgLightStories}
+      darkMeta={LgDarkStories}
+    />
+  </TabPanel>
+</Tabs>
+
+## Layered
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={XsDarkStories.Layered}
+      darkMeta={XsDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={SmDarkStories.Layered}
+      darkMeta={SmDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={MdDarkStories.Layered}
+      darkMeta={MdDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={LgLightStories.Layered}
+      darkStory={MdDarkStories.Layered}
+      lightMeta={LgLightStories}
+      darkMeta={LgDarkStories}
+    />
+  </TabPanel>
+</Tabs>
+
+## Interpolation
+<Tabs className="mt-4" size="small">
+  <TabList>
+    <Tab>XSmall</Tab>
+    <Tab>Small</Tab>
+    <Tab>Medium</Tab>
+    <Tab>Large</Tab>
+  </TabList>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={XsDarkStories.Interpolation}
+      darkMeta={XsDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={SmDarkStories.Interpolation}
+      darkMeta={SmDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      darkStory={MdDarkStories.Interpolation}
+      darkMeta={MdDarkStories}
+    />
+  </TabPanel>
+  <TabPanel>
+    <BlockCanvas
+      lightStory={LgLightStories.Interpolation}
+      darkStory={MdDarkStories.Interpolation}
       lightMeta={LgLightStories}
       darkMeta={LgDarkStories}
     />
