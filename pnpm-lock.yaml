@@ -54,8 +54,8 @@ importers:
         specifier: ^15.5.0
         version: 15.5.0(react@18.2.0)
       reaviz:
-        specifier: ^15.17.0
-        version: 15.17.0(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^15.17.1
+        version: 15.17.1(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       reaviz-data-utils:
         specifier: ^1.0.0
         version: 1.0.0(react@18.2.0)
@@ -6742,8 +6742,8 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  reaviz@15.17.0:
-    resolution: {integrity: sha512-SaiSmt2V2YN4GoFSlnExCe3KErIhXYWYkZZ8De3tfFVgqpqPjK40V2zvhnl77NAfoGRsqOnVlisKbGXkqxpYdQ==}
+  reaviz@15.17.1:
+    resolution: {integrity: sha512-I/WdkS/JF10F8iEsuT3ek8+4h3No+g4g19dKFIBdkmtfv7KhOiUbE48oyUPO9/5o5j+1pu0rHvWHays4NtloBw==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -16560,7 +16560,7 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.18.0
 
-  reaviz@15.17.0(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  reaviz@15.17.1(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@upsetjs/venn.js': 1.4.2
       big-integer: 1.6.52

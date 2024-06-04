@@ -2,10 +2,13 @@ import { Tabs, Tab, TabList, TabPanel } from 'reablocks'
 import { Canvas, Meta } from '@storybook/blocks';
 import { BlockCanvas } from '@/components/ui/block-canvas'
 
+import * as XsLightStories from '../../../stories/blocks/FunnelChartBlocksLightXSmall.story';
 import * as XsDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkXSmall.story';
 
+import * as SmLightStories from '../../../stories/blocks/FunnelChartBlocksLightSmall.story';
 import * as SmDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkSmall.story';
 
+import * as MdLightStories from '../../../stories/blocks/FunnelChartBlocksLightMedium.story';
 import * as MdDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkMedium.story';
 
 import * as LgLightStories from '../../../stories/blocks/FunnelChartBlocksLightLarge.story';
@@ -23,19 +26,25 @@ import * as LgDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkLar
   </TabList>
   <TabPanel>
     <BlockCanvas
+      lightStory={XsLightStories.Simple}
       darkStory={XsDarkStories.Simple}
+      lightMeta={XsLightStories}
       darkMeta={XsDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
+      lightStory={SmLightStories.Simple}
       darkStory={SmDarkStories.Simple}
+      lightMeta={SmLightStories}
       darkMeta={SmDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
+      lightStory={MdLightStories.Simple}
       darkStory={MdDarkStories.Simple}
+      lightMeta={MdLightStories}
       darkMeta={MdDarkStories}
     />
   </TabPanel>
@@ -59,26 +68,32 @@ import * as LgDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkLar
   </TabList>
   <TabPanel>
     <BlockCanvas
+      lightStory={XsLightStories.Layered}
       darkStory={XsDarkStories.Layered}
+      lightMeta={XsLightStories}
       darkMeta={XsDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
+      lightStory={SmLightStories.Layered}
       darkStory={SmDarkStories.Layered}
+      lightMeta={SmLightStories}
       darkMeta={SmDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
+      lightStory={MdLightStories.Layered}
       darkStory={MdDarkStories.Layered}
+      lightMeta={MdLightStories}
       darkMeta={MdDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
       lightStory={LgLightStories.Layered}
-      darkStory={MdDarkStories.Layered}
+      darkStory={LgDarkStories.Layered}
       lightMeta={LgLightStories}
       darkMeta={LgDarkStories}
     />
@@ -95,19 +110,25 @@ import * as LgDarkStories from '../../../stories/blocks/FunnelChartBlocksDarkLar
   </TabList>
   <TabPanel>
     <BlockCanvas
+      lightStory={XsLightStories.Interpolation}
       darkStory={XsDarkStories.Interpolation}
+      lightMeta={XsLightStories}
       darkMeta={XsDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
+      lightStory={SmLightStories.Interpolation}
       darkStory={SmDarkStories.Interpolation}
+      lightMeta={SmLightStories}
       darkMeta={SmDarkStories}
     />
   </TabPanel>
   <TabPanel>
     <BlockCanvas
+      lightStory={MdLightStories.Interpolation}
       darkStory={MdDarkStories.Interpolation}
+      lightMeta={MdLightStories}
       darkMeta={MdDarkStories}
     />
   </TabPanel>
