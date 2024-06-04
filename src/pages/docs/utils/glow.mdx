@@ -1,7 +1,17 @@
+import { PropsTable } from '@/components/ui/props-table';
+import * as Stories from '../../../stories/components/Glow.story.tsx';
+import { Meta } from '@storybook/blocks';
+import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+
 # Glow
 
-Add a glow to various charts. This is passed as a prop at the level of the component rendered within the series.
-For example, if you want to add a glow to a bar chart, you would add the glow prop to the `Bar` component.
+Add a glow to various charts. This is passed as a prop at the level of the component rendered 
+within the series. For example, if you want to add a glow to a bar chart, you 
+would add the glow prop to the `Bar` component.
+
+## Examples
+<Meta of={Stories} />
+<ToggleCanvas of={Stories.BarGlow} storybook="utils-glow--bar-glow" />
 
 ## API
 
