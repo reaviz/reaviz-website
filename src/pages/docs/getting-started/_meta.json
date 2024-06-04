@@ -2,5 +2,7 @@
   "setup": "Setup",
   "why": "Why",
   "developing": "Developing",
-  "data": "Data Shapes"
+  "data": "Data Shapes",
+  "colors": "Colors",
+  "custom-charts": "Custom Charts"
 }
