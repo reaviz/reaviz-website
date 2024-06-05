@@ -1,15 +1,4 @@
 {
-  "index": {
-    "display": "hidden",
-    "theme": {
-      "layout": "raw",
-      "pagination": false,
-      "footer": false,
-      "navbar": false,
-      "toc": false,
-      "breadcrumb": false
-    }
-  },
   "docs": {
     "title": "Docs",
     "type": "page"
