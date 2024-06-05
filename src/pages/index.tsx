@@ -58,7 +58,7 @@ export default function Home() {
       <main
         className={`flex min-h-screen w-full flex-col items-center overflow-y-hidden bg-gradient-to-b from-[#11111F] from-50% via-[#11111F] to-[#121212] ${inter.className} antiasliased overflow-x-hidden text-white`}
       >
-        <div className="absolute top-0 h-screen w-full bg-gradient-to-b from-[#00000020] to-transparent" />
+        <div className="absolute pointer-events-none top-0 h-screen w-full bg-gradient-to-b from-[#00000020] to-transparent" />
         <header
           className={cn(
             `fixed top-0 z-50 flex w-full justify-center border-b border-[#9091A0] border-opacity-15 bg-[#11111F] transition-[backdrop-filter] md:bg-transparent`,
