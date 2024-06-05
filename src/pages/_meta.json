@@ -3,7 +3,6 @@
     "display": "hidden",
     "theme": {
       "layout": "raw",
-      "sidebar": false,
       "pagination": false,
       "footer": false,
       "navbar": false,
