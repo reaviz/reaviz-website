@@ -37,6 +37,26 @@ Types supported by reaviz:
 - [Waterfall](/docs/charts/bar-chart#waterfall)
 - [Histograms](/docs/charts/bar-chart#histograms)
 
+## Quick Start
+To create a Bar chart, use import the `BarChart` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+```jsx
+import { BarChart } from 'reaviz';
+
+const MyChart = () => (
+  <BarChart
+    height={300}
+    width={300}
+    data={[
+      { key: 'DLP', data: 13 },
+      { key: 'SIEM', data: 2 },
+      { key: 'Endpoint', data: 7 }
+    ]}
+  />
+);
+```
+
 ## Examples
 
 ### Single Series Vertical
@@ -75,26 +95,6 @@ Types supported by reaviz:
 
 ### Histograms
 <ToggleCanvas of={BarChartVerticalHistogram.Dates} storybook="charts-bar-chart-vertical-histogram--dates" />
-
-## Quick Start
-To create a Bar chart, use import the `BarChart` and give it `data`. The chart
-will automatically configure itself with the default options exposed via `props`.
-
-```jsx
-import { BarChart } from 'reaviz';
-
-const MyChart = () => (
-  <BarChart
-    height={300}
-    width={300}
-    data={[
-      { key: 'DLP', data: 13 },
-      { key: 'SIEM', data: 2 },
-      { key: 'Endpoint', data: 7 }
-    ]}
-  />
-);
-```
 
 ## API
 ### [BarChart](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarChart.tsx)

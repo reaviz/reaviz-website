@@ -14,10 +14,6 @@ the energy accounts or material flow accounts on a community level. Sankey diagr
 visual emphasis on the major transfers or flows within a system. They are helpful in
 locating dominant contributions to an overall flow.
 
-## Examples
-
-<ToggleCanvas of={SankeyStory.Simple} storybook="charts-sankey-plot--simple" />
-
 ## Quick Start
 To create Sankey Chart, import the Sankey, SankeyNode and SankeyLink and then define the nodes and then links.
 The chart will automatically configure itself with the default options exposed via props.
@@ -57,6 +53,9 @@ For the `nodes`, you can pass the node's name through `title` property of Sankey
 For the edges, SankeyLink's `source`, `target`, and `value`
 properties are all required. For `source` and `target`, you can use
 the index of the nodes' array or the node's `id` if it's assigned.
+
+## Examples
+<ToggleCanvas of={SankeyStory.Simple} storybook="charts-sankey-plot--simple" />
 
 ## API
 ### [Sankey](https://github.com/reaviz/reaviz/blob/master/src/Sankey/Sankey.tsx)

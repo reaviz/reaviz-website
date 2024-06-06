@@ -16,14 +16,6 @@ REAVIZ supports:
 - [Single-series gauges](/docs/charts/linear-gauge#single-series-gauges)
 - [Multi-series gauges](/docs/charts/linear-gauge#multi-series-gauges)
 
-## Examples
-
-### Single-series gauges
-<ToggleCanvas of={LinearGaugeSingleSeriesStory.Simple} storybook="charts-gauge-linear-single-series--simple" />
-
-### Multi-series gauges
-<ToggleCanvas of={LinearGaugeMultiSeriesStory._Simple} storybook="charts-gauge-linear-multi-series--simple" />
-
 ## Quick Start
 To create a Linear Gauge, use import the `LinearGauge` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
@@ -42,6 +34,14 @@ const MyChart = () => (
 
 In this example, we only pass one data object, however, we can pass multiples and it will
 distribute the values across them.
+
+## Examples
+
+### Single-series gauges
+<ToggleCanvas of={LinearGaugeSingleSeriesStory.Simple} storybook="charts-gauge-linear-single-series--simple" />
+
+### Multi-series gauges
+<ToggleCanvas of={LinearGaugeMultiSeriesStory._Simple} storybook="charts-gauge-linear-multi-series--simple" />
 
 ## API
 ### [LinearGauge](https://github.com/reaviz/reaviz/blob/master/src/LinearGauge/LinearGauge.tsx)

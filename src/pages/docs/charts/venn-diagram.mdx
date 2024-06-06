@@ -15,16 +15,6 @@ The chart supports 3 layout types:
 - [Euler](/docs/charts/venn-diagram#euler)
 - [Star Euler](/docs/charts/venn-diagram#star-euler)
 
-## Examples
-### Venn
-<ToggleCanvas of={VennDiagramStory.Simple} storybook="charts-venn-diagram--simple" />
-
-### Euler
-<ToggleCanvas of={VennDiagramStory.Euler} storybook="charts-venn-diagram--euler" />
-
-### Star Euler
-<ToggleCanvas of={VennDiagramStory.StarEuler} storybook="charts-venn-diagram--star-euler" />
-
 ## Quick Start
 To create a venn diagram, import the `VennDiagram` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
@@ -48,6 +38,16 @@ const MyChart = () => (
 One important aspect to realize here is the `key` property
 is a array of intersections. It can have one to N number
 of relationships.
+
+## Examples
+### Venn
+<ToggleCanvas of={VennDiagramStory.Simple} storybook="charts-venn-diagram--simple" />
+
+### Euler
+<ToggleCanvas of={VennDiagramStory.Euler} storybook="charts-venn-diagram--euler" />
+
+### Star Euler
+<ToggleCanvas of={VennDiagramStory.StarEuler} storybook="charts-venn-diagram--star-euler" />
 
 ## API
 ### [VennDiagram](https://github.com/reaviz/reaviz/blob/master/src/VennDiagram/VennDiagram.tsx)

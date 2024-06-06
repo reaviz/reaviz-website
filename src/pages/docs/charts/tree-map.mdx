@@ -12,10 +12,6 @@ Each branch of the tree is given a rectangle, which is then tiled with smaller r
 representing sub-branches. A leaf node’s rectangle has an area proportional to a specified
 dimension on the data and often colored to show a separate dimension of the data.
 
-## Examples
-
-<ToggleCanvas of={TreeMapStory.Simple} storybook="charts-treemap--simple" />
-
 ## Quick Start
 To create a treemap chart, use import the `TreeMap` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
@@ -36,6 +32,9 @@ const MyChart = () => (
   />
 );
 ```
+
+## Examples
+<ToggleCanvas of={TreeMapStory.Simple} storybook="charts-treemap--simple" />
 
 ## API
 ### [TreeMap](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMap.tsx)
