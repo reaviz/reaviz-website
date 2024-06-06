@@ -3,15 +3,9 @@ import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
 import * as BarListStory from '../../../stories/components/BarList.story.tsx';
 
-<Meta of={BarListStory} />
-
 # Bar List
 
 Horizontal bars with a label.
-
-## Examples
-
-<ToggleCanvas of={BarListStory.Simple} storybook="charts-bar-list--simple" />
 
 ## Quick Start
 To create a Bar List, use import the `BarList` and give it `data`. The chart
@@ -30,6 +24,10 @@ const MyChart = () => (
   />
 );
 ```
+
+## Examples
+<Meta of={BarListStory} />
+<ToggleCanvas of={BarListStory.Simple} storybook="charts-bar-list--simple" />
 
 ## API
 ### [BarList](https://github.com/reaviz/reaviz/blob/master/src/BarList/BarList.tsx)
