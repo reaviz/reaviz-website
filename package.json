@@ -26,7 +26,7 @@
     "nextra": "2.13.4",
     "posthog-js": "^1.136.8",
     "reablocks": "^7.10.1",
-    "reablocks-docs-theme": "^1.0.1",
+    "reablocks-docs-theme": "^1.0.2",
     "react": "^18",
     "react-dom": "^18",
     "react-syntax-highlighter": "^15.5.0",

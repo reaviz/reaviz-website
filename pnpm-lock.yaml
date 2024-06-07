@@ -42,8 +42,8 @@ importers:
         specifier: ^7.10.1
         version: 7.10.1(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       reablocks-docs-theme:
-        specifier: ^1.0.1
-        version: 1.0.1(next@14.2.3(@babel/core@7.23.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^1.0.2
+        version: 1.0.2(next@14.2.3(@babel/core@7.23.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: ^18
         version: 18.2.0
@@ -6613,8 +6613,8 @@ packages:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
 
-  reablocks-docs-theme@1.0.1:
-    resolution: {integrity: sha512-lkl6Yek6/8loMsdCLjgrIi2D6+gydnW7WwSY7dR19Yi0zFExOJv6Rk2lW2usxeIZQwUA3xYGZMiFDlQusPnewA==}
+  reablocks-docs-theme@1.0.2:
+    resolution: {integrity: sha512-Yyupzn00nIpXsA5BAOwPLA6Z3hYwhEEOcXZfeJMwTlOYwlXN28lH2l83N7QacSH/EswPQw4sgsvoc9KOVdkZww==}
     peerDependencies:
       next: '>=9.5.3'
       react: '>=16.13.1'
@@ -16375,7 +16375,7 @@ snapshots:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
-  reablocks-docs-theme@1.0.1(next@14.2.3(@babel/core@7.23.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  reablocks-docs-theme@1.0.2(next@14.2.3(@babel/core@7.23.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@headlessui/react': 1.7.19(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@popperjs/core': 2.11.8
