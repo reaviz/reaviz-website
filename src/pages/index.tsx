@@ -249,7 +249,7 @@ export default function Home() {
                   width={235}
                   height={350}
                   objectFit="contain"
-                  className="shadow-card relative -bottom-20 left-0 z-10 max-w-[65%]"
+                  className="relative -bottom-20 left-0 z-10 max-w-[65%] shadow-card"
                 />
                 <Image
                   src="/barchart-block-small.png"
@@ -257,7 +257,7 @@ export default function Home() {
                   width={235}
                   height={350}
                   objectFit="contain"
-                  className="shadow-card relative -top-20 z-10 max-w-[65%]"
+                  className="relative -top-20 z-10 max-w-[65%] shadow-card"
                 />
                 <div className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#2310FF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[500px]" />
               </div>
@@ -273,7 +273,7 @@ export default function Home() {
                   width={375}
                   height={446}
                   objectFit="contain"
-                  className="shadow-card z-10 max-w-[90%]"
+                  className="z-10 max-w-[90%] shadow-card"
                 />
                 <div className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#105EFF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[700px]" />
               </div>
@@ -303,7 +303,43 @@ export default function Home() {
             </div>
           </section>
           <SignatureDivider className="w-full py-12 md:w-3/4" />
-          <footer className="container px-4 py-6 text-base text-content-secondary md:px-24">
+          <section className="container px-4 md:px-24">
+            <div className="flex flex-col gap-8 py-4 md:py-24">
+              <div className="flex flex-col">
+                <span className="font-semibold text-primary md:text-xl">
+                  Why Reaviz?
+                </span>
+                <span className="text-4xl font-semibold md:text-6xl">
+                  Minimize time spent on tasks
+                </span>
+              </div>
+              <div className="flex flex-col gap-x-4 gap-y-8 md:flex-row">
+                <div className="flex flex-1 flex-col gap-2 md:text-xl">
+                  <span className="font-semibold md:text-xl">
+                    Accelerate your workflow and delivery
+                  </span>
+                  <p className="text-pretty text-content-secondary">
+                    Creating and upkeeping a strong set of UI components demands
+                    significant time and effort, often in repetitive work. Using
+                    Reaviz components streamlines your process and cuts costs,
+                    helping you deliver a superior product more efficiently.
+                  </p>
+                </div>
+                <div className="flex flex-1 flex-col gap-2 md:text-xl">
+                  <span className="font-semibold md:text-xl">
+                    Zero In on Your Project
+                  </span>
+                  <p className="text-pretty text-content-secondary">
+                    Developing reliable UI components is no easy feat. Dealing
+                    with accessibility nuances and complex logic can impede
+                    product feature progress. Reaviz enables you to focus on
+                    your own engineering obstacles.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer className="container mt-12 px-4 py-6 text-base text-content-secondary md:mt-24 md:px-24">
             <div className="flex items-center justify-between gap-2">
               <Link href="#">
                 <Image
