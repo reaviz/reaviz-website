@@ -110,7 +110,7 @@ export default function Home() {
             </section>
           </HeroParallax>
           <section className="container px-4 md:px-24">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
               <Card>
                 <IconCard>
                   <WrenchIcon />
@@ -175,9 +175,9 @@ export default function Home() {
               </Card>
             </div>
           </section>
-          <SignatureDivider className="w-full py-6 md:w-3/4 md:py-12" />
+          <SignatureDivider className="w-full py-12 md:w-3/4" />
           <section className="container px-4 md:px-24">
-            <div className="flex flex-col items-center gap-4 py-24 md:flex-row">
+            <div className="flex flex-col items-center gap-12 py-4 md:flex-row md:gap-4 md:py-24">
               <div className="z-10 flex flex-1 flex-col gap-8">
                 <span className="text-4xl font-semibold md:text-6xl">
                   Real Code, Not Wrappers
@@ -249,7 +249,7 @@ export default function Home() {
                   width={235}
                   height={350}
                   objectFit="contain"
-                  className="shadow-card relative -bottom-20 left-0 z-10 max-w-[50%]"
+                  className="shadow-card relative -bottom-20 left-0 z-10 max-w-[65%]"
                 />
                 <Image
                   src="/barchart-block-small.png"
@@ -257,13 +257,52 @@ export default function Home() {
                   width={235}
                   height={350}
                   objectFit="contain"
-                  className="shadow-card relative -top-20 z-10 max-w-[50%]"
+                  className="shadow-card relative -top-20 z-10 max-w-[65%]"
                 />
-                <div className="max-w-3/4 absolute z-0 h-[600px] w-[500px] rounded-full bg-[#2310FF] bg-opacity-50 blur-3xl backdrop-blur-3xl" />
+                <div className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#2310FF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[500px]" />
               </div>
             </div>
           </section>
-          <SignatureDivider className="w-full py-6 md:w-3/4 md:py-12" />
+          <SignatureDivider className="relative z-10 w-full py-12 md:w-3/4" />
+          <section className="container px-4 md:px-24">
+            <div className="flex flex-col items-center gap-12 py-4 md:flex-row md:gap-4 md:py-24">
+              <div className="relative flex h-full min-h-[400px] flex-1 items-center justify-center">
+                <Image
+                  src="/barchart-block-medium.png"
+                  alt="Bar Chart Block"
+                  width={375}
+                  height={446}
+                  objectFit="contain"
+                  className="shadow-card z-10 max-w-[90%]"
+                />
+                <div className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#105EFF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[700px]" />
+              </div>
+              <div className="z-10 flex flex-1 flex-col gap-8">
+                <span className="text-4xl font-semibold md:text-6xl">
+                  Highly flexible, enabling you to create custom charts.
+                </span>
+                <span className="text-content-secondary md:text-xl">
+                  Almost all of the chart types allow you to pass JSX elements
+                  in the props; this allows you to customize every aspect of
+                  each element. Additionally, you can mix charts and their child
+                  components together to make combination charts.
+                </span>
+                <div className="flex items-center gap-2">
+                  <Link href="/docs">
+                    <button className="bg-primary px-8 py-4 transition-all hover:brightness-125">
+                      Get started
+                    </button>
+                  </Link>
+                  <Link href="/docs/charts/area-chart">
+                    <button className="border border-primary bg-transparent px-8 py-4 transition-all hover:brightness-125">
+                      Preview
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+          <SignatureDivider className="w-full py-12 md:w-3/4" />
           <footer className="container px-4 py-6 text-base text-content-secondary md:px-24">
             <div className="flex items-center justify-between gap-2">
               <Link href="#">
