@@ -23,7 +23,7 @@ export default function Document() {
         />
       </Head>
       <body>
-        <Main />
+        <Main suppressHydrationWarning />
         <NextScript />
       </body>
     </Html>
