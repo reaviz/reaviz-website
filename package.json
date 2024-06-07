@@ -31,7 +31,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-syntax-highlighter": "^15.5.0",
-    "reaviz": "^15.17.2",
+    "reaviz": "^15.17.3",
     "reaviz-data-utils": "^1.0.0",
     "sharp": "^0.33.3",
     "tailwind-merge": "^2.2.2",

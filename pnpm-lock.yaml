@@ -57,8 +57,8 @@ importers:
         specifier: ^15.5.0
         version: 15.5.0(react@18.2.0)
       reaviz:
-        specifier: ^15.17.2
-        version: 15.17.2(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^15.17.3
+        version: 15.17.3(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       reaviz-data-utils:
         specifier: ^1.0.0
         version: 1.0.0(react@18.2.0)
@@ -6639,11 +6639,6 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
-  react-cool-dimensions@3.0.1:
-    resolution: {integrity: sha512-DUsDB5WUN1Qh6fJJlBtqFKCktrZCPRYcVn8NTeM6hP/5AhZNjDOa2sC2Dg0EM3WUObPDNV5nFLA34vHQfahUeg==}
-    peerDependencies:
-      react: '>= 16.8.0'
-
   react-docgen-typescript@2.2.2:
     resolution: {integrity: sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==}
     peerDependencies:
@@ -6774,8 +6769,8 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  reaviz@15.17.2:
-    resolution: {integrity: sha512-TqoI2MCJ8eLhdMwjcDCstjfPBrq/zDMD1jQkreMlHnDBry4in6BZmoKzwZ/1MLSsjr8xLjUhsu9AOpHwq4ttxw==}
+  reaviz@15.17.3:
+    resolution: {integrity: sha512-9ah/n0DV9QsvXTtACWlXMJw5n8Kg5w4KkK6N9f8nGIk4ee3iK/KHMYuU/d1REJ34VwRTk16/ifNB5sWOjWPOtA==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -16454,10 +16449,6 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  react-cool-dimensions@3.0.1(react@18.2.0):
-    dependencies:
-      react: 18.2.0
-
   react-docgen-typescript@2.2.2(typescript@5.4.5):
     dependencies:
       typescript: 5.4.5
@@ -16626,7 +16617,7 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.18.0
 
-  reaviz@15.17.2(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  reaviz@15.17.3(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@upsetjs/venn.js': 1.4.2
       big-integer: 1.6.52
@@ -16649,12 +16640,12 @@ snapshots:
       memoize-one: 6.0.0
       reablocks: 7.9.6(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
-      react-cool-dimensions: 3.0.1(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
       react-fast-compare: 3.2.2
       reaviz-data-utils: 1.0.0(react@18.2.0)
       safe-identifier: 0.4.2
       transformation-matrix: 2.16.1
+      use-resize-observer: 9.1.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
       - prop-types
