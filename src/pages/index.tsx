@@ -4,6 +4,7 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 import { IconCard } from "@/components/ui/icon-card";
 import { SignatureDivider } from "@/components/ui/signature-divider";
 import { TracingBeams } from "@/components/ui/tracing-beams";
+import { AnimateIn } from "@/components/utils/AnimateIn";
 import BatteryIcon from "@/icons/Battery";
 import DribbbleIcon from "@/icons/Dribbble";
 import GithubIcon from "@/icons/Github";
@@ -111,68 +112,82 @@ export default function Home() {
           </HeroParallax>
           <section className="container px-4 md:px-24">
             <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-              <Card>
-                <IconCard>
-                  <WrenchIcon />
-                </IconCard>
-                <span className="text-xl font-semibold">
-                  Highly Customizable
-                </span>
-                <span>Built on D3 for high customization and flexibility</span>
-              </Card>
-              <Card>
-                <IconCard>
-                  <WaveIcon />
-                </IconCard>
-                <span className="text-xl font-semibold">
-                  Seamless Animations
-                </span>
-                <span>
-                  Reaviz uses Framer Motion for smooth animations and
-                  transitions.
-                </span>
-              </Card>
-              <Card>
-                <IconCard>
-                  <SnapIcon />
-                </IconCard>
-                <span className="text-xl font-semibold">Easy to Use</span>
-                <span>
-                  Intuitive API for easy and quick creation of beautiful charts
-                  with minimal code.
-                </span>
-              </Card>
-              <Card>
-                <IconCard>
-                  <BatteryIcon />
-                </IconCard>
-                <span className="text-xl font-semibold">
-                  Batteries-Included
-                </span>
-                <span>
-                  Reaviz is pre-configured for great-looking charts from day
-                  one.
-                </span>
-              </Card>
-              <Card>
-                <IconCard>
-                  <SwordsIcon />
-                </IconCard>
-                <span className="text-xl font-semibold">Battle-Tested</span>
-                <span>
-                  Used in production across dozens of enterprise products.
-                </span>
-              </Card>
-              <Card>
-                <IconCard>
-                  <KnowledgeIcon />
-                </IconCard>
-                <span className="text-xl font-semibold">Open Source</span>
-                <span>
-                  Free to use, and available for both personal and commercial
-                  projects.
-                </span>
-              </Card>
+              <AnimateIn>
+                <Card>
+                  <IconCard>
+                    <WrenchIcon />
+                  </IconCard>
+                  <span className="text-xl font-semibold">
+                    Highly Customizable
+                  </span>
+                  <span>
+                    Built on D3 for high customization and flexibility
+                  </span>
+                </Card>
+              </AnimateIn>
+              <AnimateIn transition={{ delay: 0.05 }}>
+                <Card>
+                  <IconCard>
+                    <WaveIcon />
+                  </IconCard>
+                  <span className="text-xl font-semibold">
+                    Seamless Animations
+                  </span>
+                  <span>
+                    Reaviz uses Framer Motion for smooth animations and
+                    transitions.
+                  </span>
+                </Card>
+              </AnimateIn>
+              <AnimateIn transition={{ delay: 0.1 }}>
+                <Card>
+                  <IconCard>
+                    <SnapIcon />
+                  </IconCard>
+                  <span className="text-xl font-semibold">Easy to Use</span>
+                  <span>
+                    Intuitive API for easy and quick creation of beautiful
+                    charts with minimal code.
+                  </span>
+                </Card>
+              </AnimateIn>
+              <AnimateIn>
+                <Card>
+                  <IconCard>
+                    <BatteryIcon />
+                  </IconCard>
+                  <span className="text-xl font-semibold">
+                    Batteries-Included
+                  </span>
+                  <span>
+                    Reaviz is pre-configured for great-looking charts from day
+                    one.
+                  </span>
+                </Card>
+              </AnimateIn>
+              <AnimateIn transition={{ delay: 0.05 }}>
+                <Card>
+                  <IconCard>
+                    <SwordsIcon />
+                  </IconCard>
+                  <span className="text-xl font-semibold">Battle-Tested</span>
+                  <span>
+                    Used in production across dozens of enterprise products.
+                  </span>
+                </Card>
+              </AnimateIn>
+              <AnimateIn transition={{ delay: 0.1 }}>
+                <Card>
+                  <IconCard>
+                    <KnowledgeIcon />
+                  </IconCard>
+                  <span className="text-xl font-semibold">Open Source</span>
+                  <span>
+                    Free to use, and available for both personal and commercial
+                    projects.
+                  </span>
+                </Card>
+              </AnimateIn>
             </div>
           </section>
           <SignatureDivider className="w-full py-12 md:w-3/4" />
@@ -206,7 +221,7 @@ export default function Home() {
                         260<span className="text-primary">+</span>
                       </span>
                     </div>
-                    <span className="text-xl">Variables</span>
+                    <span className="md:text-xl">Variables</span>
                   </div>
                   <div className="flex flex-1 flex-col gap-2 font-semibold">
                     <div className="flex items-center gap-2">
@@ -226,7 +241,7 @@ export default function Home() {
                         1000<span className="text-primary">+</span>
                       </span>
                     </div>
-                    <span className="text-xl">Possible configurations</span>
+                    <span className="md:text-xl">Possible configurations</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">

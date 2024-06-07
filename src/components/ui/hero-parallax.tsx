@@ -2,7 +2,7 @@
 import { cn } from "@/utils/cn";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export type HeroParallaxProps = {
   children: React.ReactNode;
@@ -11,6 +11,7 @@ export type HeroParallaxProps = {
 
 export const HeroParallax = ({ children, className }: HeroParallaxProps) => {
   const ref = React.useRef(null);
+  const [imagesLoaded, setImagesLoaded] = useState<number>(0);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -56,14 +57,25 @@ export const HeroParallax = ({ children, className }: HeroParallaxProps) => {
 
   return (
     <div ref={ref}>
-      {children}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {children}
+      </motion.div>
       <div
         className={cn(
           "h-[800px] max-w-[100vw] pt-40 md:max-w-[1440px]",
           className,
         )}
       >
-        <motion.div className="flex w-full items-center justify-center self-auto antialiased [perspective:1000px] [transform-style:preserve-3d]">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: imagesLoaded === 3 ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex w-full items-center justify-center self-auto antialiased [perspective:1000px] [transform-style:preserve-3d]"
+        >
           <motion.div
             style={{
               rotateX: rotateXOuter,
@@ -73,12 +85,15 @@ export const HeroParallax = ({ children, className }: HeroParallaxProps) => {
           >
             <Image
               alt="Heatmap Chart"
-              className="shadow-hero-chart max-h-[30vw] max-w-[30vw]"
+              className="max-h-[30vw] max-w-[30vw] shadow-hero-chart"
               height={500}
               width={500}
               objectFit="cover"
               src={"/hero-chart1.png"}
               draggable={false}
+              onLoad={() => {
+                setImagesLoaded((prev) => prev + 1);
+              }}
             />
           </motion.div>
           <motion.div
@@ -91,12 +106,15 @@ export const HeroParallax = ({ children, className }: HeroParallaxProps) => {
           >
             <Image
               alt="Area Chart"
-              className="shadow-hero-chart max-h-[30vw] max-w-[30vw]"
+              className="max-h-[30vw] max-w-[30vw] shadow-hero-chart"
               height={500}
               width={500}
               objectFit="cover"
               src={"/hero-chart2.png"}
               draggable={false}
+              onLoad={() => {
+                setImagesLoaded((prev) => prev + 1);
+              }}
             />
           </motion.div>
           <motion.div
@@ -108,12 +126,15 @@ export const HeroParallax = ({ children, className }: HeroParallaxProps) => {
           >
             <Image
               alt="Area Interpolated Chart"
-              className="shadow-hero-chart max-h-[30vw] max-w-[30vw]"
+              className="max-h-[30vw] max-w-[30vw] shadow-hero-chart"
               height={500}
               width={500}
               objectFit="cover"
               src={"/hero-chart3.png"}
               draggable={false}
+              onLoad={() => {
+                setImagesLoaded((prev) => prev + 1);
+              }}
             />
           </motion.div>
         </motion.div>
