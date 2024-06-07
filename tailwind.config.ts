@@ -66,6 +66,7 @@ const config: Config = {
         button: "0px 4px 16px 0px rgba(0, 0, 0, 0.25)",
         "hero-chart":
           "0px 9px 10px 0px rgba(0, 0, 0, 0.25), 0px 60px 70px 0px rgba(0, 0, 0, 0.30)",
+        card: "0px 4px 16px 0px rgba(0, 0, 0, 0.25)",
       },
     },
   },

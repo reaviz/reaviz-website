@@ -175,7 +175,95 @@ export default function Home() {
               </Card>
             </div>
           </section>
-          <SignatureDivider className="py-12" />
+          <SignatureDivider className="w-full py-6 md:w-3/4 md:py-12" />
+          <section className="container px-4 md:px-24">
+            <div className="flex flex-col items-center gap-4 py-24 md:flex-row">
+              <div className="z-10 flex flex-1 flex-col gap-8">
+                <span className="text-4xl font-semibold md:text-6xl">
+                  Real Code, Not Wrappers
+                </span>
+                <span className="text-content-secondary md:text-xl">
+                  Reaviz is built with real code, not wrappers around existing
+                  libraries. Everything from the select box to the radial charts
+                  are all part of the Reaviz portfolio.
+                </span>
+                <div className="flex items-center gap-4">
+                  <div className="flex flex-1 flex-col gap-2 font-semibold">
+                    <div className="flex items-center gap-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                      >
+                        <path
+                          d="M7.66644 4.50012C5.64111 4.50012 3.99978 6.14146 3.99978 8.16679V17.5001C3.99978 19.5255 5.64111 21.1668 7.66644 21.1668H11.3331V24.8335C11.3331 26.8466 12.9866 28.5001 14.9998 28.5001H24.3331C26.3463 28.5001 27.9998 26.8466 27.9998 24.8335V15.5001C27.9998 13.4869 26.3463 11.8335 24.3331 11.8335H20.6664V8.16679C20.6664 6.14146 19.0251 4.50012 16.9998 4.50012H7.66644ZM20.6664 13.8335H24.3331C25.2653 13.8335 25.9998 14.568 25.9998 15.5001V24.8335C25.9998 25.7656 25.2653 26.5001 24.3331 26.5001H14.9998C14.0676 26.5001 13.3331 25.7656 13.3331 24.8335V21.1668H16.9998C19.0251 21.1668 20.6664 19.5255 20.6664 17.5001V13.8335ZM4.31749 23.1525C4.0525 23.1566 3.79998 23.2658 3.61541 23.4559C3.43084 23.6461 3.32931 23.9018 3.33311 24.1668V25.5001C3.33311 27.5133 4.98659 29.1668 6.99978 29.1668H7.33311V29.7215C7.33311 30.0361 7.52291 30.3202 7.81358 30.4402C7.90958 30.4802 8.01045 30.5001 8.11045 30.5001C8.31312 30.5001 8.51193 30.4216 8.65993 30.2723L10.2159 28.7163C10.5199 28.4123 10.5199 27.9206 10.2159 27.6173L8.65993 26.0613C8.43793 25.8387 8.10491 25.772 7.81358 25.8934C7.52291 26.014 7.33311 26.2974 7.33311 26.6121V27.1668H6.99978C6.06763 27.1668 5.33311 26.4323 5.33311 25.5001V24.1668C5.33503 24.0329 5.31006 23.9001 5.25969 23.7761C5.20931 23.652 5.13455 23.5394 5.03984 23.4448C4.94512 23.3502 4.83239 23.2756 4.70831 23.2254C4.58423 23.1752 4.45133 23.1504 4.31749 23.1525Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span className="text-2xl md:text-4xl">
+                        260<span className="text-primary">+</span>
+                      </span>
+                    </div>
+                    <span className="text-xl">Variables</span>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-2 font-semibold">
+                    <div className="flex items-center gap-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.33301 8.50012C9.29429 8.50005 9.25559 8.50222 9.21712 8.50663C4.8643 8.56963 1.33301 12.1328 1.33301 16.5001C1.33301 20.8688 4.86637 24.434 9.22103 24.4949C9.25823 24.4987 9.29561 24.5005 9.33301 24.5001H22.6663C27.0728 24.5001 30.6663 20.9066 30.6663 16.5001C30.6663 12.0937 27.0728 8.50012 22.6663 8.50012H9.33301ZM9.33301 10.5001C12.6586 10.5001 15.333 13.1746 15.333 16.5001C15.333 19.8257 12.6586 22.5001 9.33301 22.5001C6.00745 22.5001 3.33301 19.8257 3.33301 16.5001C3.33301 13.1746 6.00745 10.5001 9.33301 10.5001ZM14.6025 10.5001H22.6663C25.9919 10.5001 28.6663 13.1746 28.6663 16.5001C28.6663 19.8257 25.9919 22.5001 22.6663 22.5001H14.6025C16.2713 21.0322 17.333 18.8886 17.333 16.5001C17.333 14.1117 16.2713 11.9681 14.6025 10.5001Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <span className="text-2xl md:text-4xl">
+                        1000<span className="text-primary">+</span>
+                      </span>
+                    </div>
+                    <span className="text-xl">Possible configurations</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Link href="/docs">
+                    <button className="bg-primary px-8 py-4 transition-all hover:brightness-125">
+                      Get started
+                    </button>
+                  </Link>
+                  <Link href="/docs/charts/area-chart">
+                    <button className="border border-primary bg-transparent px-8 py-4 transition-all hover:brightness-125">
+                      Preview
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div className="relative flex h-full min-h-[500px] flex-1 items-center justify-center gap-4">
+                <Image
+                  src="/heatmap-block-small.png"
+                  alt="Heatmap Block"
+                  width={235}
+                  height={350}
+                  objectFit="contain"
+                  className="shadow-card relative -bottom-20 left-0 z-10 max-w-[50%]"
+                />
+                <Image
+                  src="/barchart-block-small.png"
+                  alt="Bar Chart Block"
+                  width={235}
+                  height={350}
+                  objectFit="contain"
+                  className="shadow-card relative -top-20 z-10 max-w-[50%]"
+                />
+                <div className="max-w-3/4 absolute z-0 h-[600px] w-[500px] rounded-full bg-[#2310FF] bg-opacity-50 blur-3xl backdrop-blur-3xl" />
+              </div>
+            </div>
+          </section>
+          <SignatureDivider className="w-full py-6 md:w-3/4 md:py-12" />
           <footer className="container px-4 py-6 text-base text-content-secondary md:px-24">
             <div className="flex items-center justify-between gap-2">
               <Link href="#">
