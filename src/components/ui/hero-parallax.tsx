@@ -45,7 +45,7 @@ export const HeroParallax = ({ children, className }: HeroParallaxProps) => {
   );
 
   const translateYInner = useSpring(
-    useTransform(scrollYProgress, [0, 0.3], [-282, 0]),
+    useTransform(scrollYProgress, [0, 0.3], [-282, -50]),
     springConfig,
   );
 

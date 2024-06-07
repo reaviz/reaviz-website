@@ -1,10 +1,18 @@
 import { Nav } from "@/components/layout/nav";
+import { Card } from "@/components/ui/card";
 import { HeroParallax } from "@/components/ui/hero-parallax";
+import { IconCard } from "@/components/ui/icon-card";
+import { SignatureDivider } from "@/components/ui/signature-divider";
 import { TracingBeams } from "@/components/ui/tracing-beams";
-import { useViewportDimensions } from "@/hooks/useViewportDimensions";
+import BatteryIcon from "@/icons/Battery";
 import DribbbleIcon from "@/icons/Dribbble";
 import GithubIcon from "@/icons/Github";
+import KnowledgeIcon from "@/icons/Knowledge";
 import LinkedinIcon from "@/icons/LinkedIn";
+import SnapIcon from "@/icons/Snap";
+import SwordsIcon from "@/icons/Swords";
+import WaveIcon from "@/icons/Wave";
+import WrenchIcon from "@/icons/Wrench";
 import { cn } from "@/utils/cn";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -26,7 +34,6 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { width } = useViewportDimensions();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,13 +94,13 @@ export default function Home() {
                   visualization components for React provide the building blocks
                   you need to bring your data to life.
                 </p>
-                <div className="flex items-center gap-4 md:hidden">
+                <div className="mb-24 flex items-center gap-4 md:hidden">
                   <Link className="flex-1" href="/docs">
                     <button className="w-full min-w-[125px] whitespace-nowrap rounded-md border border-primary bg-[#16161E] px-4 py-2 font-semibold text-content-primary shadow-button transition-colors hover:brightness-110">
                       Get Started
                     </button>
                   </Link>
-                  <Link className="flex-1" href="/docs">
+                  <Link className="flex-1" href="https://storybook.reaviz.dev">
                     <button className="w-full min-w-[125px] whitespace-nowrap rounded-md bg-primary px-4 py-2 font-semibold text-content-primary shadow-button transition-colors hover:brightness-110">
                       Demos →
                     </button>
@@ -102,9 +109,73 @@ export default function Home() {
               </div>
             </section>
           </HeroParallax>
-          <section className="container mt-40 h-[2000px] px-4 md:px-24">
-            TEST
+          <section className="container px-4 md:px-24">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+              <Card>
+                <IconCard>
+                  <WrenchIcon />
+                </IconCard>
+                <span className="text-xl font-semibold">
+                  Highly Customizable
+                </span>
+                <span>Built on D3 for high customization and flexibility</span>
+              </Card>
+              <Card>
+                <IconCard>
+                  <WaveIcon />
+                </IconCard>
+                <span className="text-xl font-semibold">
+                  Seamless Animations
+                </span>
+                <span>
+                  Reaviz uses Framer Motion for smooth animations and
+                  transitions.
+                </span>
+              </Card>
+              <Card>
+                <IconCard>
+                  <SnapIcon />
+                </IconCard>
+                <span className="text-xl font-semibold">Easy to Use</span>
+                <span>
+                  Intuitive API for easy and quick creation of beautiful charts
+                  with minimal code.
+                </span>
+              </Card>
+              <Card>
+                <IconCard>
+                  <BatteryIcon />
+                </IconCard>
+                <span className="text-xl font-semibold">
+                  Batteries-Included
+                </span>
+                <span>
+                  Reaviz is pre-configured for great-looking charts from day
+                  one.
+                </span>
+              </Card>
+              <Card>
+                <IconCard>
+                  <SwordsIcon />
+                </IconCard>
+                <span className="text-xl font-semibold">Battle-Tested</span>
+                <span>
+                  Used in production across dozens of enterprise products.
+                </span>
+              </Card>
+              <Card>
+                <IconCard>
+                  <KnowledgeIcon />
+                </IconCard>
+                <span className="text-xl font-semibold">Open Source</span>
+                <span>
+                  Free to use, and available for both personal and commercial
+                  projects.
+                </span>
+              </Card>
+            </div>
           </section>
+          <SignatureDivider className="py-12" />
           <footer className="container px-4 py-6 text-base text-content-secondary md:px-24">
             <div className="flex items-center justify-between gap-2">
               <Link href="#">
