@@ -257,24 +257,31 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="relative flex h-full min-h-[500px] flex-1 items-center justify-center gap-4">
-                <Image
-                  src="/heatmap-block-small.png"
-                  alt="Heatmap Block"
-                  width={235}
-                  height={350}
-                  objectFit="contain"
-                  className="relative -bottom-20 left-0 z-10 max-w-[65%] shadow-card"
-                />
-                <Image
-                  src="/barchart-block-small.png"
-                  alt="Bar Chart Block"
-                  width={235}
-                  height={350}
-                  objectFit="contain"
-                  className="relative -top-20 z-10 max-w-[65%] shadow-card"
-                />
-                <div className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#2310FF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[500px]" />
+              <div className="relative flex h-full min-h-[500px] max-w-[90vw] flex-1 items-center justify-center gap-4">
+                <AnimateIn className="relative -bottom-20 left-0 z-10 min-w-[250px]">
+                  <Image
+                    src="/heatmap-block-small.png"
+                    alt="Heatmap Block"
+                    width={235}
+                    height={350}
+                    objectFit="contain"
+                    className="rounded-xl shadow-card"
+                  />
+                </AnimateIn>
+                <AnimateIn
+                  className="relative -top-20 left-0 z-10 min-w-[250px]"
+                  transition={{ delay: 0.05 }}
+                >
+                  <Image
+                    src="/barchart-block-small.png"
+                    alt="Bar Chart Block"
+                    width={235}
+                    height={350}
+                    objectFit="contain"
+                    className="rounded-xl shadow-card"
+                  />
+                </AnimateIn>
+                <AnimateIn className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#2310FF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[500px]" />
               </div>
             </div>
           </section>
@@ -282,15 +289,17 @@ export default function Home() {
           <section className="container px-4 md:px-24">
             <div className="flex flex-col items-center gap-12 py-4 md:flex-row md:gap-4 md:py-24">
               <div className="relative flex h-full min-h-[400px] flex-1 items-center justify-center">
-                <Image
-                  src="/barchart-block-medium.png"
-                  alt="Bar Chart Block"
-                  width={375}
-                  height={446}
-                  objectFit="contain"
-                  className="z-10 max-w-[90%] shadow-card"
-                />
-                <div className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#105EFF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[700px]" />
+                <AnimateIn className="z-10 h-[446px] w-[375px] max-w-[90vw] shadow-card">
+                  <Image
+                    src="/barchart-block-medium.png"
+                    alt="Bar Chart Block"
+                    width={375}
+                    height={446}
+                    objectFit="contain"
+                    className="rounded-2xl"
+                  />
+                </AnimateIn>
+                <AnimateIn className="max-w-3/4 absolute z-0 h-[400px] w-[300px] rounded-full bg-[#105EFF] bg-opacity-50 blur-3xl backdrop-blur-3xl md:h-[600px] md:w-[700px]" />
               </div>
               <div className="z-10 flex flex-1 flex-col gap-8">
                 <span className="text-4xl font-semibold md:text-6xl">
