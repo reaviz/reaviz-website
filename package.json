@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
+    "@uiw/react-codesandbox": "^1.1.5",
     "clsx": "^2.1.0",
     "d3-array": "^3.2.4",
     "d3-time": "^3.1.0",

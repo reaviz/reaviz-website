@@ -7,6 +7,7 @@ import * as BarChartHorizontalMultiSeries from '../../../stories/components/BarC
 import * as BarChartVerticalMultiSeries from '../../../stories/components/BarChartVerticalMultiSeries.story.tsx';
 import * as SparklineChart from '../../../stories/components/SparklineChart.story.tsx';
 import * as BarChartVerticalHistogram from '../../../stories/components/BarChartVerticalHistogram.story.tsx';
+import { Sandbox } from '@/components/ui/sandbox';
 
 <Meta of={BarChartVerticalStory} />
 <Meta of={BarChartHorizontal} />
@@ -41,10 +42,12 @@ Types supported by reaviz:
 To create a Bar chart, use import the `BarChart` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
+<Sandbox code={`
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { BarChart } from 'reaviz';
 
-const MyChart = () => (
+const App = () => (
   <BarChart
     height={300}
     width={300}
@@ -55,7 +58,12 @@ const MyChart = () => (
     ]}
   />
 );
-```
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+`} />
 
 ## Examples
 
