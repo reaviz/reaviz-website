@@ -8,8 +8,6 @@ const withNextra = require('nextra')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  compress: false,
-  productionBrowserSourceMaps: true,
   eslint: {
     ignoreDuringBuilds: true
   },
