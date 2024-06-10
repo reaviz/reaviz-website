@@ -218,10 +218,10 @@ export default function Home() {
                         />
                       </svg>
                       <span className="text-2xl md:text-4xl">
-                        260<span className="text-primary">+</span>
+                        22<span className="text-primary">+</span>
                       </span>
                     </div>
-                    <span className="md:text-xl">Variables</span>
+                    <span className="md:text-xl">Charts</span>
                   </div>
                   <div className="flex flex-1 flex-col gap-2 font-semibold">
                     <div className="flex items-center gap-2">
@@ -238,10 +238,10 @@ export default function Home() {
                         />
                       </svg>
                       <span className="text-2xl md:text-4xl">
-                        1000<span className="text-primary">+</span>
+                        50<span className="text-primary">+</span>
                       </span>
                     </div>
-                    <span className="md:text-xl">Possible configurations</span>
+                    <span className="md:text-xl">Blocks</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
