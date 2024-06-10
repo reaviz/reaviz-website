@@ -22,7 +22,8 @@ variables to display patterns in correlations.
 Types supported by reaviz:
 
 - [Heatmap](/docs/charts/heatmap#heatmap)
-- [Calendar Heatmap](/docs/charts/heatmap#calendar-heatmap)
+- [Year Calendar](/docs/charts/heatmap#year-calendar)
+- [Month Calendar](/docs/charts/heatmap#month-calendar)
 
 
 ## Quick Start
@@ -83,8 +84,11 @@ const MyChart = () => (
 ### Heatmap
 <ToggleCanvas of={HeatmapStory.Basic} storybook="charts-heatmap-simple--basic" />
 
-### Calendar Heatmap
+### Year Calendar
 <ToggleCanvas of={HeatmapCalendarStory.YearCalendar} storybook="charts-heatmap-calendar--year-calendar" />
+
+### Month Calendar
+<ToggleCanvas of={HeatmapCalendarStory.MonthCalendar} storybook="charts-heatmap-calendar--month-calendar" />
 
 ## API
 ### [Heatmap](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/Heatmap.tsx)
