@@ -23,6 +23,8 @@ Types supported by reaviz:
 - [Single Series](/docs/charts/line-chart#single-series)
 - [Multi Series](/docs/charts/line-chart#multi-series)
 - [Radial](/docs/charts/line-chart#radial)
+- [Stacked](/docs/charts/line-chart#stacked)
+- [Stacked Normalized](/docs/charts/line-chart#stacked-normalized)
 
 ## Quick Start
 To create a line chart, use import the `LineChart` and give it `data`. The chart
@@ -54,6 +56,12 @@ const MyChart = () => (
 
 ### Radial
 <ToggleCanvas of={RadialLineChartStories.Simple} storybook="charts-line-chart-radial--simple" />
+
+### Stacked
+<ToggleCanvas of={LineChartMultiSeriesStories.Stacked} storybook="charts-line-chart-multi-series--stacked" />
+
+### Stacked Normalized
+<ToggleCanvas of={LineChartMultiSeriesStories.StackedNormalized} storybook="charts-line-chart-multi-series--stacked-normalized" />
 
 ## API
 ### [LineChart](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaChart.tsx)
