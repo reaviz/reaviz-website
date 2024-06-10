@@ -102,20 +102,20 @@ const config: DocsThemeConfig = {
           titleTemplate:
             "reaviz \u2013 Open Source ReactJS Component Library",
           description:
-            "Beautifully designed, highly customizable, Open Source React components based on Tailwind and Framer Motion.",
+            "Beautifully designed, highly customizable, Open Source React Data Visualization Library"
         };
       }
 
       return {
         titleTemplate: "%s \u2013 reaviz",
         description:
-          "Beautifully designed, highly customizable, Open Source React components based on Tailwind and Framer Motion.",
+          "Beautifully designed, highly customizable, Open Source React Data Visualization Library",
       };
     } else {
       return {
         titleTemplate: "reaviz \u2013 Open Source ReactJS Component Library",
         description:
-          "Beautifully designed, highly customizable, Open Source React components based on Tailwind and Framer Motion.",
+          "Beautifully designed, highly customizable, Open Source React Data Visualization Library",
       };
     }
   },
