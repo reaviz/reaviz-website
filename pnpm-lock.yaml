@@ -60,8 +60,8 @@ importers:
         specifier: ^15.5.0
         version: 15.5.0(react@18.2.0)
       reaviz:
-        specifier: ^15.18.1
-        version: 15.18.1(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^15.18.2
+        version: 15.18.2(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       reaviz-data-utils:
         specifier: ^1.0.0
         version: 1.0.0(react@18.2.0)
@@ -6618,8 +6618,8 @@ packages:
       react: '>=16.13.1'
       react-dom: '>=16.13.1'
 
-  reablocks@7.13.2:
-    resolution: {integrity: sha512-DxC7yFIVygvefY5R3widrQmhKxkMfp3RINfG4Z8Ze9VtIyE3hpi0LjdgpYA8+sKp7neQk/0YVnRYbRU/QGSnKw==}
+  reablocks@7.13.3:
+    resolution: {integrity: sha512-dYoDZNz26ZmNWN+PWM66dNuRCuFNbUhoPr4if8/mBnTmCis4+e1Wr1PxVmll4IgywQAMa1ZuKQy/93vixt+6AQ==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -6784,8 +6784,8 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  reaviz@15.18.1:
-    resolution: {integrity: sha512-YWYosUjbqz6KdB8IHadPg1B9U0YDqP3dElnjDAoKzw4pCa/VseX0JeNe1In0HBMQI+909IEGX8B2LPGJgdJVeg==}
+  reaviz@15.18.2:
+    resolution: {integrity: sha512-8pG2jFZfZEigPoeSpoiqn59GP20bpRN8Pgcyn+50owZg4se/MNCsSAHGqcPMCFvU9epwQgHX+sig2DbmF3E1Rw==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -16392,7 +16392,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  reablocks@7.13.2(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  reablocks@7.13.3(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@floating-ui/react': 0.26.16(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@marko19907/string-to-color': 1.0.0
@@ -16642,7 +16642,7 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.18.0
 
-  reaviz@15.18.1(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  reaviz@15.18.2(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@floating-ui/dom': 1.6.5
       '@upsetjs/venn.js': 1.4.2
@@ -16664,7 +16664,7 @@ snapshots:
       invert-color: 2.0.0
       memoize-bind: 1.0.3
       memoize-one: 6.0.0
-      reablocks: 7.13.2(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      reablocks: 7.13.3(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-fast-compare: 3.2.2
