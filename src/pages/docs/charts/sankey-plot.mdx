@@ -7,12 +7,12 @@ import * as SankeyStory from '../../../stories/components/Sankey.story.tsx';
 
 # Sankey Chart
 
-Sankey diagrams are a specific type of flow diagram, in which the width of the
-arrows is shown proportionally to the flow quantity. They are typically used to
-visualize energy or material or cost transfers between processes. They can also visualize
-the energy accounts or material flow accounts on a community level. Sankey diagrams put a
-visual emphasis on the major transfers or flows within a system. They are helpful in
-locating dominant contributions to an overall flow.
+Sankey diagrams in REAVIZ provide a powerful way to visualize and analyze flows of energy, materials, or costs within a system. They help in identifying major transfers and understanding resource distribution, making them a valuable tool for data visualization.
+
+### Where to use:
+- **Visualize Flow Quantities:** Ideal for displaying flows of energy, materials, or costs.
+- **Highlight Major Transfers:** Useful for emphasizing significant transfers within a system.
+- **Analyze Resource Distribution:** Great for analyzing how resources are distributed and transferred.
 
 ## Quick Start
 To create Sankey Chart, import the Sankey, SankeyNode and SankeyLink and then define the nodes and then links.
@@ -43,16 +43,13 @@ const MyChart = () => (
 As default, the Sankey chart shows the link/flow with gradation based on
 the given colorScheme. You can turn off the gradation by passing `false`
 to SankeyLink component's `gradient` property (e.g. `gradient={false}`).
-
+### Configuration 
 To render, the `nodes` and `links` of the Sankey
 component are required and `colorScheme` is optianal but is recommended to spacify
 to make Sankeys easier to interpret.
 
-For the `nodes`, you can pass the node's name through `title` property of SankeyNode.
-
-For the edges, SankeyLink's `source`, `target`, and `value`
-properties are all required. For `source` and `target`, you can use
-the index of the nodes' array or the node's `id` if it's assigned.
+- **Nodes:** Define the nodes using the SankeyNode component. Each node can have a title and id.
+- **Links:** Define the links using the SankeyLink component. Each link requires source, target, and value properties. The source and target can be the index of the nodes array or the node's id
 
 ## Examples
 <ToggleCanvas of={SankeyStory.Simple} storybook="charts-sankey-plot--simple" />
