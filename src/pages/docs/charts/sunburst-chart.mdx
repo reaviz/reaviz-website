@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as Stories from '../../../stories/components/SunburstChart.story.tsx';
 
 <Meta of={Stories} />
@@ -17,6 +18,67 @@ A sunburst chart, when devoid of any hierarchical data (only one level of catego
 bears a resemblance to a doughnut chart. However, when a sunburst chart has
 multiple levels of categories, it demonstrates the relationships between the outer and
 inner rings.
+
+## Quick Start
+To create a sunburst chart, use import the `SunburstChart` and give it some `data`.
+
+<Runner code={`import { SunburstChart } from 'reaviz';
+
+export default function App() {
+  const heatmapSimpleData = [
+  {
+    key: "Discovery",
+    data: [
+      {
+        key: "XML",
+        data: 100,
+      },
+      {
+        key: "JSON",
+        data: 34,
+      },
+      {
+        key: "HTTPS",
+        data: 0,
+      },
+      {
+        key: "SSH",
+        data: 111,
+      },
+    ],
+  },
+  {
+    key: "Threat Intelligence",
+    data: [
+      {
+        key: "XML",
+        data: 1,
+      },
+      {
+        key: "JSON",
+        data: 120,
+      },
+      {
+        key: "HTTPS",
+        data: 200,
+      },
+      {
+        key: "SSH",
+        data: 160,
+      },
+    ],
+  }
+];
+
+  return (
+    <SunburstChart
+      height={400}
+      width={400}
+      data={heatmapSimpleData}
+    />
+  );
+}`}
+/>
 
 ## Examples
 ### Simple
