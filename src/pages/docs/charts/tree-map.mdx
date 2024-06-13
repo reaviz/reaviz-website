@@ -7,10 +7,16 @@ import * as TreeMapStory from '../../../stories/components/TreeMap.story.tsx';
 
 # TreeMap
 
-Treemaps display hierarchical data as a set of nested rectangles.
-Each branch of the tree is given a rectangle, which is then tiled with smaller rectangles
-representing sub-branches. A leaf node’s rectangle has an area proportional to a specified
-dimension on the data and often colored to show a separate dimension of the data.
+A TreeMap in REAVIZ displays hierarchical data as a set of nested rectangles. 
+Each branch of the tree is given a rectangle, which is then tiled with smaller rectangles representing sub-branches. 
+The area of each leaf node's rectangle is proportional to a specified data dimension, and the color often represents a separate data dimension.
+
+### Where to use:
+
+- **Visualize Hierarchical Data:** Ideal for displaying hierarchical data structures.
+- **Show Proportional Values:** Useful for showing how different parts of a whole compare in size.
+- **Highlight Data Dimensions:** Great for highlighting multiple data dimensions, such as size and color.
+
 
 ## Quick Start
 To create a treemap chart, use import the `TreeMap` and give it `data`. The chart
