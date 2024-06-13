@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as PieChartStory from '../../../stories/components/PieChart.story.tsx';
 import * as DonutChartStory from '../../../stories/components/DonutChart.story.tsx';
 
@@ -24,21 +25,22 @@ Types supported by reaviz:
 To create a Pie chart, use import the `PieChart` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { PieChart } from 'reaviz';
+<Runner code={`import { PieChart } from 'reaviz';
 
-const MyChart = () => (
-  <PieChart
-    height={300}
-    width={300}
-    data={[
-      { key: 'Bacon', data: 13 },
-      { key: 'Eggs', data: 13 },
-      { key: 'Cheese', data: 13 },
-    ]}
-  />
-);
-```
+export default function App() {
+  return (
+    <PieChart
+      height={300}
+      width={300}
+      data={[
+        { key: 'Bacon', data: 13 },
+        { key: 'Eggs', data: 8 },
+        { key: 'Cheese', data: 17 },
+      ]}
+    />
+  );
+}`}
+/>
 
 ## Examples
 

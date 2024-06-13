@@ -7,6 +7,9 @@ import * as BarChartHorizontalMultiSeries from '../../../stories/components/BarC
 import * as BarChartVerticalMultiSeries from '../../../stories/components/BarChartVerticalMultiSeries.story.tsx';
 import * as SparklineChart from '../../../stories/components/SparklineChart.story.tsx';
 import * as BarChartVerticalHistogram from '../../../stories/components/BarChartVerticalHistogram.story.tsx';
+import {
+  Runner
+} from '@/components/ui/runner';
 
 <Meta of={BarChartVerticalStory} />
 <Meta of={BarChartHorizontal} />
@@ -41,21 +44,22 @@ Types supported by reaviz:
 To create a Bar chart, use import the `BarChart` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { BarChart } from 'reaviz';
+<Runner code={`import { BarChart } from 'reaviz';
 
-const MyChart = () => (
-  <BarChart
-    height={300}
-    width={300}
-    data={[
-      { key: 'DLP', data: 13 },
-      { key: 'SIEM', data: 2 },
-      { key: 'Endpoint', data: 7 }
-    ]}
-  />
-);
-```
+export default function App() {
+  return (
+    <BarChart
+      height={300}
+      width={300}
+      data={[
+        { key: 'DLP', data: 13 },
+        { key: 'SIEM', data: 2 },
+        { key: 'Endpoint', data: 7 }
+      ]}
+    />
+  );
+}`}
+/>
 
 ## Examples
 
@@ -105,6 +109,9 @@ const MyChart = () => (
 
 ### [Bar](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/Bar.tsx)
 <PropsTable name="Bar" />
+
+### [GuideBar](https://github.com/reaviz/reaviz/blob/master/src//BarChart/BarSeries/GuideBar.tsx)
+<PropsTable name="GuideBar" />
 
 ### [RangeLines](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/RangeLines.tsx)
 <PropsTable name="RangeLines" />
