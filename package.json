@@ -32,7 +32,7 @@
     "react-live-runner": "^1.0.7",
     "react-runner": "^1.0.5",
     "react-syntax-highlighter": "^15.5.0",
-    "reaviz": "^15.18.1",
+    "reaviz": "^15.18.2",
     "reaviz-data-utils": "^1.0.0",
     "sharp": "^0.33.3",
     "tailwind-merge": "^2.2.2",
