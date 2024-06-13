@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as VennDiagramStory from '../../../stories/components/VennDiagram.story.tsx';
 
 <Meta of={VennDiagramStory} />
@@ -19,21 +20,22 @@ The chart supports 3 layout types:
 To create a venn diagram, import the `VennDiagram` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { VennDiagram } from 'reaviz';
+<Runner code={`import { VennDiagram } from 'reaviz';
 
-const MyChart = () => (
-  <VennDiagram
-    height={300}
-    width={300}
-    data={[
-      { key: ['A'], data: 12 },
-      { key: ['B'], data: 12 },
-      { key: ['A', 'B'], data: 2 }
-    ]}
-  />
-);
-```
+export default function App() {
+  return (
+    <VennDiagram
+      height={300}
+      width={300}
+      data={[
+        { key: ['A'], data: 12 },
+        { key: ['B'], data: 12 },
+        { key: ['A', 'B'], data: 2 }
+      ]}
+    />
+  );
+}`}
+/>
 
 One important aspect to realize here is the `key` property
 is a array of intersections. It can have one to N number

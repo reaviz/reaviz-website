@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as FunnelChartStory from '../../../stories/components/FunnelChart.story.tsx';
 
 <Meta of={FunnelChartStory} />
@@ -14,32 +15,32 @@ bears the value that is the final result of the entire procedure.
 ## Quick Start
 To create a funnel chart, use import the `FunnelChart` and give it some `data`.
 
-```jsx
-import { FunnelChart } from 'reaviz';
 
-const data = [
-  {
-    data: 1000,
-    key: 'Visited Site'
-  },
-  {
-    data: 900,
-    key: 'Added to Cart'
-  },
-  {
-    data: 600,
-    key: 'Initiated Checkout'
-  },
-  {
-    data: 400,
-    key: 'Completed Purchase'
-  }
-];
+<Runner code={`import { FunnelChart } from 'reaviz';
 
-const MyChart = () => (
-  <FunnelChart data={data} height={450} width={450} />
-);
-```
+export default function App() {
+  return (
+    <FunnelChart
+      height={300}
+      width={400}
+      data={[
+        {
+          data: 1000,
+          key: 'Visited Site'
+        },
+        {
+          data: 900,
+          key: 'Added to Cart'
+        },
+        {
+          data: 600,
+          key: 'Initiated Checkout'
+        }
+      ]}
+    />
+  );
+}`}
+/>
 
 ## Examples
 <ToggleCanvas of={FunnelChartStory.Basic} storybook="charts-funnel-chart--basic" />

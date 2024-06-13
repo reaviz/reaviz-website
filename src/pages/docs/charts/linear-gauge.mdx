@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as LinearGaugeSingleSeriesStory from '../../../stories/components/LinearGaugeSingleSeries.story.tsx';
 import * as LinearGaugeMultiSeriesStory from '../../../stories/components/LinearGaugeMultiSeries.story.tsx';
 
@@ -20,17 +21,18 @@ REAVIZ supports:
 To create a Linear Gauge, use import the `LinearGauge` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { LinearGauge } from 'reaviz';
+<Runner code={`import { LinearGauge } from 'reaviz';
 
-const MyChart = () => (
-  <LinearGauge
-    height={300}
-    width={300}
-    data={{ key: 'Risk Score', data: 24 }}
-  />
-);
-```
+export default function App() {
+  return (
+    <LinearGauge
+      width={300}
+      height={100}
+      data={{ key: 'Risk Score', data: 74 }}
+    />
+  );
+}`}
+/>
 
 In this example, we only pass one data object, however, we can pass multiples and it will
 distribute the values across them.
