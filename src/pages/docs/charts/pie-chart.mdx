@@ -9,16 +9,21 @@ import * as DonutChartStory from '../../../stories/components/DonutChart.story.t
 
 # Pie Chart
 
-A pie chart is divided into sectors, illustrating numerical proportion.
-In a pie chart, the arc length of each sector (and consequently its central angle and area),
-is proportional to the quantity it represents. While it is named for its resemblance to a pie
-which has been sliced, there are variations on the way it can be presented.
+A Pie Chart in REAVIZ is divided into sectors, each representing a numerical proportion. 
+The arc length of each sector (along with its central angle and area) is proportional to the quantity it represents. 
+Named for its resemblance to a sliced pie, a pie chart effectively visualizes part-to-whole relationships in data.
 
-Types supported by reaviz:
+### Types supported by reaviz:
 
-- [Pie](/docs/charts/pie-chart#pie)
-- [Exploded](/docs/charts/pie-chart#exploded)
-- [Donut](/docs/charts/pie-chart#donut)
+- [Pie](/docs/charts/pie-chart#pie) - A standard pie chart divided into sectors to show proportions.
+- [Exploded](/docs/charts/pie-chart#exploded) - A variation where one or more slices are separated from the main chart to emphasize specific sectors.
+- [Donut](/docs/charts/pie-chart#donut) - Similar to a pie chart, but with a hole in the center, making it easier to read multiple data points.
+
+### Where to use:
+
+- **Show Proportions:** Ideal for visualizing parts of a whole.
+- **Compare Categories:** Useful for comparing different categories in a dataset.
+- **Highlight Key Data Points:** Exploded pie charts emphasize specific sectors.
 
 ## Quick Start
 To create a Pie chart, use import the `PieChart` and give it `data`. The chart
