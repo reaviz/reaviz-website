@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as Stories from '../../../stories/components/SunburstChart.story.tsx';
 
 <Meta of={Stories} />
@@ -17,6 +18,67 @@ Each segment of the inner circle has a hierarchical connection to the segments o
 - **Show Category Relationships:** Useful for showing the relationships between categories and subcategories.
 - **Analyze Data Structure:** Great for analyzing the structure and distribution of hierarchical data.
 
+
+## Quick Start
+To create a sunburst chart, use import the `SunburstChart` and give it some `data`.
+
+<Runner code={`import { SunburstChart } from 'reaviz';
+
+export default function App() {
+  const heatmapSimpleData = [
+  {
+    key: "Discovery",
+    data: [
+      {
+        key: "XML",
+        data: 100,
+      },
+      {
+        key: "JSON",
+        data: 34,
+      },
+      {
+        key: "HTTPS",
+        data: 16,
+      },
+      {
+        key: "SSH",
+        data: 111,
+      },
+    ],
+  },
+  {
+    key: "Threat Intelligence",
+    data: [
+      {
+        key: "XML",
+        data: 14,
+      },
+      {
+        key: "JSON",
+        data: 120,
+      },
+      {
+        key: "HTTPS",
+        data: 200,
+      },
+      {
+        key: "SSH",
+        data: 160,
+      },
+    ],
+  }
+];
+
+  return (
+    <SunburstChart
+      height={400}
+      width={400}
+      data={heatmapSimpleData}
+    />
+  );
+}`}
+/>
 
 ## Examples
 ### Simple

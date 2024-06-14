@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as HeatmapStory from '../../../stories/components/Heatmap.story.tsx';
 import * as HeatmapCalendarStory from '../../../stories/components/HeatmapCalendar.story.tsx';
 import { CalendarHeatmap } from 'reaviz';
@@ -29,54 +30,55 @@ Heatmaps are particularly useful in displaying large datasets and identifying tr
 To create a Heatmap, use import the `Heatmap` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { Heatmap } from 'reaviz';
+<Runner code={`import { Heatmap } from 'reaviz';
 
-const data = [
-  {
-    key: 'Lateral Movement',
-    data: [
-      {
-        key: 'XML',
-        data: 0
-      },
-      {
-        key: 'JSON',
-        data: 120
-      },
-      {
-        key: 'HTTPS',
-        data: 150
-      }
-    ]
-  },
-  {
-    key: 'Discovery',
-    data: [
-      {
-        key: 'XML',
-        data: 100
-      },
-      {
-        key: 'JSON',
-        data: 34
-      },
-      {
-        key: 'HTTPS',
-        data: 0
-      }
-    ]
-  }
-];
+export default function App() {
+  const data = [
+    {
+      key: 'Lateral Movement',
+      data: [
+        {
+          key: 'XML',
+          data: 0
+        },
+        {
+          key: 'JSON',
+          data: 120
+        },
+        {
+          key: 'HTTPS',
+          data: 150
+        }
+      ]
+    },
+    {
+      key: 'Discovery',
+      data: [
+        {
+          key: 'XML',
+          data: 100
+        },
+        {
+          key: 'JSON',
+          data: 34
+        },
+        {
+          key: 'HTTPS',
+          data: 0
+        }
+      ]
+    }
+  ];
 
-const MyChart = () => (
-  <Heatmap
-    height={350}
-    width={350}
-    data={data}
-  />
-);
-```
+  return (
+    <Heatmap
+      height={350}
+      width={350}
+      data={data}
+    />
+  );
+}`}
+/>
 
 ## Examples
 

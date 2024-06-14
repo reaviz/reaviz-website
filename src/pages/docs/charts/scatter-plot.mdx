@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as ScatterPlotLinearStory from '../../../stories/components/ScatterPlotLinear.story.tsx';
 
 <Meta of={ScatterPlotLinearStory} />
@@ -26,21 +27,24 @@ Each data point is represented as a dot, where the horizontal axis represents on
 To create a Bar chart, use import the `ScatterPlot` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { ScatterPlot } from 'reaviz';
+<Runner code={`import { ScatterPlot } from 'reaviz';
 
-const MyChart = () => (
-  <ScatterPlot
-    height={300}
-    width={300}
-    data={[
-      { key: new Date('11/29/2019'), data: 13 },
-      { key: new Date('11/30/2019'), data: 13 },
-      { key: new Date('12/1/2019'), data: 13 },
-    ]}
-  />
-);
-```
+export default function App() {
+  return (
+    <ScatterPlot
+      height={300}
+      width={300}
+      data={[
+        { key: new Date('11/29/2019'), data: 7 },
+        { key: new Date('11/30/2019'), data: 5 },
+        { key: new Date('12/1/2019'), data: 10 },
+        { key: new Date('12/2/2019'), data: 9 },
+        { key: new Date('12/3/2019'), data: 12 }
+      ]}
+    />
+  );
+}`}
+/>
 
 ## Examples
 

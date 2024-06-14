@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as BarListStory from '../../../stories/components/BarList.story.tsx';
 
 <Meta of={BarListStory} />
@@ -17,19 +18,20 @@ In REAVIZ, the Bar List consists of horizontal bars that represent different cat
 To create a Bar List, use import the `BarList` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { BarList } from 'reaviz';
+<Runner code={`import { BarList } from 'reaviz';
 
-const MyChart = () => (
-  <BarList
-    data={[
-      { key: 'DLP', data: 13 },
-      { key: 'SIEM', data: 2 },
-      { key: 'Endpoint', data: 7 }
-    ]}
-  />
-);
-```
+export default function App() {
+  return (
+    <BarList
+      data={[
+        { key: 'DLP', data: 13 },
+        { key: 'Endpoint', data: 7 },
+        { key: 'SIEM', data: 2 }
+      ]}
+    />
+  );
+}`}
+/>
 
 ## Examples
 <ToggleCanvas of={BarListStory.Simple} storybook="charts-bar-list--simple" />

@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as SankeyStory from '../../../stories/components/Sankey.story.tsx';
 
 <Meta of={SankeyStory} />
@@ -18,27 +19,33 @@ Sankey diagrams in REAVIZ provide a powerful way to visualize and analyze flows 
 To create Sankey Chart, import the Sankey, SankeyNode and SankeyLink and then define the nodes and then links.
 The chart will automatically configure itself with the default options exposed via props.
 
-```jsx
-import { Sankey, SankeyNode, SankeyLink } from 'reaviz';
+<Runner code={`
+import {
+  Sankey,
+  SankeyNode,
+  SankeyLink
+} from 'reaviz';
 
-const MyChart = () => (
-  <Sankey
-    height={300}
-    width={500}
-    nodes={[
-      <SankeyNode title="A1" id="1" />,
-      <SankeyNode title="A2" id="2" />,
-      <SankeyNode title="B1" id="3" />,
-      <SankeyNode title="B2" id="4" />
-    ]}
-    links={[
-      <SankeyLink source="1" target="3" value="8" gradient={false} />,
-      <SankeyLink source="2" target="4" value="4" gradient={false} />,
-      <SankeyLink source="1" target="4" value="2" gradient={false} />
-    ]}
-  />
-);
-```
+export default function App() {
+  return (
+    <Sankey
+      height={400}
+      width={300}
+      nodes={[
+        <SankeyNode title="A1" id="1" />,
+        <SankeyNode title="A2" id="2" />,
+        <SankeyNode title="B1" id="3" />,
+        <SankeyNode title="B2" id="4" />
+      ]}
+      links={[
+        <SankeyLink source="1" target="3" value="8" />,
+        <SankeyLink source="2" target="4" value="4" />,
+        <SankeyLink source="1" target="4" value="2" />
+      ]}
+    />
+  );
+}`}
+/>
 
 As default, the Sankey chart shows the link/flow with gradation based on
 the given colorScheme. You can turn off the gradation by passing `false`

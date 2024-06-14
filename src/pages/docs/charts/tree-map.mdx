@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as TreeMapStory from '../../../stories/components/TreeMap.story.tsx';
 
 <Meta of={TreeMapStory} />
@@ -22,22 +23,23 @@ The area of each leaf node's rectangle is proportional to a specified data dimen
 To create a treemap chart, use import the `TreeMap` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { TreeMap } from 'reaviz';
+<Runner code={`import { TreeMap } from 'reaviz';
 
-const MyChart = () => (
-  <TreeMap
-    height={400}
-    width={400}
-    data={[
-      { key: 'AWS', data: 100 },
-      { key: 'SendGrid', data: 45 },
-      { key: 'Okta', data: 75 },
-      { key: 'Twillo', data: 25 }
-    ]}
-  />
-);
-```
+export default function App() {
+  return (
+    <TreeMap
+      height={400}
+      width={400}
+      data={[
+        { key: 'AWS', data: 100 },
+        { key: 'SendGrid', data: 45 },
+        { key: 'Okta', data: 75 },
+        { key: 'Twillo', data: 25 }
+      ]}
+    />
+  );
+}`}
+/>
 
 ## Examples
 <ToggleCanvas of={TreeMapStory.Simple} storybook="charts-treemap--simple" />

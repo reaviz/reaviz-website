@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as MeterStory from '../../../stories/components/Meter.story.tsx';
 
 <Meta of={MeterStory} />
@@ -20,13 +21,14 @@ Meter charts in REAVIZ are effective tools for visualizing a single value within
 ## Quick Start
 To create a meter, use import the `Meter` and give it `value` point.
 
-```jsx
-import { PieChart } from 'reaviz';
+<Runner code={`import { Meter } from 'reaviz';
 
-const MyChart = () => (
-  <Meter value={50} />
-);
-```
+export default function App() {
+  return (
+    <Meter value={50} style={{ width: 300 }} />
+  );
+}`}
+/>
 
 ## Examples
 <ToggleCanvas of={MeterStory.Basic} storybook="charts-meter--basic" />

@@ -1,6 +1,7 @@
 import { PropsTable } from '@/components/ui/props-table';
 import { Canvas, Meta } from '@storybook/blocks';
 import { ToggleCanvas } from '@/components/ui/toggle-canvas';
+import { Runner } from '@/components/ui/runner';
 import * as RadialGaugeStory from '../../../stories/components/RadialGauge.story.tsx';
 
 <Meta of={RadialGaugeStory} />
@@ -25,17 +26,18 @@ This type of gauge is ideal for showing how a value fits within a circular range
 To create a Radial Gauge, use import the `RadialGauge` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
-```jsx
-import { RadialGauge } from 'reaviz';
+<Runner code={`import { RadialGauge } from 'reaviz';
 
-const MyChart = () => (
-  <RadialGauge
-    height={300}
-    width={300}
-    data={[{ key: 'Austin, TX', data: 24 }]}
-  />
-);
-```
+export default function App() {
+  return (
+    <RadialGauge
+      height={300}
+      width={300}
+      data={[{ key: 'Austin, TX', data: 75 }]}
+    />
+  );
+}`}
+/>
 
 In this example, we only pass one data object, however, we can pass multiples and it will
 distribute the values across them.
