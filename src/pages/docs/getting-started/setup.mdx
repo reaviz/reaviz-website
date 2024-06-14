@@ -1,31 +1,33 @@
 # Setup
+Everything you need to set up reaviz.
 
-## Install
+## Installation
 
-You can install reaviz via [npm](https://www.npmjs.com/package/reaviz).
+To start using reaviz, install it via [npm](https://www.npmjs.com/package/reaviz). Just run this command in your terminal:
 
 ```sh copy npm2yarn
 npm install reaviz --save
 ```
+This will add reaviz to your project, allowing you to create beautiful and functional charts with ease.
 
 ## Configuration
 
 To customize various elements in the charts,
 we use [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables).
-This gives you fine grain control over the styles
-that is native to the browser. The color variables are:
+These variables give you fine-grained control over the look and feel of your charts. 
+Here are the main CSS variables you can tweak:
 
-- `--tooltip-background`
-- `--tooltip-color`
-- `--tooltip-border-radius`
-- `--tooltip-spacing`
-- `--chart-background`
-- `--chart-color`
-- `--chart-handle-fill`
-- `--chart-handle-stroke`
-- `--chart-handle-drag-fill`
-- `--chart-handle-dots`
-- `--chart-handle-line`
+* `--tooltip-background`  -- Background color for tooltips.
+* `--tooltip-color` -- Text color for tooltips.
+* `--tooltip-border-radius` -- Border radius for tooltips.
+* `--tooltip-spacing` -- Spacing inside tooltips.
+* `--chart-background` -- Background color for charts.
+* `--chart-color` -- Main color for charts.
+* `--chart-handle-fill` -- Fill color for chart handles.
+* `--chart-handle-stroke` -- Stroke color for chart handles.
+* `--chart-handle-drag-fill` -- Fill color when handles are dragged.
+* `--chart-handle-dots` -- Color of dots on chart handles.
+* `--chart-handle-line` -- Color of lines on chart handles.
 
 These names are based on the Google Material design spec. These variables
 are not setup when you install the project automatically but if you want
@@ -50,7 +52,41 @@ some sensible defaults here is what we use in the Storybook demo:
   }
 </style>
 ```
+Feel free to adjust these variables to match your project's design.
+
 
 ## Compatibility
 
-REAVIZ is compatible with React v16+ and works with ReactDOM. React Native is not supported at this time.
+Reaviz is built to work seamlessly with React v16+ and ReactDOM. Unfortunately, it doesn't support React Native at the moment, but we're always looking to improve and expand compatibility in future updates.
+
+## FAQ
+<details>
+  <summary>How do I install reaviz?</summary>
+  <p>You can install reaviz via npm, pnpm, yarn and bun</p>
+</details>
+<details>
+  <summary>How do I customize the styles?</summary>
+  <p>You can customize chart styles using CSS variables, such as <code>--tooltip-background</code> and <code>--chart-color</code>. See the full list of variables in the Configuration section above.</p>
+</details>
+<details>
+  <summary>Which React versions are supported?</summary>
+  <p>Reaviz is compatible with React v16+ and works with ReactDOM. React Native is not supported at this time.</p>
+</details>
+<details>
+  <summary>What chart types are available in reaviz?</summary>
+  <p>Reaviz supports a variety of chart types including: Bar Charts, Line Charts, Area Charts, Scatter Charts, Pie Charts, Sankey Charts, Gauge Charts, Map Charts, Heatmaps, Venn Diagrams, Bubble Charts, Treemaps, and more. Each type comes with different variations to fit your needs.</p>
+</details>
+<details>
+  <summary>Does reaviz support animations and interactivity?</summary>
+  <p>Yes, reaviz includes animations for entering, updating, and exiting elements. It also supports gestures like pinch, pan, zoom, and move, making your charts interactive and engaging.</p>
+</details>
+<details>
+  <summary>How do I run reaviz locally?</summary>
+  <p>If you want to run reaviz locally, follow these steps:</p>
+  <ol>
+    <li>Clone the repository</li>
+    <li>Run <code>npm install</code></li>
+    <li>Run <code>npm start</code></li>
+    <li>Your browser will open to the Storybook page</li>
+  </ol>
+</details>

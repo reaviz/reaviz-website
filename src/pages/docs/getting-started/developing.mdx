@@ -1,19 +1,45 @@
+import {Steps} from 'nextra/components'
+
 # Developing
 
-If you want to run the project locally, its really easy!
+Running the reaviz project locally is straightforward and simple. Here's a step-by-step guide to help you get started:
 
-The project uses Storybook for its demos and development
-environment. To run it locally:
+### Local Setup
 
-- Clone repo
-- `npm install`
-- `npm start`
+The project uses Storybook for its demos and development environment. 
+Follow these steps to set up and run the project on your local machine:
+
+<Steps>
+
+  ### Clone the Repository
+
+  ### Install Dependencies
+
+  Navigate to the project directory and install the necessary dependencies:
+
+```shell copy
+ npm install
+```
+
+  ### Start the Development Server
+
+```shell copy
+  npm start
+```
 
 Once started the browser will open to the storybook url.
 From here you can tweak the charts and see them build
 and reload in real time.
 
-We use Rollup to build and package for distribution.
-You can run this by doing `npm build` and it will
-create a `dist` folder with the type definitions, bundled
-javascript and css files.
+ </Steps>
+
+### Building for Distribution
+When you're ready to package the project for distribution, we use Rollup to bundle the code. Here's how to do it:
+Run the build script to create the distribution files:
+```shell copy
+npm build
+```
+
+This command will generate a dist folder containing the type definitions, bundled JavaScript, and CSS files.
+
+**With these steps, you can easily set up, develop, and build the reaviz project locally. Happy coding!**
