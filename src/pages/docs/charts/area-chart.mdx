@@ -11,20 +11,25 @@ import * as AreaChartMultiSeries from '../../../stories/components/AreaChartMult
 <Meta of={AreaChartMultiSeries} />
 
 
-An Area Chart or area graph are basically a line graph with the area
-below the lined filled with colors or textures. Like line graphs area charts are
-used to represent the development of quantitative values over a time period. It can also be used
-to compare two or more categories and is similar to the Stacked Area Chart. Area charts often used 
-to show overall trends over time rather than specific values.
+Area Charts are excellent for showing trends over time, allowing for a clear visualization of data relationships. 
+With REAVIZ, you can easily create and customize Area Charts just in few minutes!
 
-We support the following types of area charts:
+### Types supported by reaviz:
 
 - [Single Series](/docs/charts/area-chart#single-series)
 - [Multi Series](/docs/charts/area-chart#multi-series)
 - [Stacked](/docs/charts/area-chart#stacked)
 - [Stacked Normalized](/docs/charts/area-chart#stacked-normalized)
 
+### Where to use:
+- **Track Trends Over Time:** Ideal for showing how data evolves over a period, such as stock prices or temperature changes.
+- **Compare Multiple Categories:** Useful for visualizing data for different categories in a single view, like sales figures for different products.
+- **Show Cumulative Totals:** Good for displaying cumulative data, such as total revenue over months.
+- **Highlight Overall Trends:** Better for emphasizing the overall pattern or trend rather than precise data points.
+- **Visualize Continuous Data:** Effective for continuous data where the area between the x-axis and the line is significant.
+
 ## Quick Start
+
 To create a area chart, use import the `AreaChart` and give it `data`. The chart
 will automatically configure itself with the default options exposed via `props`.
 
@@ -58,6 +63,14 @@ export default function App() {
 
 ### Stacked Normalized
 <ToggleCanvas of={AreaChartMultiSeries.StackedNormalized} storybook="charts-area-chart-multi-series--stacked-normalized" />
+
+## Customization
+You can customize the Area Chart by using various props:
+
+- **colorScheme:** Array of colors for the chart.
+- **gridlines:** Toggle gridlines on or off.
+- **area:** Customize the appearance of the area.
+- **legend and tooltips:** Enhance your chart by adding legends and tooltips for better data interpretation.
 
 ## API
 ### [AreaChart](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaChart.tsx)

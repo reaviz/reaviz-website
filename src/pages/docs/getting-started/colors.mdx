@@ -5,9 +5,8 @@ import { ColorPaletteBlocks } from 'reablocks';
 <Meta title="Utils/Colors" />
 
 # Colors 
+Reaviz offers a variety of preset color schemes that you can use in your charts via the `colorScheme` attribute. These color schemes are based on the [ColorBrewer](https://colorbrewer2.org) palettes, ensuring that you have a range of visually appealing options for your data visualizations.
 
-Here's a collection of preset color schemes available via the `colorScheme` attribute on most charts. 
-We've added all of the [ColorBrewer](https://colorbrewer2.org/) palletes as well.
 <br />
 
 {Object.keys(schemes).map(name => (
@@ -21,3 +20,21 @@ We've added all of the [ColorBrewer](https://colorbrewer2.org/) palletes as well
     <br />
   </>
 ))}
+
+### Using Color Schemes
+
+To apply a color scheme to your chart, simply set the `colorScheme` attribute to the desired scheme. For example:
+
+```js
+import { BarChart } from 'reaviz';
+
+const data = [
+  { key: 'DLP', data: 13 },
+  { key: 'SIEM', data: 2 },
+  { key: 'Endpoint', data: 7 }
+];
+<BarChart data={data} colorScheme="unifyviz" />;
+
+```
+This will render your chart using the "unifyviz" color scheme.
+

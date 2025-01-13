@@ -1,25 +1,30 @@
 # Data Shapes
-The majority of the chart's in REAVIZ have a `data` property that they
-use to render off of. This data shape comes is a generic `ChartDataShape` that
-implements two different formats depending on the chart.
 
-- `ChartShallowDataShape`: Single-series charts like a simple Bar Chart or Area Chart.
-- `ChartNestedDataShape`: Multi-series charts like Stacked Area, Grouped Bar Charts, etc.
+In REAVIZ, most charts use a `data` property to render their visuals. 
+This data adheres to a generic `ChartDataShape` which can take on two different formats depending on the type of chart you are using.
 
-Each of the data types define a `key` and `data` property. Depending on the type
-the `data` property might be a raw data type or a nested shape. This raw Data
-type is called `ChartDataTypes`:
+### Chart Data Formats
+
+- **`ChartShallowDataShape`**: Used for single-series charts like simple Bar Charts or Area Charts.
+- **`ChartNestedDataShape`**: Used for multi-series charts like Stacked Area Charts, Grouped Bar Charts, etc.
+
+
+Each of these data types defines a `key` and `data` property. 
+The `data` property can either be a raw data type or a nested shape, depending on the chart. 
+The raw data types, known as `ChartDataTypes`, include:
+
 
 ```js
 type ChartDataTypes = number | string | Date | bigInt.BigInteger;
 ```
+For more details, you can refer to the [source code](https://github.com/reaviz/reaviz/blob/master/src/common/data/types.ts).
 
-Reference: [src/common/data/types.ts](https://github.com/reaviz/reaviz/blob/master/src/common/data/types.ts).
+## ChartShallowDataShape
 
-## `ChartShallowDataShape`
-The shallow data shape is used for single-series charts.
+The `ChartShallowDataShape` is used for single-series charts. 
+This format includes a straightforward key-value pair, along with optional metadata.
 
-```js
+```js 
 interface ChartShallowDataShape {
   // The key for the data point. Typically this might be a x-axis value.
   key: ChartDataTypes;
@@ -32,7 +37,9 @@ interface ChartShallowDataShape {
 }
 ```
 
-If we were to implement this in a `BarChart` it might look something like this:
+### Example: Single-Series BarChart
+
+To use this data shape in a BarChart, your data might look like this:
 
 ```js
 const data = [
@@ -41,10 +48,13 @@ const data = [
   { key: 'Endpoint', data: 7 }
 ]
 ```
+This data structure is simple, with each object representing a bar in the chart.
 
-## `ChartNestedDataShape`
-The shallow data shape is used for multi-series charts. Unlike the `ChartShallowDataShape`
-the `data` attribute on the type is a nested `ChartShallowDataShape<ChartDataTypes>[]`.
+
+## ChartNestedDataShape
+
+The `ChartNestedDataShape` is designed for multi-series charts. 
+Here, the data property is a nested array of `ChartShallowDataShape` items, allowing for more complex data representations.
 
 ```js
 export interface ChartNestedDataShape {
@@ -59,7 +69,8 @@ export interface ChartNestedDataShape {
 }
 ```
 
-If we were to implement this in a `BarChart` it might look something like:
+### Example: Multi-Series BarChart
+For a multi-series `BarChart`, your data might look like this:
 
 ```js
 const data = [
@@ -94,3 +105,9 @@ const data = [
 
 In this example, our x-axis would show `Lateral Movement` and `Discovery` and then
 a group of bar would contain `XML` and `JSON` with their respective values.
+
+### Explanation
+- **Single-Series Charts**: Ideal for charts with one set of data points (e.g., Bar Chart with one bar per category).
+- **Multi-Series Charts**: Used when you have multiple data series per category (e.g., Stacked Bar Chart with multiple bars per category).
+
+**Using these data shapes correctly ensures that your charts are rendered accurately and effectively.**

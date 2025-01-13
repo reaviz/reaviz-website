@@ -1,20 +1,27 @@
 import { PropsTable } from '@/components/ui/props-table';
 
 # Tooltips
+Tooltips in REAVIZ provide additional information about data points when users hover over them. 
 
-REAVIZ has two types of tooltips:
+### Types supported by reaviz:
 
-- `TooltipArea` - Tooltip positioning based on position calculations of data.
-- `Tooltip` - Tooltip positioning based on element anchors.
+- **TooltipArea** - Used for positioning tooltips based on position calculations of data. Ideal for multi-series charts (bar/line/area), time series data, and charts with difficult-to-hit points (small bar chart lines).
+- **Tooltip** - Used for simple positioning relative to an element. Ideal for most charts.
 
-## Tooltip Area
-The tooltip area component is useful for when:
+### Where to use:
 
-- Dealing with multi-series charts (bar/line/area)
-- Dealing with time series data (line/area)
-- Dealing with difficult to hit points (small bar chart lines)
+ **TooltipArea:**
 
-### Example
+- Multi-series charts (bar/line/area)
+- Time series data (line/area)
+- Small bar chart lines with difficult-to-hit points
+
+ **Tooltip:**
+
+- Simple positioning relative to an element
+- Ideal for most chart types
+
+## Tooltip Area Example
 The Sonar Chart is a good example of a custom tooltip area:
 
 ```jsx
@@ -51,12 +58,9 @@ the `tooltip` property passing its own `content`.
 #### [TooltipArea](https://github.com/reaviz/reaviz/blob/master/src/common/Tooltip/TooltipArea.tsx)
 <PropsTable name="TooltipArea" />
 
-## ChartTooltip
-The tooltip component is used for simple position relative to a element. This is ideal
-for most charts.
+## ChartTooltip Example
 
-### Example
-The Calendar Heatmap is a good example of custom tooltip:
+The Calendar Heatmap is a good example of chart tooltip:
 
 ```jsx
 <HeatmapCell
