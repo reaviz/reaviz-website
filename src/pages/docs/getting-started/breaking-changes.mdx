@@ -1,0 +1,48 @@
+import { Steps } from "nextra/components";
+
+# Breaking Changes
+
+## v16.0.0
+
+After updating to version **v16.0.0**, you will need to check if the components types are using proper.
+
+In version **v15.x.x**, you may have used **AreaChart** with StackedAreaSeries like this:
+
+```tsx
+<AreaChart
+  data={multiDateData}
+  xAxis={<LinearXAxis type="time" />}
+  yAxis={<LinearYAxis />}
+  series={
+    <StackedAreaSeries
+      line={<Line strokeWidth={3} glow={{ blur: 10 }} />}
+      area={<Area glow={{ blur: 20 }} />}
+      colorScheme={["#FAE5F6", "#EE4094", "#BB015A"]}
+    />
+  }
+/>
+```
+
+In version **v16.0.0**, you should use **StackedAreaChart** when want to use StackedAreaSeries like this:
+
+```tsx
+<StackedAreaChart
+  data={multiDateData}
+  xAxis={<LinearXAxis type="time" />}
+  yAxis={<LinearYAxis />}
+  series={
+    <StackedAreaSeries
+      line={<Line strokeWidth={3} glow={{ blur: 10 }} />}
+      area={<Area glow={{ blur: 20 }} />}
+      colorScheme={["#FAE5F6", "#EE4094", "#BB015A"]}
+    />
+  }
+/>
+```
+
+This change is applied to the following components:
+
+- StackedAreaChart
+- StackedNormalizedAreaChart
+- StackedBarChart
+- StackedNormalizedBarChart

@@ -27,6 +27,7 @@ import {
 import { Gradient, GradientStop } from 'reaviz';
 
 export default {
+  tags: ['snapshot'],
   title: 'Charts/Bar Chart/Horizontal/Multi Series',
   component: BarChart,
   subcomponents: {

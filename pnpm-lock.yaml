@@ -60,8 +60,8 @@ importers:
         specifier: ^15.5.0
         version: 15.5.0(react@18.2.0)
       reaviz:
-        specifier: ^15.19.1
-        version: 15.19.1(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^16.0.0
+        version: 16.0.0(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       reaviz-data-utils:
         specifier: ^1.0.0
         version: 1.0.0(react@18.2.0)
@@ -4364,7 +4364,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -6787,8 +6787,8 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  reaviz@15.19.1:
-    resolution: {integrity: sha512-MpZjs5rX9mg3YB8xfngn5T/9KfK8OjGXfClVaENTDgXrnIT0nvd6WJKJUyMmfb3TPrxL6eUrSEfa8vo3QqQm6w==}
+  reaviz@16.0.0:
+    resolution: {integrity: sha512-oqWJx6pNNKlnptjeofu5xvVwVRSEICWAnHVVJL2uJMrDPJmt3fuNN0eii8e16H6Q+kR18+x5TPi7UA9888N1AQ==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -16649,7 +16649,7 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.18.0
 
-  reaviz@15.19.1(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  reaviz@16.0.0(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@floating-ui/dom': 1.6.5
       '@types/d3-cloud': 1.2.9
