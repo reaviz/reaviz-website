@@ -1,12 +1,14 @@
 import { Steps } from "nextra/components";
 
-# Breaking Changes
+# Migration Guide
 
-## v16.0.0
+## Update to v16.0.0
 
-After updating to version **v16.0.0**, you will need to check if the components types are using proper.
+With the release of **v16.0.0**, some changes have been made regarding the usage of chart components. It's important to ensure that your components are using the correct types following the update.
 
-In version **v15.x.x**, you may have used **AreaChart** with StackedAreaSeries like this:
+#### Changes in Chart Component Usage
+
+In previous versions like **v15.x.x**, you might have implemented an **AreaChart** with a **StackedAreaSeries** as demonstrated below:
 
 ```tsx
 <AreaChart
@@ -23,7 +25,7 @@ In version **v15.x.x**, you may have used **AreaChart** with StackedAreaSeries l
 />
 ```
 
-In version **v16.0.0**, you should use **StackedAreaChart** when want to use StackedAreaSeries like this:
+For version **v16.0.0**, you need to switch to using **StackedAreaChart** when using **StackedAreaSeries**. The updated usage looks like this:
 
 ```tsx
 <StackedAreaChart
@@ -39,8 +41,9 @@ In version **v16.0.0**, you should use **StackedAreaChart** when want to use Sta
   }
 />
 ```
+#### Affected Components
 
-This change is applied to the following components:
+This change impacts the following components, so be sure to update your implementation if you are using them:
 
 - StackedAreaChart
 - StackedNormalizedAreaChart
