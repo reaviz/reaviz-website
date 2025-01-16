@@ -7,7 +7,7 @@ import {
   FunnelSeries,
   TooltipArea
 } from 'reaviz';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import { largeFunnelData, simpleFunnelData } from 'reaviz-data-utils';
 import { schemes } from 'reaviz';
