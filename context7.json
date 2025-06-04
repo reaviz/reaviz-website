@@ -1,0 +1,9 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Reaviz",
+  "description": "Data visualization library for React. Maintained by @goodcodeus.",
+  "folders": ["src/pages"],
+  "excludeFolders": [],
+  "excludeFiles": [],
+  "rules": []
+}
