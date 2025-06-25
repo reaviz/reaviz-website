@@ -10,10 +10,10 @@ import DribbbleIcon from "@/icons/Dribbble";
 import GithubIcon from "@/icons/Github";
 import KnowledgeIcon from "@/icons/Knowledge";
 import LinkedinIcon from "@/icons/LinkedIn";
-import SnapIcon from "@/icons/Snap";
 import SwordsIcon from "@/icons/Swords";
 import WaveIcon from "@/icons/Wave";
 import WrenchIcon from "@/icons/Wrench";
+import AccessibilityIcon from "@/icons/Accessibility";
 import { cn } from "@/utils/cn";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -134,7 +134,7 @@ export default function Home() {
                     Seamless Animations
                   </span>
                   <span>
-                    Reaviz uses Framer Motion for smooth animations and
+                    Reaviz uses Motion for smooth animations and
                     transitions.
                   </span>
                 </Card>
@@ -142,12 +142,11 @@ export default function Home() {
               <AnimateIn transition={{ delay: 0.1 }}>
                 <Card>
                   <IconCard>
-                    <SnapIcon />
+                    <AccessibilityIcon />
                   </IconCard>
-                  <span className="text-xl font-semibold">Easy to Use</span>
+                  <span className="text-xl font-semibold">Accessibility</span>
                   <span>
-                    Intuitive API for easy and quick creation of beautiful
-                    charts with minimal code.
+                    Built with accessibility in mind, featuring screen reader support.
                   </span>
                 </Card>
               </AnimateIn>
