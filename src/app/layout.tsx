@@ -29,7 +29,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
     <Layout
       navbar={<Nav />}
       pageMap={await getPageMap()}
-      docsRepositoryBase="https://github.com/reaviz/reagraph-website"
+      docsRepositoryBase="https://github.com/reaviz/reaviz-website"
       editLink="Edit this page on GitHub"
       sidebar={{ defaultMenuCollapseLevel: 2, autoCollapse: false }}
       footer={<Footer />}

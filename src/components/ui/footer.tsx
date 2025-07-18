@@ -25,7 +25,7 @@ export const Footer = ({ forceDark = false }: { forceDark?: boolean }) => {
         <span className="hidden md:block"> Made with ❤️ by{" "}
           <Link
             className="text-primary underline"
-            href="https://goodcode.us?utm_source=reagraph"
+            href="https://goodcode.us?utm_source=reaviz"
           >
           Good Code
         </Link>
