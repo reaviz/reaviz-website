@@ -1,0 +1,93 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Sparkline
+
+A Sparkline in REAVIZ is a small, condensed, and simplified line chart that provides a snapshot of data trends within a compact space, without axes or labels. 
+It is designed for quick and immediate comprehension of data trends, making it ideal for presenting patterns and changes at a glance within limited space.
+
+### Types supported in reaviz:
+- [Line](/docs/charts/spark-line#line) - Displays data trends as a simple line.
+- [Area](/docs/charts/spark-line#area) - Similar to a line sparkline but with the area under the line filled.
+- [Bar](/docs/charts/spark-line#bar) - Displays data trends as a series of bars.
+- [Sonar](/docs/charts/spark-line#sonar) - A unique representation often used for tracking and sonar-like visualizations.
+
+### Where to use:
+
+- **Concise Data Visualization:** Ideal for displaying data trends in a compact space.
+- **Quick Trend Comprehension:** Useful for providing immediate insight into data trends without specific data points or labels.
+- **Minimalist Design:** Great for incorporating into text, tables, or dashboards where space is limited.
+
+
+## Quick Start
+To create a Sparkline, import the chart of your choice `SparklineChart`, `AreaSparklineChart`, `BarSparklineChart` or `SonarChart` and
+provide th data. The chart will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { SparklineChart } from 'reaviz';
+
+export default function App() {
+  const data = [
+    {
+      id: '50',
+      key: new Date('2020-01-13T08:00:00.000Z'),
+      data: 16
+    },
+    {
+      id: '49',
+      key: new Date('2020-01-14T08:00:00.000Z'),
+      data: 44
+    },
+    {
+      id: '48',
+      key: new Date('2020-01-15T08:00:00.000Z'),
+      data: 12
+    },
+    {
+      id: '47',
+      key: new Date('2020-01-16T08:00:00.000Z'),
+      data: 26
+    },
+    {
+      id: '46',
+      key: new Date('2020-01-17T08:00:00.000Z'),
+      data: 41
+    }
+  ];
+
+  return (
+    <SparklineChart
+      height={200}
+      width={300}
+      data={data}
+    />
+  );
+}`}
+/>
+
+## Examples
+
+### Line
+<StoryRenderer path="components/SparklineChart.story.tsx" name="Line" storybookKey="charts-sparkline--line" />
+
+### Area
+<StoryRenderer path="components/SparklineChart.story.tsx" name="Area" storybookKey="charts-sparkline--area" />
+
+### Bar
+<StoryRenderer path="components/SparklineChart.story.tsx" name="Bar" storybookKey="charts-sparkline--bar" />
+
+### Sonar
+<StoryRenderer path="components/SparklineChart.story.tsx" name="Sonar" storybookKey="charts-sparkline--sonar" />
+
+## API
+### [Sparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/SparklineChart/SparklineChart.tsx)
+<PropsTable name="SparklineChart" />
+
+### [Sonar Chart](https://github.com/reaviz/reaviz/blob/master/src/SonarChart/SonarChart.tsx)
+<PropsTable name="SonarChart" />
+
+### [BarSparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/BarSparklineChart/BarSparklineChart.tsx)
+<PropsTable name="BarSparklineChart" />
+
+### [AreaSparkline Chart](https://github.com/reaviz/reaviz/blob/master/src/AreaSparklineChart/AreaSparklineChart.tsx)
+<PropsTable name="AreaSparklineChart" />

@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -66,7 +66,7 @@ export const HeroParallax = ({ children, className }: HeroParallaxProps) => {
       </motion.div>
       <div
         className={cn(
-          "h-[800px] max-w-[100vw] pt-40 md:max-w-[1440px]",
+          "h-[800px] max-w-[100vw] pt-40 ",
           className,
         )}
       >

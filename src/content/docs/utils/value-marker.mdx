@@ -1,0 +1,31 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+
+# Value Marker
+The Value Marker component in REAVIZ allows you to mark a specific value on a chart with a line. 
+
+### Types supported by reaviz:
+
+- **Linear Marker** -  Used in linear charts to mark a specific value along the x or y axis.
+- **Radial Marker** -  Used in radial charts to mark a specific value in a circular format.
+### Where to use:
+
+- **Highlight Key Values:** Ideal for emphasizing specific data points or thresholds.
+- **Guide Data Interpretation:** Useful for guiding users' interpretation of the chart by marking significant values.
+- **Enhance Visual Clarity:** Great for adding visual clarity and focus to important values in your data.
+
+## Examples
+### Linear Marker
+<StoryRenderer path="components/AreaChartMarkers.story.tsx" name="LinearValueMarkers" storybookKey="charts-area-chart-markers--linear-value-markers" />
+
+### Radial Marker
+<StoryRenderer path="components/AreaChartMarkers.story.tsx" name="RadialValueMarkers" storybookKey="charts-area-chart-markers--radial-value-markers" />
+
+## API
+
+#### [LinearValueMarker](https://github.com/reaviz/reaviz/blob/master/src/common/ValueMarker/LinearValueMarker.tsx)
+<PropsTable name="LinearValueMarker" />
+
+#### [RadialValueMarker](https://github.com/reaviz/reaviz/blob/master/src/common/ValueMarker/RadialValueMarker.tsx)
+<PropsTable name="RadialValueMarker" />

@@ -28,7 +28,6 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/stories/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/reablocks/**/*.{js,jsx,ts,tsx}",
-    "./theme.config.tsx",
   ],
   theme: {
     container: {

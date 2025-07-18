@@ -1,0 +1,38 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+import { Runner } from '@/components/ui/runner';
+
+# Count
+
+The Count component in REAVIZ allows you to animate counting from one number to another. 
+This feature can be used to display numerical data dynamically, adding a visual flair to your data presentations.
+
+### Where to use:
+
+- **Display Dynamic Numbers:** Ideal for displaying changing numerical values.
+- **Highlight Key Metrics:** Useful for highlighting key metrics and statistics in a visually engaging way.
+- **Animate Data:** Great for adding animation and interactivity to your data displays.
+
+## Quick Start
+To use the Count component, use import the `Count` and give it a number `to`. Optionally
+you can give the `from` number to start from.
+
+<Runner code={`import { Count } from 'reaviz';
+
+export default function App() {
+  return (
+    <Count
+      from={0}
+      to={50}
+    />
+  );
+}`}
+/>
+
+## Examples
+<StoryRenderer path="components/Count.story.tsx" name="Simple" storybookKey="utils-count--simple" />
+
+## API
+
+### [Count](https://github.com/reaviz/reaviz/blob/master/src/common/Count/Count.tsx)
+<PropsTable name="Count" />

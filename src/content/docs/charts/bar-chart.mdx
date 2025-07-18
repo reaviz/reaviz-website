@@ -1,0 +1,115 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Bar Chart
+A bar chart uses rectangular bars to show values, with one axis for categories and the other for values. 
+It's great for visualizing data like months, age groups, or product types. 
+Bar charts help compare different categories and track trends over time. 
+With REAVIZ, you can easily create and customize bar charts to suit your data visualization needs!
+
+### Types supported by reaviz:
+
+- Single Series [Vertical](/docs/charts/bar-chart#single-series-vertical) / [Horizontal](/docs/charts/bar-chart#single-series-horizontal)
+- Multi Series [Vertical](/docs/charts/bar-chart#multi-series-vertical) / [Horizontal](/docs/charts/bar-chart#multi-series-horizontal)
+- Stacked [Vertical](/docs/charts/bar-chart#stacked-vertical) / [Horizontal](/docs/charts/bar-chart#stacked-horizontal)
+- Stacked Normalized [Vertical](/docs/charts/bar-chart#stacked-normalized-vertical) / [Horizontal](/docs/charts/bar-chart#stacked-normalized-horizontal)
+- Stacked Diverging [Vertical](/docs/charts/bar-chart#stacked-diverging-vertical) / [Horizontal](/docs/charts/bar-chart#stacked-diverging-horizontal)
+- [Marimekko](/docs/charts/bar-chart#marimekko)
+- [Sparkline](/docs/charts/bar-chart#sparkline)
+- [Waterfall](/docs/charts/bar-chart#waterfall)
+- [Histograms](/docs/charts/bar-chart#histograms)
+
+### Where to use:
+- **Compare Quantities:** Compare different categories, like sales figures.
+- **Highlight Largest/Smallest Categories:** Identify categories with highest or lowest values.
+- **Visualize Categorical Data:** Display distinct categories, such as age groups or product types.
+
+## Quick Start
+To create a Bar chart, use import the `BarChart` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { BarChart } from 'reaviz';
+
+export default function App() {
+  return (
+    <BarChart
+      height={300}
+      width={300}
+      data={[
+        { key: 'DLP', data: 13 },
+        { key: 'SIEM', data: 2 },
+        { key: 'Endpoint', data: 7 }
+      ]}
+    />
+  );
+}`}
+/>
+
+## Examples
+
+### Single Series Vertical
+<StoryRenderer path="components/BarChartVerticalStory.story.tsx" name="Simple" storybookKey="charts-bar-chart-vertical-single-series--simple" />
+### Single Series Horizontal
+<StoryRenderer path="components/BarChartHorizontal.story.tsx" name="Simple" storybookKey="charts-bar-chart-horizontal-single-series--simple" />
+
+### Multi Series Vertical
+<StoryRenderer path="components/BarChartVerticalMultiSeries.story.tsx" name="Simple" storybookKey="charts-bar-chart-vertical-multi-series--simple" />
+### Multi Series Horizontal
+<StoryRenderer path="components/BarChartHorizontalMultiSeries.story.tsx" name="Simple" storybookKey="charts-bar-chart-horizontal-multi-series--simple" />
+
+### Stacked Vertical
+<StoryRenderer path="components/BarChartVerticalMultiSeries.story.tsx" name="Simple" storybookKey="charts-bar-chart-vertical-multi-series--stacked" />
+### Stacked Horizontal
+<StoryRenderer path="components/BarChartHorizontalMultiSeries.story.tsx" name="Stacked" storybookKey="charts-bar-chart-horizontal-multi-series--stacked" />
+
+### Stacked Normalized Vertical
+<StoryRenderer path="components/BarChartVerticalMultiSeries.story.tsx" name="StackedNormalized" storybookKey="charts-bar-chart-vertical-multi-series--stacked-normalized" />
+### Stacked Normalized Horizontal
+<StoryRenderer path="components/BarChartHorizontalMultiSeries.story.tsx" name="StackedNormalized" storybookKey="charts-bar-chart-horizontal-multi-series--stacked-normalized" />
+
+### Stacked Diverging Vertical
+<StoryRenderer path="components/BarChartVerticalMultiSeries.story.tsx" name="StackedDiverging" storybookKey="charts-bar-chart-vertical-multi-series--stacked-diverging" />
+### Stacked Diverging Horizontal
+<StoryRenderer path="components/BarChartHorizontalMultiSeries.story.tsx" name="StackedDiverging" storybookKey="charts-bar-chart-horizontal-multi-series--stacked-diverging" />
+
+### Marimekko
+<StoryRenderer path="components/BarChartVerticalMultiSeries.story.tsx" name="Marimekko" storybookKey="charts-bar-chart-vertical-multi-series--marimekko" />
+
+### Sparkline
+<StoryRenderer path="components/SparklineChart.story.tsx" name="Bar" storybookKey="charts-sparkline--bar" />
+
+### Waterfall
+<StoryRenderer path="components/BarChartHorizontal.story.tsx" name="Waterfall" storybookKey="charts-bar-chart-horizontal-single-series--waterfall" />
+
+### Histograms
+<StoryRenderer path="components/BarChartVerticalHistogram.story.tsx" name="Dates" storybookKey="charts-bar-chart-vertical-histogram--dates" />
+
+### Customization
+
+Customize the Bar Chart using various props:
+
+- **colorScheme:** Array of colors for the chart.
+- **gridlines:** Toggle gridlines on or off.
+- **bar:** Customize the appearance of the bars.
+- **legend and tooltips:** Add legends and tooltips for better data interpretation.
+
+
+## API
+### [BarChart](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarChart.tsx)
+<PropsTable name="BarChart" />
+
+### [BarSeries](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/BarSeries.tsx)
+<PropsTable name="BarSeries" />
+
+### [Bar](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/Bar.tsx)
+<PropsTable name="Bar" />
+
+### [GuideBar](https://github.com/reaviz/reaviz/blob/master/src//BarChart/BarSeries/GuideBar.tsx)
+<PropsTable name="GuideBar" />
+
+### [RangeLines](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/RangeLines.tsx)
+<PropsTable name="RangeLines" />
+
+### [BarLabel](https://github.com/reaviz/reaviz/blob/master/src/BarChart/BarSeries/BarLabel.tsx)
+<PropsTable name="BarLabel" />

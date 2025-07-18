@@ -1,0 +1,99 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+
+# Heatmap
+
+A heatmap in REAVIZ visualizes data values within a matrix using color variations. 
+This method, first termed by Cormac Kinney in 1991, is effective for showing patterns in correlations across multiple variables.
+Heatmaps are particularly useful in displaying large datasets and identifying trends that might not be obvious through other chart types.
+
+### Types supported by reaviz:
+
+- [Heatmap](/docs/charts/heatmap#heatmap)
+- [Year Calendar](/docs/charts/heatmap#year-calendar)
+- [Month Calendar](/docs/charts/heatmap#month-calendar)
+
+### Where to use:
+- **Visualize Variance:** Ideal for displaying variance across multiple variables.
+- **Identify Patterns:** Useful for identifying patterns and correlations in data.
+- **Analyze Complex Data:** Great for analyzing large datasets with multiple variables.
+
+## Quick Start
+To create a Heatmap, use import the `Heatmap` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { Heatmap } from 'reaviz';
+
+export default function App() {
+  const data = [
+    {
+      key: 'Lateral Movement',
+      data: [
+        {
+          key: 'XML',
+          data: 0
+        },
+        {
+          key: 'JSON',
+          data: 120
+        },
+        {
+          key: 'HTTPS',
+          data: 150
+        }
+      ]
+    },
+    {
+      key: 'Discovery',
+      data: [
+        {
+          key: 'XML',
+          data: 100
+        },
+        {
+          key: 'JSON',
+          data: 34
+        },
+        {
+          key: 'HTTPS',
+          data: 0
+        }
+      ]
+    }
+  ];
+
+  return (
+    <Heatmap
+      height={350}
+      width={350}
+      data={data}
+    />
+  );
+}`}
+/>
+
+## Examples
+
+### Heatmap
+<StoryRenderer path="components/Heatmap.story.tsx" name="Basic" storybookKey="charts-heatmap-simple--basic" />
+
+### Year Calendar
+<StoryRenderer path="components/HeatmapCalendar.story.tsx" name="YearCalendar" storybookKey="charts-heatmap-calendar--year-calendar" />
+
+### Month Calendar
+<StoryRenderer path="components/HeatmapCalendar.story.tsx" name="MonthCalendar" storybookKey="charts-heatmap-calendar--month-calendar" />
+
+## API
+### [Heatmap](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/Heatmap.tsx)
+<PropsTable name="Heatmap" />
+
+### [CalendarHeatmap](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/CalendarHeatmap.tsx)
+<PropsTable name="CalendarHeatmap" />
+
+### [HeatmapSeries](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/HeatmapSeries/HeatmapSeries.tsx)
+<PropsTable name="HeatmapSeries" />
+
+### [HeatmapCell](https://github.com/reaviz/reaviz/blob/master/src/Heatmap/HeatmapSeries/HeatmapCell.tsx)
+<PropsTable name="HeatmapCell" />

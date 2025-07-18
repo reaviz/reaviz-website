@@ -1,0 +1,37 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Meter
+
+Meter charts in REAVIZ are effective tools for visualizing a single value within a predefined range.
+ They provide a clear and intuitive way to display metrics, making them ideal for dashboards and performance tracking.
+ Whether you're showing progress towards a goal or tracking a specific metric, REAVIZ's Meter charts offer a straightforward and visually appealing solution.
+
+
+### Where to use:
+- **Display Single Values:** Perfect for showing a specific value within a defined range.
+- **Track Performance:** Useful for tracking performance metrics against a target.
+- **Show Progress:** Great for visualizing progress towards a goal.
+
+## Quick Start
+To create a meter, use import the `Meter` and give it `value` point.
+
+<Runner code={`import { Meter } from 'reaviz';
+
+export default function App() {
+  return (
+    <Meter value={50} style={{ width: 300 }} />
+  );
+}`}
+/>
+
+## Examples
+<StoryRenderer path="components/Meter.story.tsx" name="Basic" storybookKey="charts-meter--basic" />
+
+## API
+### [Meter](https://github.com/reaviz/reaviz/blob/master/src/Meter/Meter.tsx)
+<PropsTable name="Meter" />
+
+### [MeterColumn](https://github.com/reaviz/reaviz/blob/master/src/Meter/MeterColumn.tsx)
+<PropsTable name="MeterColumn" />

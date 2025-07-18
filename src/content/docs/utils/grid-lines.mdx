@@ -1,0 +1,26 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Gridlines
+The Gridlines component in REAVIZ provides a visual representation of the value marks in a chart. 
+You can customize the grid lines to render only the x-axis, y-axis, or both, enhancing the readability and clarity of your data visualizations.
+
+### Where to use:
+
+- **Enhance Readability:** Ideal for improving the readability of charts by providing reference lines.
+- **Visualize Data Points:** Useful for visually aligning data points with their corresponding values.
+- **Custom Gridlines:** Great for customizing the appearance of gridlines to match the style of your chart.
+
+## Examples
+<StoryRenderer path="components/AreaChartGridLines.story.tsx" name="YAxis" storybook="charts-area-chart-gridlines--y-axis" />
+
+## API
+
+#### [GridlineSeries](https://github.com/reaviz/reaviz/blob/master/src/common/Gridline/GridlineSeries.tsx)
+<PropsTable name="GridlineSeries" />
+
+#### [Gridline](https://github.com/reaviz/reaviz/blob/master/src/common/Gridline/Gridline.tsx)
+<PropsTable name="Gridline" />
+
+#### [GridStripe](https://github.com/reaviz/reaviz/blob/master/src/common/Gridline/GridStripe.tsx)
+<PropsTable name="GridStripe" />

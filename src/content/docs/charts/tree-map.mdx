@@ -1,0 +1,54 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# TreeMap
+
+A TreeMap in REAVIZ displays hierarchical data as a set of nested rectangles. 
+Each branch of the tree is given a rectangle, which is then tiled with smaller rectangles representing sub-branches. 
+The area of each leaf node's rectangle is proportional to a specified data dimension, and the color often represents a separate data dimension.
+
+### Where to use:
+
+- **Visualize Hierarchical Data:** Ideal for displaying hierarchical data structures.
+- **Show Proportional Values:** Useful for showing how different parts of a whole compare in size.
+- **Highlight Data Dimensions:** Great for highlighting multiple data dimensions, such as size and color.
+
+
+## Quick Start
+To create a treemap chart, use import the `TreeMap` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { TreeMap } from 'reaviz';
+
+export default function App() {
+  return (
+    <TreeMap
+      height={400}
+      width={400}
+      data={[
+        { key: 'AWS', data: 100 },
+        { key: 'SendGrid', data: 45 },
+        { key: 'Okta', data: 75 },
+        { key: 'Twillo', data: 25 }
+      ]}
+    />
+  );
+}`}
+/>
+
+## Examples
+<StoryRenderer path="components/TreeMap.story.tsx" name="Simple" storybookKey="charts-treemap--simple" />
+
+## API
+### [TreeMap](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMap.tsx)
+<PropsTable name="TreeMap" />
+
+### [TreeMapSeries](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMapSeries.tsx)
+<PropsTable name="TreeMapSeries" />
+
+### [TreeMapLabel](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMapLabel.tsx)
+<PropsTable name="TreeMapLabel" />
+
+### [TreeMapRect](https://github.com/reaviz/reaviz/blob/master/src/TreeMap/TreeMapRect.tsx)
+<PropsTable name="TreeMapRect" />

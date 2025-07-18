@@ -1,0 +1,83 @@
+import { StoryRenderer } from "@/components/ui/story-renderer";
+import { PropsTable } from "@/components/ui/props-table";
+import { Runner } from '@/components/ui/runner';
+
+# Area Chart
+
+Area Charts are excellent for showing trends over time, allowing for a clear visualization of data relationships. 
+With REAVIZ, you can easily create and customize Area Charts just in few minutes!
+
+### Types supported by reaviz:
+
+- [Single Series](/docs/charts/area-chart#single-series)
+- [Multi Series](/docs/charts/area-chart#multi-series)
+- [Stacked](/docs/charts/area-chart#stacked)
+- [Stacked Normalized](/docs/charts/area-chart#stacked-normalized)
+
+### Where to use:
+- **Track Trends Over Time:** Ideal for showing how data evolves over a period, such as stock prices or temperature changes.
+- **Compare Multiple Categories:** Useful for visualizing data for different categories in a single view, like sales figures for different products.
+- **Show Cumulative Totals:** Good for displaying cumulative data, such as total revenue over months.
+- **Highlight Overall Trends:** Better for emphasizing the overall pattern or trend rather than precise data points.
+- **Visualize Continuous Data:** Effective for continuous data where the area between the x-axis and the line is significant.
+
+## Quick Start
+
+To create a area chart, use import the `AreaChart` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { AreaChart } from 'reaviz';
+
+export default function App() {
+  return (
+    <AreaChart
+      height={300}
+      width={300}
+      data={[
+        { key: new Date('11/29/2019'), data: 10 },
+        { key: new Date('11/30/2019'), data: 7 },
+        { key: new Date('12/1/2019'), data: 14 },
+      ]}
+    />
+  );
+}`}
+/>
+
+## Examples
+
+### Single Series
+<StoryRenderer path="components/AreaChartSingleSeries.story.tsx" name="Simple" storybookKey="charts-area-chart-single-series--simple" />
+
+### Multi Series
+<StoryRenderer path="components/AreaChartMultiSeries.story.tsx" name="Simple" storybookKey="charts-area-chart-multi-series--simple" />
+
+### Stacked
+<StoryRenderer path="components/AreaChartMultiSeries.story.tsx" name="Stacked" storybookKey="charts-area-chart-multi-series--stacked" />
+
+### Stacked Normalized
+<StoryRenderer path="components/AreaChartMultiSeries.story.tsx" name="StackedNormalized" storybookKey="charts-area-chart-multi-series--stacked-normalized" />
+
+
+## Customization
+You can customize the Area Chart by using various props:
+
+- **colorScheme:** Array of colors for the chart.
+- **gridlines:** Toggle gridlines on or off.
+- **area:** Customize the appearance of the area.
+- **legend and tooltips:** Enhance your chart by adding legends and tooltips for better data interpretation.
+
+## API
+### [AreaChart](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaChart.tsx)
+<PropsTable name="AreaChart" />
+
+### [AreaSeries](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/AreaSeries.tsx)
+<PropsTable name="AreaSeries" />
+
+### [Area](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/Area.tsx)
+<PropsTable name="Area" />
+
+### [Line](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/Line.tsx)
+<PropsTable name="Line" />
+
+### [PointSeries](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaSeries/PointSeries.tsx)
+<PropsTable name="PointSeries" />
