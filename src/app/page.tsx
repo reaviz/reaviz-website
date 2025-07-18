@@ -48,7 +48,7 @@ export default function Home() {
         <Header />
         <TracingBeams className="hidden md:block">
           <HeroParallax className="hidden md:block">
-            <section className="container mt-40 flex flex-col px-4 md:items-center md:px-24">
+            <section className="container mx-auto mt-40 flex flex-col px-4 md:items-center md:px-24">
               <div className="mb-4 flex flex-col gap-4 md:mb-20 md:items-center md:text-center">
                 <a href="https://github.com/reaviz/reaviz" target="_blank">
                   <img

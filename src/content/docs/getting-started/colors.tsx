@@ -1,10 +1,11 @@
 "use client";
 
+import { Fragment } from "react";
 import { schemes } from 'reaviz';
 import { ColorPaletteBlocks } from 'reablocks';
 
 export const ColorsPalette = () => Object.keys(schemes).map(name => (
-  <>
+  <Fragment key={name}>
     <ColorPaletteBlocks
       name={name}
       className="blocks"
@@ -12,5 +13,5 @@ export const ColorsPalette = () => Object.keys(schemes).map(name => (
       showNames={false}
     />
     <br />
-  </>
+  </Fragment>
 ))

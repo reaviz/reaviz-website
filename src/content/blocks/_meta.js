@@ -4,7 +4,9 @@ export const meta = {
     theme: {
       timestamp: false,
       layout: "full",
-      pagination: false
+      pagination: false,
+      toc: false,
+      breadcrumb: false,
     }
   },
   charts: '📊 ⏐ Charts'

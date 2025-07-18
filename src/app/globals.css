@@ -275,6 +275,8 @@ svg {
 
 /* Define theme tokens */
 @theme inline {
+  --breakpoint-2xl: 1440px;
+
   /* Fonts */
   --font-sans: Gilroy, sans-serif;
   --font-inter: Inter, sans-serif;

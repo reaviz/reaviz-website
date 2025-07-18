@@ -32,7 +32,10 @@ export async function generateMetadata(props: any) {
 
   try {
     const { metadata } = await importPage(params.mdxPath);
-    return metadata;
+    return {
+      title: `${metadata?.title} - Reaviz` || 'Reaviz',
+      description: metadata?.description || 'Documentation for Reaviz, a modular chart component library for React.',
+    };
   } catch (error) {
     return {
       title: "Not Found",

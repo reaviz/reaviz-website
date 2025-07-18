@@ -27,12 +27,12 @@ export default async function RootLayout({ children }: PropsWithChildren) {
       className="flex flex-col dark:bg-gradient-to-b dark:from-[#11111F] dark:from-50% dark:via-[#11111F] dark:to-[#121212] antialiased overflow-x-hidden dark:text-white"
     >
     <Layout
-      navbar={<Nav />}
+      navbar={<Nav key="1" />}
       pageMap={await getPageMap()}
       docsRepositoryBase="https://github.com/reaviz/reaviz-website"
       editLink="Edit this page on GitHub"
       sidebar={{ defaultMenuCollapseLevel: 2, autoCollapse: false }}
-      footer={<Footer />}
+      footer={<Footer key="1" />}
     >
       {children}
     </Layout>
