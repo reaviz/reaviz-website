@@ -1,3 +1,4 @@
+import LogoIcon from "@/assets/logo.svg";
 import { Header } from "@/components/header";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/ui/footer";
@@ -17,6 +18,7 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { LandingFooter } from "reablocks-docs-theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -337,7 +339,11 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <Footer forceDark />
+          <LandingFooter
+            logo={<LogoIcon className="h-fit w-[150px] text-white" />}
+            className="px-4 py-6 text-base md:px-24"
+            libName="reaviz"
+          />
         </TracingBeams>
       </main>
     </>

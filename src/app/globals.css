@@ -8,6 +8,7 @@ html.light {
   --tooltip-background: #f7f7fa;
   --tooltip-color: #3d3d4d;
   --foreground-rgb: 0, 0, 0;
+  --foreground: #000000;
 }
 
 html.dark {
@@ -15,6 +16,7 @@ html.dark {
   --tooltip-background: #00050be6;
   --tooltip-color: #fff;
   --foreground-rgb: 255, 255, 255;
+  --foreground: #ffffff;
 }
 
 body {
@@ -103,7 +105,7 @@ body {
   @apply hover:bg-gray-100 dark:hover:bg-gray-700/20;
 }
 
-.rb-code {
+.nextra-code, .rb-code {
   color: #029cfd !important;
 }
 
@@ -139,6 +141,24 @@ input {
 svg {
   overflow: visible;
 }
+
+
+body {
+  line-height: inherit;
+}
+
+/* Backdrop background for layouts component */
+.backdrop-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--backdrop-url);
+}
+
 
 /* Color palette */
 :root,
@@ -530,20 +550,4 @@ svg {
   --color-charade: #242433;
   --color-waterloo: #77778c;
   --color-anakiwa: #93b6ff;
-}
-
-body {
-  line-height: inherit;
-}
-
-/* Backdrop background for layouts component */
-.backdrop-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: var(--backdrop-url);
 }

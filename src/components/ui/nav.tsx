@@ -1,18 +1,17 @@
 "use client";
 
-import { Navbar, useTheme } from "reablocks-docs-theme";
+import LogoIcon from "@/assets/logo.svg";
 
-export const Nav = () => {
-  const { resolvedTheme } = useTheme();
+import { Navbar } from "reablocks-docs-theme";
 
-  return <Navbar
+export const Nav = () => (
+  <Navbar
     className="font-inter"
     logo={
-      <div className='flex items-center gap-2'>
-        <img src={resolvedTheme === 'light' ? '/logo-light.png' : '/logo.svg'} alt='Reaviz' width={112} height={24} />
+      <div className="flex items-center gap-2">
+        <LogoIcon className="h-fit w-[105px] text-[var(--foreground)]" />
       </div>
     }
-    projectLink='https://github.com/reaviz/reaviz'
-  />;
-
-}
+    projectLink="https://github.com/reaviz/reaviz"
+  />
+);
