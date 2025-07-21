@@ -1,0 +1,109 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Radial Scatter Plot
+
+A Radial or Circular Scatter Plot in REAVIZ is used for displaying circular data by wrapping the usual scatter plot around a circle. 
+Each point in the chart is positioned according to its data values, with the distance from the center representing the data's magnitude.
+
+### Types supported by reaviz:
+
+- [Scatter](/docs/charts/radial-scatter-plot#scatter) - Displays individual data points in a circular layout.
+- [Bubble](/docs/charts/radial-scatter-plot#bubble) - Similar to scatter, but with points sized according to a third data dimension. 
+
+### Where to use:
+
+- **Display Circular Data:** Ideal for representing data in a circular format.
+- **Visualize Relationships:** Useful for visualizing relationships between multiple data points.
+- **Highlight Data Patterns:** Great for identifying patterns and trends in data.
+
+## Quick Start
+To create a Radial Scatter Plot, use import the `RadialScatterPlot` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`
+import {
+  RadialScatterPlot,
+  RadialScatterSeries,
+  RadialScatterPoint,
+  RadialAxisTickSeries,
+  RadialAxis,
+  RadialAxisTick,
+  RadialAxisTickLine,
+  RadialAxisArcSeries
+} from 'reaviz';
+
+export default function App() {
+  const data = [
+    {
+      id: "3",
+      key: new Date("2020-02-07T08:00:00.000Z"),
+      data: 39,
+    },
+    {
+      id: "2",
+      key: new Date("2020-03-01T08:00:00.000Z"),
+      data: 98,
+    },
+    {
+      id: "1",
+      key: new Date("2020-03-12T08:00:00.000Z"),
+      data: 17,
+    }
+  ];
+
+  return (
+    <RadialScatterPlot
+      height={300}
+      width={300}
+      data={data}
+      innerRadius={40}
+      series={
+        <RadialScatterSeries
+          point={
+            <RadialScatterPoint
+              size={5}
+              color="rgba(45, 96, 232, .8)"
+            />
+          }
+        />
+      }
+      axis={
+        <RadialAxis
+          ticks={
+            <RadialAxisTickSeries
+              count={5}
+              tick={
+                <RadialAxisTick
+                  line={<RadialAxisTickLine
+                  position="inside" />}
+                />
+              }
+            />
+          }
+          arcs={<RadialAxisArcSeries count={5} />}
+        />
+      }
+    />
+  );
+}`}
+/>
+
+## Examples
+
+### Scatter
+<StoryRenderer path="components/RadialScatterPlot.story.tsx" name="Simple" storybookKey="charts-scatter-plot-radial--simple" />
+
+### Bubble
+<StoryRenderer path="components/RadialScatterPlot.story.tsx" name="Bubble" storybookKey="/story/charts-scatter-plot-radial--bubble" />
+
+## API
+### [RadialScatterPlot](https://github.com/reaviz/reaviz/blob/master/src/RadialScatterPlot/RadialScatterPlot.tsx)
+<PropsTable name="RadialScatterPlot" />
+
+### [RadialScatterSeries](https://github.com/reaviz/reaviz/blob/master/src/RadialScatterPlot/RadialScatterSeries/RadialScatterSeries.tsx)
+<PropsTable name="RadialScatterSeries" />
+
+### [RadialScatterPoint](https://github.com/reaviz/reaviz/blob/master/src/RadialScatterPlot/RadialScatterSeries/RadialScatterPoint.tsx)
+<PropsTable name="RadialScatterPoint" />

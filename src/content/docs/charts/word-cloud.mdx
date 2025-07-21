@@ -1,0 +1,39 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+
+# Word Cloud
+
+A word cloud is a visual representation for text data to visualize keywords or tags. 
+Tags are usually single words, and the importance of each tag is shown with size or color. 
+This format is useful for quickly perceiving the most prominent terms and for locating a 
+term alphabetically to determine its relative prominence.
+
+## Quick Start
+To create a word cloud, use import the `WordCloud` and give it some `data`.
+
+<Runner code={`import { WordCloud } from 'reaviz';
+
+export default function App() {
+  return (
+    <WordCloud
+      height={300}
+      width={300}
+      data={[
+        { key: 'HTML', data: 70 },
+        { key: 'CSS', data: 65 },
+        { key: 'Docker', data: 40 },
+        { key: 'Kubernetes', data: 35 },
+        { key: 'AWS', data: 30 },
+        { key: 'Git', data: 25 }
+      ]}
+    />
+  );
+}`}
+/>
+
+## API
+### [WordCloud](https://github.com/reaviz/reaviz/blob/master/src/WordCloud/WordCloud.tsx)
+<PropsTable name="WordCloud" />
+
+### [WordCloudLabel](https://github.com/reaviz/reaviz/blob/master/src/WordCloud/WordCloudLabel.tsx)
+<PropsTable name="WordCloudLabel" />

@@ -1,0 +1,61 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Scatter Plot
+
+A Scatter Plot in REAVIZ is a type of mathematical diagram using Cartesian coordinates to display values for two variables in a dataset. 
+Each data point is represented as a dot, where the horizontal axis represents one variable and the vertical axis represents another.
+
+### Types supported by reaviz:
+
+- [Scatter](/docs/charts/scatter-plot#scatter) - Displays individual data points in a Cartesian coordinate system.
+- [Bubble](/docs/charts/scatter-plot#bubble) - Similar to scatter, but with points sized according to a third data dimension.
+
+### Where to use:
+
+- **Show Relationships:** Ideal for visualizing relationships between two variables.
+- **Identify Patterns:** Useful for identifying patterns, trends, and correlations in data.
+- **Highlight Outliers:** Great for spotting outliers and anomalies in data.
+
+
+## Quick Start
+To create a Bar chart, use import the `ScatterPlot` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { ScatterPlot } from 'reaviz';
+
+export default function App() {
+  return (
+    <ScatterPlot
+      height={300}
+      width={300}
+      data={[
+        { key: new Date('11/29/2019'), data: 7 },
+        { key: new Date('11/30/2019'), data: 5 },
+        { key: new Date('12/1/2019'), data: 10 },
+        { key: new Date('12/2/2019'), data: 9 },
+        { key: new Date('12/3/2019'), data: 12 }
+      ]}
+    />
+  );
+}`}
+/>
+
+## Examples
+
+### Scatter
+<StoryRenderer path="components/ScatterPlotLinear.story.tsx" name="Simple" storybookKey="charts-scatter-plot-linear--simple" />
+
+### Bubble
+<StoryRenderer path="components/ScatterPlotLinear.story.tsx" name="Bubble" storybookKey="charts-scatter-plot-linear--bubble" />
+
+## API
+### [ScatterPlot](https://github.com/reaviz/reaviz/blob/master/src/ScatterPlot/ScatterPlot.tsx)
+<PropsTable name="ScatterPlot" />
+
+### [ScatterSeries](https://github.com/reaviz/reaviz/blob/master/src/ScatterPlot/ScatterSeries/ScatterSeries.tsx)
+<PropsTable name="ScatterSeries" />
+
+### [ScatterPoint](https://github.com/reaviz/reaviz/blob/master/src/ScatterPlot/ScatterSeries/ScatterPoint.tsx)
+<PropsTable name="ScatterPoint" />

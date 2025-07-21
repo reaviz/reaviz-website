@@ -1,0 +1,651 @@
+# Custom Charts
+
+REAVIZ is extremely flexible and allows you to create custom charts.
+
+Almost all of the chart types allow you to pass `JSX` elements in the props; this allows you
+to customize every aspect of each element. Additionally, you can mix charts and their child components
+together to make combination charts.
+
+## Radar Chart Example
+The Radar chart was the primary driver behind creating REAVIZ. This chart combines
+multiple chart types to create a new visualization. Its a great example of how to leverage
+various chart internal components to create new chart types.
+
+This chart is more than just pretty, it served as a central element for cyber-security analysts to
+identify trends and threats. For more information on the chart and design
+itself, checkout: [From Dashboard to HUD: How JASK reimagined the security analyst user experience](https://medium.com/@harlanelam/from-dashboard-to-hud-how-jask-reimagined-the-security-analyst-user-experience-fcbe69ffab29). The chart was rewritten
+and visually tweaked from original design for demonstration purposes.
+
+### Breaking it Down
+Before we start with the code, let's break this chart down to its core elements.
+
+![breakdown](/breakdown.png)
+
+While the chart looks pretty intense, its actually not that crazy. The chart is made up of 3 different
+chart types: scatter, bar, and area. Additionally there is some decorative elements that are pretty simple
+svg lines.
+
+### Code Tutorial
+Now that we understand the general structure of the chart type, we can walk through the [code](https://github.com/reaviz/reaviz/blob/master/docs/advanced/Radar.tsx)
+for this chart now.
+
+All of the charts in REAVIZ start with the `ChartContainer` component. This component deals
+with measuring sizes and creating the root svg element for us. Below is a minimal example
+of how to configure the `ChartContainer` component.
+
+```jsx
+<ChartContainer
+  id="radar"
+  width={500}
+  height={500}
+  margins={margins}
+  xAxisVisible={false}
+  yAxisVisible={false}
+  center={true}
+>
+  {({ chartWidth, chartHeight }) => {
+    const rad = Math.min(chartWidth, chartHeight) / 2;
+    return (
+      <Fragment>
+        {renderAxis(chartHeight, chartWidth)}
+        {renderOuterLines(rad)}
+        {renderSideLines(rad)}
+        {renderInnerLines(rad)}
+        <RadarBarChart height={chartHeight} width={chartWidth} radius={rad} data={barData} />
+        <RadarAreaChart height={chartHeight} width={chartWidth} radius={rad} data={areaData} />
+        <RadarScatterPlot radius={rad} data={scatterData} />
+        <InnerX />
+      </Fragment>
+    );
+  }}
+</ChartContainer>
+```
+
+Inside the `ChartContainer` component, there is a callback that gives
+us the chart dimensions. We use this to calculate the radius of the chart
+and then tee up the `RadarBarChart`, `RadarAreaChart` and `RadarScatterPlot` along
+with a few visual components for axises and decoration.
+
+Let's take a look at the first component `RadarBarChart`.
+
+```jsx
+const RadarBarChart = ({
+  height,
+  width,
+  radius,
+  data
+}) => {
+  const { innerRadius, outerRadius } = getRadius(9, 12, radius);
+  const { yScale, xScale, data: barData } = buildScale(
+    data,
+    outerRadius,
+    innerRadius,
+    false
+  );
+
+  // The `RadialBarSeries` is a internal component used by the `RadialBarChart`.
+  // These components are exposed so you can compose them in ways like this.
+  return (
+    <RadialBarSeries
+      id="radar-bars"
+      colorScheme={["#016691"]}
+      data={barData}
+      xScale={xScale}
+      yScale={yScale}
+      innerRadius={innerRadius}
+      width={width}
+      height={height}
+      bar={
+        <RadialBar
+          gradient={false}
+          guide={
+            <RadialGuideBar
+              opacity={0.2}
+              fill="#016691"
+            />
+          }
+        />
+      }
+    />
+  );
+};
+```
+
+This chart uses the `RadialBarSeries` component to render the bars. We modify the
+positions and appearence of those `RadialBar` components by building a custom scale.
+The [buildScale](https://github.com/reaviz/reaviz/blob/master/docs/advanced/radarUtils.ts)
+function takes the data and returns scales and a modified data object that the bar chart can understand.
+This function is relatively simple and used in all the child chart components:
+
+```ts
+export const buildScale = (
+  initialData = [],
+  outerRad = 0,
+  innerRad = 0,
+  isTime = false,
+  xDomain
+) => {
+  const data = buildShallowChartData(initialData);
+
+  // If we are dealing with time, we need to use the `scaleTime`
+  // scale provided by d3, otherwise lets use the `scaleBand`.
+  let xScale;
+  if (isTime) {
+    xDomain = (xDomain || extent(data, 'x'));
+    xScale = scaleTime().range([0, 2 * Math.PI]).domain(xDomain);
+  } else {
+    xDomain = (xDomain || uniqueBy(data, d => d.x));
+    xScale = scaleBand().range([0, 2 * Math.PI]).domain(xDomain);
+  }
+
+  const yDomain = getYDomain({ data, scaled: false });
+
+  return {
+    yScale: getRadialYScale(innerRad, outerRad, yDomain),
+    xScale,
+    data
+  };
+};
+```
+
+These charts also use a function called `getRadius` to determine
+render positions:
+
+```ts
+export const getRadius = (startIdx, endIdx, rad) => {
+  // Leveraging the d3 `scaleLinear` to determine the radius.
+  const scale = scaleLinear().domain([0, ARC_COUNT]).range([INNER_RADIUS, rad]);
+  const arcs = scale.ticks(ARC_COUNT);
+
+  return {
+    innerRadius: scale(arcs[startIdx]),
+    outerRadius: scale(arcs[endIdx])
+  };
+};
+```
+
+These function are mainly leveraging the `d3-scale` library to build the scales
+and data all the charts expect.
+
+The next chart in the series is `RadarAreaChart`.
+
+```jsx
+const RadarAreaChart = ({
+  height,
+  width,
+  radius,
+  data
+}) => {
+  const { innerRadius, outerRadius } = getRadius(6, 8, radius);
+  const { yScale, xScale, data: areaData } = buildScale(
+    data,
+    outerRadius,
+    innerRadius,
+    true
+  );
+
+  return (
+    <RadialAreaSeries
+      id="radar-area"
+      data={areaData}
+      xScale={xScale}
+      yScale={yScale}
+      height={height}
+      width={width}
+      outerRadius={outerRadius}
+      innerRadius={innerRadius}
+      colorScheme={["#1E5DC8"]}
+      line={<RadialLine strokeWidth={1} />}
+      area={
+        <RadialArea
+          gradient={
+            <RadialGradient
+              stops={[
+                <GradientStop key={1} offset="40%" stopOpacity={0.5} />,
+                <GradientStop key={2} offset="10%" stopOpacity={0.1} />
+              ]}
+            />
+          }
+        />
+      }
+    />
+  );
+};
+```
+
+Similar to the `RadarBarChart` component, this chart uses the `RadialAreaSeries`
+which is internally used by `RadialAreaChart`.
+
+Moving the last chart in this series, we have the `RadialScatterSeries` and
+as you can imagine, similar to the other charts we utilize the `RadialScatterSeries`
+from the interal `RadialScatterPlot` component.
+
+```jsx
+const RadarScatterPlot = ({
+  radius,
+  data
+}) => {
+  const { innerRadius, outerRadius } = getRadius(4, 4, radius);
+  const { yScale, xScale, data: scatterData } = buildScale(
+    data,
+    outerRadius,
+    innerRadius,
+    false
+  );
+  return (
+    <RadialScatterSeries
+      id="radar-scatter"
+      data={scatterData}
+      xScale={xScale}
+      yScale={yScale}
+      point={
+        <RadialScatterPoint
+          symbol={point => {
+            let size = 0;
+            if (point.value >= 80) {
+              size = 200;
+            } else if (point.value >= 50) {
+              size = 100;
+            } else if (point.value >= 40) {
+              size = 50;
+            }
+
+            const d = (symbol()
+              .type(symbolTriangle)
+              .size(size))();
+
+            return (
+              <path
+                d={d}
+                fill="#CB003E"
+                stroke="#EF0954"
+                strokeWidth="1"
+              />
+            );
+          }}
+        />
+      }
+    />
+  );
+};
+```
+
+The `RadarScatterPlot` uses a custom callback to render a triange symbol ( d3-shape code ).
+We use the value of the point to determine the size of the symbol.
+
+### Wrapping Up
+And thats it! This example shows you how you can mix and match
+various different charts to build truley unique visualizations.
+You can see all the code in the files below.
+
+##### Radar.tsx
+
+```tsx
+import React, { Fragment, FC } from 'react';
+import { ChartContainer, ChartContainerChildProps, GradientStop, RadialArea, RadialAreaSeries, RadialAxis, RadialAxisArc, RadialAxisArcSeries, RadialAxisTick, RadialAxisTickLabel, RadialAxisTickLine, RadialAxisTickSeries, RadialBar, RadialBarSeries, RadialGradient, RadialGuideBar, RadialLine, RadialScatterPoint, RadialScatterSeries } from '../../src/index';
+import { scaleLinear, scaleBand } from 'd3-scale';
+import { range } from 'd3-array';
+import { getDegrees } from 'reaviz';
+import { symbol, symbolTriangle } from 'd3-shape';
+import { ARC_COUNT, buildScale, getRadius, INNER_RADIUS } from './radarUtils';
+
+const InnerX: FC = () => (
+  <g transform="translate(-12, -12)">
+    <line
+      fill="#fff"
+      x1="0"
+      x2="25"
+      y1="0"
+      y2="25"
+      style={{
+        strokeWidth: 1,
+        stroke: '#fff'
+      }}
+    />
+    <line
+      fill="#fff"
+      x1="25"
+      x2="0"
+      y1="0"
+      y2="25"
+      style={{
+        strokeWidth: 1,
+        stroke: '#fff'
+      }}
+    />
+  </g>
+);
+
+const RadarLineSeries: FC<any> = ({
+  count = 4,
+  outerRad,
+  innerRad
+}) => {
+  const lines = range(count);
+  const radius = scaleLinear().range([innerRad, outerRad]);
+  const angle = scaleBand()
+    .domain(lines as any)
+    .range([Math.PI / count, (2 + 1 / count) * Math.PI]);
+
+  return lines.map(i => {
+    const rotation = getDegrees(angle(i));
+    const [x1, x2] = radius.range();
+
+    return (
+      <line
+        key={i}
+        stroke="#054856"
+        transform={`rotate(${rotation})`}
+        x1={x1}
+        x2={x2}
+        pointerEvents="none"
+      />
+    );
+  });
+};
+
+const RadarScatterPlot: FC<any> = ({
+  radius,
+  data
+}) => {
+  const { innerRadius, outerRadius } = getRadius(4, 4, radius);
+  const { yScale, xScale, data: scatterData } = buildScale(
+    data,
+    outerRadius,
+    innerRadius,
+    false
+  );
+  return (
+    <RadialScatterSeries
+      id="radar-scatter"
+      data={scatterData}
+      xScale={xScale}
+      yScale={yScale}
+      point={
+        <RadialScatterPoint
+          symbol={point => {
+            let size = 0;
+            if (point.value >= 80) {
+              size = 200;
+            } else if (point.value >= 50) {
+              size = 100;
+            } else if (point.value >= 40) {
+              size = 50;
+            }
+
+            const d = (symbol()
+              .type(symbolTriangle)
+              .size(size))();
+
+            return (
+              <path
+                d={d}
+                fill="#CB003E"
+                stroke="#EF0954"
+                strokeWidth="1"
+              />
+            );
+          }}
+        />
+      }
+    />
+  );
+};
+
+const RadarBarChart: FC<any> = ({
+  height,
+  width,
+  radius,
+  data
+}) => {
+  const { innerRadius, outerRadius } = getRadius(9, 12, radius);
+  const { yScale, xScale, data: barData } = buildScale(
+    data,
+    outerRadius,
+    innerRadius,
+    false
+  );
+
+  return (
+    <RadialBarSeries
+      id="radar-bars"
+      colorScheme={["#016691"]}
+      data={barData}
+      xScale={xScale}
+      yScale={yScale}
+      innerRadius={innerRadius}
+      width={width}
+      height={height}
+      bar={
+        <RadialBar
+          gradient={false}
+          guide={
+            <RadialGuideBar
+              opacity={0.2}
+              fill="#016691"
+            />
+          }
+        />
+      }
+    />
+  );
+};
+
+const RadarAreaChart: FC<any> = ({
+  height,
+  width,
+  radius,
+  data
+}) => {
+  const { innerRadius, outerRadius } = getRadius(6, 8, radius);
+  const { yScale, xScale, data: areaData } = buildScale(
+    data,
+    outerRadius,
+    innerRadius,
+    true
+  );
+
+  return (
+    <RadialAreaSeries
+      id="radar-area"
+      data={areaData}
+      xScale={xScale}
+      yScale={yScale}
+      height={height}
+      width={width}
+      outerRadius={outerRadius}
+      innerRadius={innerRadius}
+      colorScheme={["#1E5DC8"]}
+      line={<RadialLine strokeWidth={1} />}
+      area={
+        <RadialArea
+          gradient={
+            <RadialGradient
+              stops={[
+                <GradientStop key={1} offset="40%" stopOpacity={0.5} />,
+                <GradientStop key={2} offset="10%" stopOpacity={0.1} />
+              ]}
+            />
+          }
+        />
+      }
+    />
+  );
+};
+
+export const Radar: FC<any> = ({
+  margins = 10,
+  axisPadding = 5,
+  areaData = [],
+  barData = [],
+  scatterData = []
+}) => {
+  const renderInnerLines = (outerRad: number) => {
+    const { innerRadius } = getRadius(1, 1, outerRad);
+    return (
+      <RadarLineSeries
+        count={25}
+        innerRad={innerRadius - axisPadding}
+        outerRad={innerRadius}
+      />
+    );
+  };
+
+  const renderSideLines = (outerRad: number) => {
+    const { innerRadius } = getRadius(2, 2, outerRad);
+    return (
+      <RadarLineSeries
+        innerRad={innerRadius - axisPadding}
+        outerRad={innerRadius + axisPadding}
+      />
+    );
+  };
+
+  const renderOuterLines = (outerRad: number) => {
+    const { innerRadius } = getRadius(3, 3, outerRad);
+    const outerRadius = outerRad + (margins as number);
+    return <RadarLineSeries innerRad={innerRadius} outerRad={outerRadius} />;
+  };
+
+  const renderAxis = (height: number, width: number) => {
+    const { xScale } = buildScale(areaData, undefined, undefined, true);
+    return (
+      <RadialAxis
+        height={height}
+        width={width}
+        innerRadius={INNER_RADIUS}
+        xScale={xScale}
+        arcs={
+          <RadialAxisArcSeries
+            count={ARC_COUNT}
+            arc={
+              <RadialAxisArc
+                stroke="#054366"
+                strokeDasharray={(index: number) => [1, 3, 6, 9, 12].includes(index) ? 'none' : '1,3'}
+              />
+            }
+          />
+        }
+        ticks={
+          <RadialAxisTickSeries
+            count={24}
+            tick={
+              <RadialAxisTick
+                line={<RadialAxisTickLine position="outside" />}
+              />
+            }
+          />
+        }
+      />
+    );
+  };
+
+  return (
+    <ChartContainer
+      id="radar"
+      width={500}
+      height={500}
+      margins={margins}
+      xAxisVisible={false}
+      yAxisVisible={false}
+      center={true}
+    >
+      {({ chartWidth, chartHeight }: ChartContainerChildProps) => {
+        const rad = Math.min(chartWidth, chartHeight) / 2;
+        return (
+          <Fragment>
+            {renderAxis(chartHeight, chartWidth)}
+            {renderOuterLines(rad)}
+            {renderSideLines(rad)}
+            {renderInnerLines(rad)}
+            <RadarBarChart height={chartHeight} width={chartWidth} radius={rad} data={barData} />
+            <RadarAreaChart height={chartHeight} width={chartWidth} radius={rad} data={areaData} />
+            <RadarScatterPlot radius={rad} data={scatterData} />
+            <InnerX />
+          </Fragment>
+        );
+      }}
+    </ChartContainer>
+  );
+}
+```
+
+##### Radar Utils.tsx
+
+```tsx
+import { buildShallowChartData, ChartInternalShallowDataShape, ChartShallowDataShape, extent, getYDomain, uniqueBy } from 'reaviz';
+import { scaleLinear, scaleBand, scaleTime } from 'd3-scale';
+import { range } from 'd3-array';
+import { getRadialYScale } from 'reaviz';
+import moment from 'moment';
+import { randomNumber } from 'reaviz-data-utils';
+
+export const ARC_COUNT = 12;
+export const INNER_RADIUS = 25;
+
+const startDate = moment().startOf('day');
+export const generateData = () =>
+  range(48).map(i => ({
+      // Dont do this, its for demo purposes
+      id: `${new Date().getTime()}-${i})}`,
+      key: startDate.clone().add(1 * i, 'hour').toDate(),
+      data: randomNumber(1, 100)
+    }));
+
+export const getRadius = (
+  startIdx: number,
+  endIdx: number,
+  rad: number
+) => {
+  const scale = scaleLinear()
+    .domain([0, ARC_COUNT])
+    .range([INNER_RADIUS, rad]);
+
+  const arcs = scale.ticks(ARC_COUNT);
+  return {
+    innerRadius: scale(arcs[startIdx]),
+    outerRadius: scale(arcs[endIdx])
+  };
+};
+
+export const buildScale = (
+  initialData: ChartShallowDataShape[],
+  outerRad = 0,
+  innerRad = 0,
+  isTime = false,
+  xDomain?: [Date, Date]
+) => {
+  const data = buildShallowChartData(
+    initialData
+  ) as ChartInternalShallowDataShape[];
+
+  let xScale;
+  if (isTime) {
+    xDomain = (xDomain || extent(data, 'x')) as [Date, Date];
+
+    xScale = scaleTime()
+      .range([0, 2 * Math.PI])
+      // @ts-ignore
+      .domain(xDomain);
+  } else {
+    xDomain = (xDomain ||
+      uniqueBy<ChartInternalShallowDataShape>(data, d => d.x)) as [
+      Date,
+      Date
+    ];
+
+    xScale = scaleBand()
+      .range([0, 2 * Math.PI])
+      // @ts-ignore
+      .domain(xDomain);
+  }
+
+  const yDomain = getYDomain({ data, scaled: false });
+
+  return {
+    yScale: getRadialYScale(innerRad, outerRad, yDomain),
+    xScale,
+    data
+  };
+};
+```

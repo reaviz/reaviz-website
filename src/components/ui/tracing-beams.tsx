@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 export const TracingBeams = ({
@@ -96,7 +96,7 @@ export const TracingBeams = ({
         ref={ref}
         className={cn("relative flex-1", containerClassName)}
       >
-        <div className={cn("absolute right-8 z-50", className)}>
+        <div className={cn("absolute right-3 z-50", className)}>
           <svg
             viewBox={`0 0 20 ${svgHeight}`}
             width="20"

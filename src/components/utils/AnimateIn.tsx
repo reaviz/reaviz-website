@@ -1,5 +1,6 @@
+"use client";
 import { useViewportDimensions } from "@/hooks/useViewportDimensions";
-import { Transition, UseInViewOptions, motion, useInView } from "framer-motion";
+import { Transition, UseInViewOptions, motion, useInView } from "motion/react";
 import { FC, ReactNode, useRef } from "react";
 
 export type AnimateInProps = {

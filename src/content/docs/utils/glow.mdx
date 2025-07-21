@@ -1,0 +1,47 @@
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Glow
+
+The Glow effect in REAVIZ allows you to add a glowing effect to various chart components. 
+For example, if you want to add a glow to a bar chart, you 
+would add the glow prop to the `Bar` component. This can enhance the visual appeal of your charts and help to highlight important data points or elements.
+
+### Where to use:
+- **Highlight Data Points:** Ideal for emphasizing specific data points or chart elements.
+- **Enhance Visual Appeal:** Useful for adding visual interest and improving the aesthetics of your charts.
+- **Guide User Attention:** Great for guiding user attention to key areas of the chart.
+
+
+## Examples
+<StoryRenderer path="components/Glow.story.tsx" name="BarGlow" storybookKey="utils-glow--bar-glow" />
+
+## API
+
+```ts
+interface Glow {
+  /**
+   * The color of the glow.
+   */
+  color?: string;
+
+  /**
+   * The x offset of the glow.
+   */
+  x?: number;
+
+  /**
+   * The y offset of the glow.
+   */
+  y?: number;
+
+  /**
+   * The blur radius of the glow.
+   */
+  blur?: number;
+
+  /**
+   * The opacity of the glow.
+   */
+  opacity?: number;
+}
+```

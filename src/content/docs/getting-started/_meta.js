@@ -1,0 +1,11 @@
+const meta = {
+  "setup": "Setup",
+  "why": "Why",
+  "developing": "Developing",
+  "data": "Data Shapes",
+  "colors": "Colors",
+  "custom-charts": "Custom Charts",
+  "migration-guide": "Migration Guide"
+};
+
+export default meta;

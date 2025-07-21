@@ -1,0 +1,66 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Pie Chart
+
+A Pie Chart in REAVIZ is divided into sectors, each representing a numerical proportion. 
+The arc length of each sector (along with its central angle and area) is proportional to the quantity it represents. 
+Named for its resemblance to a sliced pie, a pie chart effectively visualizes part-to-whole relationships in data.
+
+### Types supported by reaviz:
+
+- [Pie](/docs/charts/pie-chart#pie) - A standard pie chart divided into sectors to show proportions.
+- [Exploded](/docs/charts/pie-chart#exploded) - A variation where one or more slices are separated from the main chart to emphasize specific sectors.
+- [Donut](/docs/charts/pie-chart#donut) - Similar to a pie chart, but with a hole in the center, making it easier to read multiple data points.
+
+### Where to use:
+
+- **Show Proportions:** Ideal for visualizing parts of a whole.
+- **Compare Categories:** Useful for comparing different categories in a dataset.
+- **Highlight Key Data Points:** Exploded pie charts emphasize specific sectors.
+
+## Quick Start
+To create a Pie chart, use import the `PieChart` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { PieChart } from 'reaviz';
+
+export default function App() {
+  return (
+    <PieChart
+      height={300}
+      width={300}
+      data={[
+        { key: 'Bacon', data: 13 },
+        { key: 'Eggs', data: 8 },
+        { key: 'Cheese', data: 17 },
+      ]}
+    />
+  );
+}`}
+/>
+
+## Examples
+
+### Pie
+<StoryRenderer path="components/PieChart.story.tsx" name="Simple" storybookKey="charts-pie-chart-pie--simple" />
+
+### Exploded
+<StoryRenderer path="components/PieChart.story.tsx" name="Explode" storybookKey="charts-pie-chart-pie--explode" />
+
+### Donut
+<StoryRenderer path="components/DonutChart.story.tsx" name="Simple" storybookKey="charts-pie-chart-pie--simple" />
+
+## API
+### [PieChart](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieChart.tsx)
+<PropsTable name="PieChart" />
+
+### [PieArcSeries](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieArcSeries/PieArcSeries.tsx)
+<PropsTable name="PieArcSeries" />
+
+### [PieArcLabel](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieArcSeries/PieArcLabel.tsx)
+<PropsTable name="PieArcLabel" />
+
+### [PieArc](https://github.com/reaviz/reaviz/blob/master/src/PieChart/PieArcSeries/PieArc/PieArc.tsx)
+<PropsTable name="PieArc" />

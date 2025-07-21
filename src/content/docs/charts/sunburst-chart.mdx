@@ -1,0 +1,97 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Sunburst Chart
+
+A Sunburst Chart in REAVIZ is designed to display hierarchical data using concentric circles. 
+The central circle represents the root node, with the hierarchy expanding outwards from this point. 
+Each segment of the inner circle has a hierarchical connection to the segments of the outer circle that fall within the angular range of the parent segment.
+
+### Where to use:
+
+- **Visualize Hierarchical Data:** Ideal for displaying hierarchical relationships in a compact, radial format.
+- **Show Category Relationships:** Useful for showing the relationships between categories and subcategories.
+- **Analyze Data Structure:** Great for analyzing the structure and distribution of hierarchical data.
+
+
+## Quick Start
+To create a sunburst chart, use import the `SunburstChart` and give it some `data`.
+
+<Runner code={`import { SunburstChart } from 'reaviz';
+
+export default function App() {
+  const heatmapSimpleData = [
+  {
+    key: "Discovery",
+    data: [
+      {
+        key: "XML",
+        data: 100,
+      },
+      {
+        key: "JSON",
+        data: 34,
+      },
+      {
+        key: "HTTPS",
+        data: 16,
+      },
+      {
+        key: "SSH",
+        data: 111,
+      },
+    ],
+  },
+  {
+    key: "Threat Intelligence",
+    data: [
+      {
+        key: "XML",
+        data: 14,
+      },
+      {
+        key: "JSON",
+        data: 120,
+      },
+      {
+        key: "HTTPS",
+        data: 200,
+      },
+      {
+        key: "SSH",
+        data: 160,
+      },
+    ],
+  }
+];
+
+  return (
+    <SunburstChart
+      height={400}
+      width={400}
+      data={heatmapSimpleData}
+    />
+  );
+}`}
+/>
+
+## Examples
+### Simple
+<StoryRenderer path="components/SunburstChart.story.tsx" name="Simple" storybookKey="charts-sunburst-chart--simple" />
+
+### 3-Level
+<StoryRenderer path="components/SunburstChart.story.tsx" name="MultiLevel" storybookKey="charts-sunburst-chart--multi-level" />
+
+## API
+### [SunburstChart](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstChart.tsx)
+<PropsTable name="SunburstChart" />
+
+### [SunburstSeries](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstSeries.tsx)
+<PropsTable name="SunburstSeries" />
+
+### [SunburstArc](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstArc.tsx)
+<PropsTable name="SunburstArc" />
+
+### [SunburstArcLabel](https://github.com/reaviz/reaviz/blob/master/src/SunburstChart/SunburstArcLabel.tsx)
+<PropsTable name="SunburstArcLabel" />

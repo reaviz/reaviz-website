@@ -1,0 +1,66 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Axis
+In REAVIZ, an axis is a fundamental component of a chart, providing a reference framework for plotting data points. 
+Axes help in organizing and displaying data in a clear and structured manner, allowing for easy interpretation and analysis.
+
+
+### Types supported by reaviz:
+- **Linear Axis** - A linear axis is used in most charts to represent data along horizontal (x-axis) and vertical (y-axis) lines.
+- **Radial Axis** - A radial axis is used in radial charts to represent data in a circular format.
+
+### Where to use:
+
+- **Linear Axes:** Use linear axes for charts that require data to be displayed along straight lines, such as line charts, bar charts, and scatter plots.
+- **Radial Axes:** Use radial axes for charts that display data in a circular layout, such as radial bar charts and radial area charts.
+
+## Examples
+### Linear
+<StoryRenderer path="components/LinearAxis.story.tsx" name="CenterAxes" storybookKey="utils-axis-linear--center-axes" />
+
+### Advanced Label Positioning
+<StoryRenderer path="components/LinearAxis.story.tsx" name="CustomLabelRotation" storybookKey="utils-axis-linear--custom-label-rotation" />
+
+### Radial
+<StoryRenderer path="components/RadialAxis.story.tsx" name="Simple" storybookKey="utils-axis-radial--simple" />
+
+## API
+#### [LinearAxis](https://github.com/reaviz/reaviz/blob/master/src/common/axis/LinearAxis/LinearAxis.tsx)
+<PropsTable name="LinearAxis" />
+
+#### [LinearAxisLine](https://github.com/reaviz/reaviz/blob/master/src/common/axis/LinearAxis/LinearAxisLine.tsx)
+<PropsTable name="LinearAxisLine" />
+
+#### [LinearAxisTickLabel](https://github.com/reaviz/reaviz/blob/master/src/common/axis/LinearAxis/LinearAxisTickLabel.tsx)
+<PropsTable name="LinearAxisTickLabel" />
+
+#### [LinearAxisTickLine](https://github.com/reaviz/reaviz/blob/master/src/common/axis/LinearAxis/LinearAxisTickLine.tsx)
+<PropsTable name="LinearAxisTickLine" />
+
+#### [LinearAxisTickSeries](https://github.com/reaviz/reaviz/blob/master/src/common/axis/LinearAxis/LinearAxisTickSeries.tsx)
+<PropsTable name="LinearAxisTickSeries" />
+
+#### [RadialAxis](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxis.tsx)
+<PropsTable name="RadialAxis" />
+
+#### [RadialAxisTick](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxisTickSeries/RadialAxisTick.tsx)
+<PropsTable name="RadialAxisTick" />
+
+#### [RadialAxisTickLabel](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxisTickSeries/RadialAxisTickLabel.tsx)
+<PropsTable name="RadialAxisTickLabel" />
+
+#### [RadialAxisTickLine](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxisTickSeries/RadialAxisTickLine.tsx)
+<PropsTable name="RadialAxisTickLine" />
+
+#### [RadialAxisTickSeries](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxisTickSeries/RadialAxisTickSeries.tsx)
+<PropsTable name="RadialAxisTickSeries" />
+
+#### [RadialAxisArc](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxisArcSeries/RadialAxisArc.tsx)
+<PropsTable name="RadialAxisArc" />
+
+#### [RadialAxisArcLine](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxisArcSeries/RadialAxisArcLine.tsx)
+<PropsTable name="RadialAxisArcLine" />
+
+#### [RadialAxisArcSeries](https://github.com/reaviz/reaviz/blob/master/src/common/axis/RadialAxis/RadialAxisArcSeries/RadialAxisArcSeries.tsx)
+<PropsTable name="RadialAxisArcSeries" />

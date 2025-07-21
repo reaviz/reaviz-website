@@ -1,0 +1,38 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Legends
+
+The Legends component in REAVIZ provides a visual representation of the data series in a chart. 
+Legends help users understand what each color or symbol in the chart represents.
+
+### Types supported by reaviz:
+- **Discrete Legend:** Displays individual entries for each data series. REAVIZ does not include legends by default to keep the library modular, but you can add discrete legends as needed.
+- **Sequential Legend:** Useful for categorical charts such as heatmaps, supporting both vertical and horizontal layouts.
+
+### Where to use:
+
+- **Clarify Data Series:** Ideal for providing clear labels and color codes for different data series in a chart.
+- **Enhance Readability:** Useful for improving the readability and interpretation of complex charts.
+- **Categorical Data Representation:** Great for representing categorical data in charts like heatmaps.
+
+
+## Examples
+### Descrete
+<StoryRenderer path="components/DiscreteLegendHorizontal.story.tsx" name="_Simple" storybookKey="utils-legend-discrete-horizontal--simple" />
+
+### Sequential
+<StoryRenderer path="components/SequentialLegendHorizontal.story.tsx" name="Simple" storybookKey="utils-legend-sequential-horizontal--simple" />
+
+## API
+### [DiscreteLegend](https://github.com/reaviz/reaviz/blob/master/src/common/legends/DiscreteLegend/DiscreteLegend.tsx)
+<PropsTable name="DiscreteLegend" />
+
+### [DiscreteLegendEntry](https://github.com/reaviz/reaviz/blob/master/src/common/legends/DiscreteLegend/DiscreteLegendEntry.tsx)
+<PropsTable name="DiscreteLegendEntry" />
+
+### [DiscreteLegendSymbol](https://github.com/reaviz/reaviz/blob/master/src/common/legends/DiscreteLegend/DiscreteLegendSymbol.tsx)
+<PropsTable name="DiscreteLegendSymbol" />
+
+### [SequentialLegend](https://github.com/reaviz/reaviz/blob/master/src/common/legends/SequentialLegend/SequentialLegend.tsx)
+<PropsTable name="SequentialLegend" />

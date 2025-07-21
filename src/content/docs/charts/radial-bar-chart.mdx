@@ -1,0 +1,52 @@
+import { PropsTable } from '@/components/ui/props-table';
+import { Runner } from '@/components/ui/runner';
+import { StoryRenderer } from '@/components/ui/story-renderer';
+
+# Radial Bar Chart
+
+A Radial or Circular Bar Chart in REAVIZ is used for displaying circular data, which involves wrapping the usual bar chart or histogram around a circle.
+Each bar in the chart is centered at the middle of the group period, with the length of the bar proportional to the frequency in the group.
+
+### Where to use:
+
+- **Display Circular Data:** Ideal for representing data in a circular format.
+- **Compare Categories:** Useful for comparing categories or data points in a circular layout.
+- **Visualize Frequency:** Great for visualizing the frequency of data points within groups.
+
+## Quick Start
+To create a Radial Bar chart, use import the `RadialBarChart` and give it `data`. The chart
+will automatically configure itself with the default options exposed via `props`.
+
+<Runner code={`import { RadialBarChart } from 'reaviz';
+
+export default function App() {
+  return (
+    <RadialBarChart
+      height={400}
+      width={400}
+      data={[
+        { key: new Date('11/27/2019'), data: 9 },
+        { key: new Date('11/28/2019'), data: 6 },
+        { key: new Date('11/29/2019'), data: 3 },
+        { key: new Date('11/30/2019'), data: 11 },
+        { key: new Date('12/1/2019'), data: 6 },
+        { key: new Date('12/2/2019'), data: 16 },
+        { key: new Date('12/3/2019'), data: 8 }
+      ]}
+    />
+  );
+}`}
+/>
+
+## Examples
+<StoryRenderer path="components/RadialBarChart.story.tsx" name="Simple" storybookKey="charts-bar-chart-radial--simple" />
+
+## API
+### [RadialBarChart](https://github.com/reaviz/reaviz/blob/master/src/RadialAreaChart/RadialAreaChart.tsx)
+<PropsTable name="RadialBarChart" />
+
+### [RadialBarSeries](https://github.com/reaviz/reaviz/blob/master/src/RadialAreaChart/RadialBarSeries/RadialBarSeries.tsx)
+<PropsTable name="RadialBarSeries" />
+
+### [RadialBar](https://github.com/reaviz/reaviz/blob/master/src/RadialAreaChart/RadialBarSeries/RadialBar.tsx)
+<PropsTable name="RadialBar" />
