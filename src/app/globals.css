@@ -128,6 +128,12 @@ pre.highlighter code {
   display: block;
 }
 
+pre {
+  background-color: hsl(var(--nextra-primary-hue)var(--nextra-primary-saturation)77%/.1);
+  box-shadow: none;
+  border-radius: .75rem;
+}
+
 .prismjs > div {
   /** Handle storybook code samples running off the page */
   white-space: pre-wrap !important;
@@ -302,7 +308,7 @@ body {
   --breakpoint-2xl: 1440px;
 
   /* Fonts */
-  --font-sans: Gilroy, sans-serif;
+  --font-sans: Inter, sans-serif;
   --font-inter: Inter, sans-serif;
   --font-mono: Fira Code, monospace;
 
