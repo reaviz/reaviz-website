@@ -24,7 +24,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
     <html lang="en" dir="ltr" suppressHydrationWarning className="h-full">
     <Head />
     <body
-      className="flex flex-col dark:bg-gradient-to-b dark:from-[#11111F] dark:from-50% dark:via-[#11111F] dark:to-[#121212] antialiased overflow-x-hidden dark:text-white"
+      className="flex flex-col dark:bg-gradient-to-b dark:from-[#11111F] dark:from-50% dark:via-[#11111F] dark:to-[#121212] antialiased dark:text-white"
     >
     <Layout
       navbar={<Nav />}
