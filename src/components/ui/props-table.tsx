@@ -9,7 +9,7 @@ export const PropsTable = ({ name }: { name: string }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Card className="mt-5 p-3">
+      <Card className="mt-5 p-3" theme={theme.components.card}>
         <table className="w-full text-base">
           <thead className="border-b-[1px] border-[rgba(241,245,249,0.2)]">
             <tr className="opacity-60">

@@ -362,7 +362,7 @@ body {
   --color-info-background: var(--info-background);
 
   /* Panel colors */
-  --color-panel: var(--color-athens-dark-navy-overlay);
+  --color-panel: var(--panel);
   --color-panel-accent: var(--panel-accent);
 
   /* Surface colors */
