@@ -61,6 +61,10 @@ body {
   box-shadow: none !important;
 }
 
+.nextra-sidebar {
+  font-family: var(--font-inter), 'sans-serif';
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
