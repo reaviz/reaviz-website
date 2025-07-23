@@ -48,8 +48,8 @@ importers:
         specifier: ^8.7.4
         version: 8.7.4(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       reablocks-docs-theme:
-        specifier: ^2.1.5
-        version: 2.1.5(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nextra@4.2.17(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(use-sync-external-store@1.5.0(react@18.3.1))
+        specifier: ^2.1.7
+        version: 2.1.7(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nextra@4.2.17(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(use-sync-external-store@1.5.0(react@18.3.1))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -5622,8 +5622,8 @@ packages:
     resolution: {integrity: sha512-qqJBtEyVgS0ZmPGdCFPWJ3FreoqvG4MVQln/kCgF7Olq95IbOp0/BWyMwbdtn4VTvkM8Y7khCQ2Xgk/tcrCXig==}
     engines: {node: '>= 0.8'}
 
-  reablocks-docs-theme@2.1.5:
-    resolution: {integrity: sha512-LqV+0vm8pSKaJgM6+n6y/uKGSnDwKsAzHUAerKEqPokGxqDwmk+osbxCUuTdjtaR4+p9VJX7B18YhAvVimk3FA==}
+  reablocks-docs-theme@2.1.7:
+    resolution: {integrity: sha512-22hJPflaArX+BW8ZGhzIG4VnyMfwoFnk8w5CmeLQSjddXTcKmpEGN/8NjDDW5apI24Bj8IZROWTBLAfVuljZiA==}
     peerDependencies:
       next: '>=14'
       nextra: '>=4.2.0'
@@ -13307,7 +13307,7 @@ snapshots:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
 
-  reablocks-docs-theme@2.1.5(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nextra@4.2.17(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(use-sync-external-store@1.5.0(react@18.3.1)):
+  reablocks-docs-theme@2.1.7(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nextra@4.2.17(next@15.4.1(@babel/core@7.23.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(use-sync-external-store@1.5.0(react@18.3.1)):
     dependencies:
       '@headlessui/react': 2.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx: 2.1.1
