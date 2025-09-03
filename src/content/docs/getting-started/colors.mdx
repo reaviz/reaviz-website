@@ -21,3 +21,37 @@ const data = [
 ```
 This will render your chart using the "unifyviz" color scheme.
 
+### Using callback for Colors
+
+You can also use a function callback to determine the color of each data point. For example:
+
+
+```js
+import { BarChart } from 'reaviz';
+
+const data = [
+  { key: 'DLP', data: 10 },
+  { key: 'SIEM', data: 20 },
+  { key: 'Endpoint', data: 70 },
+  { key: 'Network', data: 40 },
+  { key: 'Cloud', data: 30 },
+  { key: 'Other', data: 80 }
+];
+<BarChart
+  data={data}
+  series={
+    <BarSeries colorScheme={(item, index) => (item.data > 50 ? '#418AD7' : '#ACB7C9')}
+  />}
+/>;
+```
+
+The type for the color scheme is:
+```js 
+type ColorSchemeType =
+  | ((data, index: number, active?: any[]) => string)
+  | string[]
+  | string;
+```
+This will render your chart using a function callback to determine the color of each data point.
+
+
