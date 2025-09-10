@@ -15,6 +15,11 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
     "@mdx-js/mdx": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
@@ -29,7 +34,7 @@
     "nextra": "^4.2.17",
     "posthog-js": "^1.131.4",
     "reablocks": "^8.7.4",
-    "reablocks-docs-theme": "^2.1.7",
+    "reablocks-docs-theme": "^2.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-live-runner": "^1.0.7",
