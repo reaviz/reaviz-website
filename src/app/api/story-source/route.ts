@@ -147,7 +147,7 @@ const generateCSFStorySource = (componentName: string, args: string): string => 
   return `() => <${componentName}${propsString} />;`;
 };
 
-export const getStorySource = async (request: NextRequest) => {
+export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const storyPath = searchParams.get('storyPath');
   const functionName = searchParams.get('functionName');
