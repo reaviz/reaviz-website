@@ -66,8 +66,8 @@ importers:
         specifier: ^15.5.0
         version: 15.5.0(react@18.3.1)
       reaviz:
-        specifier: ^16.0.5
-        version: 16.0.5(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^16.1.0
+        version: 16.1.0(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       reaviz-data-utils:
         specifier: ^1.0.0
         version: 1.0.0(react@18.3.1)
@@ -1105,8 +1105,14 @@ packages:
   '@floating-ui/core@1.5.1':
     resolution: {integrity: sha512-QgcKYwzcc8vvZ4n/5uklchy8KVdjJwcOeI+HnnTNclJjs2nYsy23DOCf+sSV1kBwD9yDAoVKCkv/gEPzgQU3Pw==}
 
+  '@floating-ui/core@1.7.3':
+    resolution: {integrity: sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==}
+
   '@floating-ui/dom@1.6.5':
     resolution: {integrity: sha512-Nsdud2X65Dz+1RHjAIP0t8z5e2ff/IRbei6BqFrl1urT8sDVzM1HMQ+R0XcU5ceRfyO3I6ayeqIfh+6Wb8LGTw==}
+
+  '@floating-ui/dom@1.7.4':
+    resolution: {integrity: sha512-OOchDgh4F2CchOX94cRVqhvy7b3AFb+/rQXyswmzmGakRfkMgoWVjfnLWkRirfLEfuD4ysVW16eXzwt3jHIzKA==}
 
   '@floating-ui/react-dom@2.1.0':
     resolution: {integrity: sha512-lNzj5EQmEKn5FFKc04+zasr09h/uX8RtJRNj5gUXsSQIXHVWTVh+hVAg1vOMCexkX8EgvemMvIFpQfkosnVNyA==}
@@ -1122,6 +1128,9 @@ packages:
 
   '@floating-ui/utils@0.1.6':
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
+
+  '@floating-ui/utils@0.2.10':
+    resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
   '@floating-ui/utils@0.2.2':
     resolution: {integrity: sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==}
@@ -3259,6 +3268,9 @@ packages:
   ellipsize@0.5.1:
     resolution: {integrity: sha512-0jEAyuIRU6U8MN0S5yUqIrkK/AQWkChh642N3zQuGV57s9bsUWYLc0jJOoDIUkZ2sbEL3ySq8xfq71BvG4q3hw==}
 
+  ellipsize@0.6.2:
+    resolution: {integrity: sha512-zB4m5iEETalVrrP8RzcF0Qzqyw3MkUQ4R43NiczRAp0Hpp0+0bRdwKnoaFXyJoVJCipm2/3xc7Hkg0OOAorUPw==}
+
   emoji-regex-xs@1.0.0:
     resolution: {integrity: sha512-LRlerrMYoIDrT6jgpeZ2YYl/L8EulRTt5hQcYjy5AInh7HWXKimpqx68aknBFpGL2+/IcogTcaydJEgaTmOpDg==}
 
@@ -3706,6 +3718,20 @@ packages:
       react-dom:
         optional: true
 
+  framer-motion@12.23.22:
+    resolution: {integrity: sha512-ZgGvdxXCw55ZYvhoZChTlG6pUuehecgvEAJz0BHoC5pQKW1EC5xf1Mul1ej5+ai+pVY0pylyFfdl45qnM1/GsA==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
   framer-motion@12.23.6:
     resolution: {integrity: sha512-dsJ389QImVE3lQvM8Mnk99/j8tiZDM/7706PCqvkQ8sSCnpmWxsgX+g0lj7r5OBVL0U36pIecCTBoIWcM2RuKw==}
     peerDependencies:
@@ -4019,6 +4045,10 @@ packages:
 
   human-format@1.2.0:
     resolution: {integrity: sha512-GIjOefWusTiXEPezbuI59uc1G2SNMpym6w1wNfoWAG6QrTsWueuauR5We0xHHuzoJKIYTwwNtTEy0ahyji5KXw==}
+    engines: {node: '>=4'}
+
+  human-format@1.2.1:
+    resolution: {integrity: sha512-o5Ldz62VWR5lYUZ8aVQaLKiN37NsHnmk3xjMoUjza3mGkk8MvMofgZT0T6HKSCKSJIir+AWk9Dx8KhxvZAUgCg==}
     engines: {node: '>=4'}
 
   human-signals@2.1.0:
@@ -4996,6 +5026,9 @@ packages:
   motion-dom@11.16.4:
     resolution: {integrity: sha512-2wuCie206pCiP2K23uvwJeci4pMFfyQKpWI0Vy6HrCTDzDCer4TsYtT7IVnuGbDeoIV37UuZiUr6SZMHEc1Vww==}
 
+  motion-dom@12.23.21:
+    resolution: {integrity: sha512-5xDXx/AbhrfgsQmSE7YESMn4Dpo6x5/DTZ4Iyy4xqDvVHWvFVoV+V2Ri2S/ksx+D40wrZ7gPYiMWshkdoqNgNQ==}
+
   motion-dom@12.23.6:
     resolution: {integrity: sha512-G2w6Nw7ZOVSzcQmsdLc0doMe64O/Sbuc2bVAbgMz6oP/6/pRStKRiVRV4bQfHp5AHYAKEGhEdVHTM+R3FDgi5w==}
 
@@ -5007,6 +5040,20 @@ packages:
 
   motion@11.18.0:
     resolution: {integrity: sha512-uJ4zNXh/4K9C5wftxHKlXLHC0Rc9dHSHPyO1P6T9XE2bTn2z8C2lOZX/M8vAmFp0gtJTJ3aYkv44lTtJSfv6+A==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
+  motion@12.23.22:
+    resolution: {integrity: sha512-iSq6X9vLHbeYwmHvhK//+U74ROaPnZmBuy60XZzqNl0QtZkWfoZyMDHYnpKuWFv0sNMqHgED8aCXk94LCoQPGg==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -5638,6 +5685,12 @@ packages:
       react: '>=16'
       react-dom: '>=16'
 
+  reablocks@9.2.2:
+    resolution: {integrity: sha512-YZffpcOcVArIQucKfw8AgkFUuC+0vmXghH0W7KY5Mpyin+Ecl1Qq1rL/RAV9W0eKlyHp2QKrYujmKVnqnfHDbQ==}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+
   react-compiler-runtime@0.0.0-experimental-22c6e49-20241219:
     resolution: {integrity: sha512-bOAGaRL1ldfIIpbDsl+uV025Ta6RS6/cOjvvh8r2Vo7KtqB+RSvihVYRsWQz7ECKNPWdq5MClS845acwAwieDw==}
     peerDependencies:
@@ -5730,8 +5783,9 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  reaviz@16.0.5:
-    resolution: {integrity: sha512-kJaj1cYKQwb1sEdSSK1Uh4ouOWg6e/hTBtWtI+4XgSDjZeisVpss6ACldd5QOzzO0Cf5zmxagmh2MtVM2EFrMA==}
+  reaviz@16.1.0:
+    resolution: {integrity: sha512-zSVB97O26wrDh61OHs8tS+nEAyZjRVnfAdJvLW+vrUhqmjKIWnXE6/EcF/y82F6LN1mF/3SMVW38D9dAdakqdw==}
+    engines: {node: '>=22', npm: '>=10.8.2'}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -6365,8 +6419,8 @@ packages:
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
-  transformation-matrix@2.16.1:
-    resolution: {integrity: sha512-tdtC3wxVEuzU7X/ydL131Q3JU5cPMEn37oqVLITjRDSDsnSHVFzW2JiCLfZLIQEgWzZHdSy3J6bZzvKEN24jGA==}
+  transformation-matrix@3.1.0:
+    resolution: {integrity: sha512-oYubRWTi2tYFHAL2J8DLvPIqIYcYZ0fSOi2vmSy042Ho4jBW2ce6VP7QfD44t65WQz6bw5w1Pk22J7lcUpaTKA==}
 
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
@@ -7861,10 +7915,19 @@ snapshots:
     dependencies:
       '@floating-ui/utils': 0.1.6
 
+  '@floating-ui/core@1.7.3':
+    dependencies:
+      '@floating-ui/utils': 0.2.10
+
   '@floating-ui/dom@1.6.5':
     dependencies:
       '@floating-ui/core': 1.5.1
       '@floating-ui/utils': 0.2.2
+
+  '@floating-ui/dom@1.7.4':
+    dependencies:
+      '@floating-ui/core': 1.7.3
+      '@floating-ui/utils': 0.2.10
 
   '@floating-ui/react-dom@2.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -7881,6 +7944,8 @@ snapshots:
       tabbable: 6.2.0
 
   '@floating-ui/utils@0.1.6': {}
+
+  '@floating-ui/utils@0.2.10': {}
 
   '@floating-ui/utils@0.2.2': {}
 
@@ -10286,6 +10351,8 @@ snapshots:
 
   ellipsize@0.5.1: {}
 
+  ellipsize@0.6.2: {}
+
   emoji-regex-xs@1.0.0: {}
 
   emoji-regex@8.0.0: {}
@@ -10982,6 +11049,16 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
+  framer-motion@12.23.22(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      motion-dom: 12.23.21
+      motion-utils: 12.23.6
+      tslib: 2.8.1
+    optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   framer-motion@12.23.6(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       motion-dom: 12.23.6
@@ -11417,6 +11494,8 @@ snapshots:
       - supports-color
 
   human-format@1.2.0: {}
+
+  human-format@1.2.1: {}
 
   human-signals@2.1.0: {}
 
@@ -12660,6 +12739,10 @@ snapshots:
     dependencies:
       motion-utils: 11.16.0
 
+  motion-dom@12.23.21:
+    dependencies:
+      motion-utils: 12.23.6
+
   motion-dom@12.23.6:
     dependencies:
       motion-utils: 12.23.6
@@ -12672,6 +12755,15 @@ snapshots:
     dependencies:
       framer-motion: 11.18.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tslib: 2.4.1
+    optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  motion@12.23.22(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      framer-motion: 12.23.22(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      tslib: 2.8.1
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
       react: 18.3.1
@@ -13382,6 +13474,36 @@ snapshots:
       - '@types/react'
       - prop-types
 
+  reablocks@9.2.2(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@floating-ui/react': 0.26.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@marko19907/string-to-color': 1.0.0
+      '@reaviz/react-use-fuzzy': 1.0.3(fuse.js@6.6.2)(react@18.3.1)
+      body-scroll-lock-upgrade: 1.1.0
+      chroma-js: 3.1.2
+      classnames: 2.5.1
+      coverup: 0.1.1
+      create-global-state-hook: 0.0.2
+      ctrl-keys: 1.0.6
+      date-fns: 3.6.0
+      ellipsize: 0.5.1
+      focus-trap-react: 10.2.3(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      fuse.js: 6.6.2
+      human-format: 1.2.1
+      motion: 12.23.22(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      name-initials: 0.1.3
+      pluralize: 8.0.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-fast-compare: 3.2.2
+      react-highlight-words: 0.20.0(react@18.3.1)
+      react-textarea-autosize: 8.5.3(@types/react@18.0.25)(react@18.3.1)
+      tailwind-merge: 2.3.0
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@types/react'
+      - prop-types
+
   react-compiler-runtime@0.0.0-experimental-22c6e49-20241219(react@18.3.1):
     dependencies:
       react: 18.3.1
@@ -13507,13 +13629,13 @@ snapshots:
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.18.0
 
-  reaviz@16.0.5(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  reaviz@16.1.0(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@floating-ui/dom': 1.6.5
+      '@floating-ui/dom': 1.7.4
       '@types/d3-cloud': 1.2.9
       '@upsetjs/venn.js': 2.0.0
       big-integer: 1.6.52
-      chroma-js: 2.4.2
+      chroma-js: 3.1.2
       classnames: 2.5.1
       d3-array: 3.2.4
       d3-cloud: 1.2.7
@@ -13525,17 +13647,17 @@ snapshots:
       d3-scale: 4.0.2
       d3-shape: 3.2.0
       d3-time: 3.1.0
-      ellipsize: 0.5.1
-      human-format: 1.2.0
+      ellipsize: 0.6.2
+      human-format: 1.2.1
       invert-color: 2.0.0
-      motion: 12.23.6(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      reablocks: 8.7.14(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      motion: 12.23.22(@emotion/is-prop-valid@0.8.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      reablocks: 9.2.2(@emotion/is-prop-valid@0.8.8)(@types/react@18.0.25)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-fast-compare: 3.2.2
       reaviz-data-utils: 1.0.0(react@18.3.1)
       safe-identifier: 0.4.2
-      transformation-matrix: 2.16.1
+      transformation-matrix: 3.1.0
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
@@ -14392,7 +14514,7 @@ snapshots:
 
   tr46@0.0.3: {}
 
-  transformation-matrix@2.16.1: {}
+  transformation-matrix@3.1.0: {}
 
   trim-lines@3.0.1: {}
 
