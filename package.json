@@ -9,7 +9,6 @@
     "copy:blocks": "cpx \"node_modules/reaviz/dist/blocks/*.tsx\" \"src/stories/blocks\" -C",
     "build": "next build",
     "postinstall": "pnpm run copy:stories && pnpm run copy:blocks",
-    "postbuild": "pagefind --site out --output-path out/_pagefind",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
