@@ -8,6 +8,7 @@ const withNextra = nextra({
 });
 
 const nextConfig: NextConfig = withNextra({
+  output: 'standalone',
   reactStrictMode: true,
   images: {
     unoptimized: true,
