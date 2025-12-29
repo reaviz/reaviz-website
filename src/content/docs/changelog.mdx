@@ -1,13 +1,24 @@
 import Mdx from '@/components/ui/mdx';
 
 export async function Changelog() {
-  const response = await fetch('https://raw.githubusercontent.com/reaviz/reaviz/master/CHANGELOG.md');
-  const text = await response.text();
-  return (
-    <Mdx>
-      {text}
-    </Mdx>
-  );
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/reaviz/reaviz/master/CHANGELOG.md');
+    if (!response.ok) {
+      throw new Error('Failed to fetch changelog');
+    }
+    const text = await response.text();
+    return (
+      <Mdx>
+        {text}
+      </Mdx>
+    );
+  } catch (error) {
+    return (
+      <div className="p-4 text-center">
+        <p>Unable to load changelog. Please visit the <a href="https://github.com/reaviz/reaviz/blob/master/CHANGELOG.md" className="text-primary underline">GitHub repository</a> for the latest changelog.</p>
+      </div>
+    );
+  }
 }
 
 <Changelog />

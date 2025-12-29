@@ -14,13 +14,10 @@ import WaveIcon from "@/icons/Wave";
 import WrenchIcon from "@/icons/Wrench";
 import AccessibilityIcon from "@/icons/Accessibility";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { LandingFooter } from "reablocks-docs-theme";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "reaviz - Data visualization library for React",
@@ -44,7 +41,7 @@ export default function Home() {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       <main
-        className={`flex min-h-screen w-full flex-col items-center overflow-y-hidden bg-gradient-to-b from-[#11111F] from-50% via-[#11111F] to-[#121212] ${inter.className} antiasliased overflow-x-hidden text-white`}
+        className="flex min-h-screen w-full flex-col items-center overflow-y-hidden bg-gradient-to-b from-[#11111F] from-50% via-[#11111F] to-[#121212] font-sans antialiased overflow-x-hidden text-white"
       >
         <div className="pointer-events-none absolute top-0 h-screen w-full bg-gradient-to-b from-[#00000020] to-transparent" />
         <Header />
