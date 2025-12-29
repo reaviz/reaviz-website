@@ -7,7 +7,7 @@
     "dev": "next dev",
     "copy:stories": "cpx \"node_modules/reaviz/dist/stories/*.tsx\" \"src/stories/components\" -C",
     "copy:blocks": "cpx \"node_modules/reaviz/dist/blocks/*.tsx\" \"src/stories/blocks\" -C",
-    "build": "next build && npx @opennextjs/cloudflare build --skipNextBuild",
+    "build": "node scripts/generate-story-sources.mjs && next build",
     "postinstall": "pnpm run copy:stories && pnpm run copy:blocks",
     "start": "next start",
     "lint": "next lint",
@@ -47,7 +47,6 @@
     "world-atlas": "^2.0.2"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.14.7",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/chroma-js": "^3.1.1",
@@ -67,7 +66,6 @@
     "prettier-plugin-tailwindcss": "^0.5.13",
     "storybook": "7.6.3",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5",
-    "wrangler": "^4.54.0"
+    "typescript": "^5"
   }
 }
