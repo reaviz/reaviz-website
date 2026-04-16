@@ -12,6 +12,7 @@ const meta = {
   "getting-started": "🚀 ⏐ Getting Started",
   charts: "📊 ⏐ Charts",
   utils: "⚙️ ⏐ Utils",
+  skills: "🤖 ⏐ AI Skills",
   changelog: {
     title: "📓 ⏐ Changelog",
     theme: {

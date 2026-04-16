@@ -1,0 +1,111 @@
+# AI Skills
+
+[AI Skills](https://github.com/reaviz/skills) are Claude Code skill files that provide
+AI-assistant reference guides for Reaviz. Skills contain component APIs,
+usage patterns, theming details, and code examples derived from source code and stories.
+
+When installed, Claude Code automatically loads the relevant skill files when it encounters
+Reaviz components in your code, giving it deep knowledge of the component APIs, props, and
+usage patterns.
+
+## Available Components
+
+| Category | Components |
+|----------|------------|
+| **Common** | Axis, Gridline, Tooltip, Legend, Gradient, Mask, Brush, ZoomPan, ColorSchemes, ValueMarker, MarkLine |
+| **Charts** | AreaChart, BarChart, BarList, BubbleChart, FunnelChart, LinearGauge, RadialGauge, Meter, Heatmap, CalendarHeatmap, LineChart, Map, PieChart, RadarChart, Sankey, ScatterPlot, SparklineChart, AreaSparklineChart, BarSparklineChart, SonarChart, SunburstChart, TreeMap, VennDiagram, WordCloud |
+
+## Installation
+
+Choose one of the following methods to make skills available in your project.
+
+### Option 1: Project-level (recommended for teams)
+
+Copy or symlink the Reaviz skills into your project's `.claude/skills/` folder:
+
+```bash
+# From your project root
+mkdir -p .claude/skills
+
+# Symlink the reaviz skill tree
+ln -s /path/to/reaviz/skills/reaviz .claude/skills/reaviz
+```
+
+Skills placed in `.claude/skills/` are committed to version control and shared with all team members.
+
+### Option 2: User-level (personal, all projects)
+
+Copy or symlink skills into `~/.claude/skills/` to make them available across all your projects:
+
+```bash
+mkdir -p ~/.claude/skills
+
+# Symlink the library
+ln -s /path/to/reaviz/skills/reaviz ~/.claude/skills/reaviz
+```
+
+User-level skills are not shared with other team members.
+
+### Option 3: `--add-dir` flag (per-session)
+
+Point Claude Code to the skills repository at launch. Skills inside `.claude/skills/` of added
+directories are discovered automatically:
+
+```bash
+claude --add-dir /path/to/reaviz/skills
+```
+
+This grants file access for the current session only.
+
+## Verifying Installation
+
+Once installed, Claude Code will automatically load the relevant skill files when it encounters
+Reaviz components in your code. You can verify by asking Claude Code about a specific component:
+
+```
+> How do I use the reaviz AreaChart component?
+```
+
+Claude Code should respond with API details, props, and examples sourced from the skill files.
+
+## Skill Structure
+
+Skills are organized into category directories with per-component skill files:
+
+```
+reaviz/
+├── SKILL.md                        # Library overview, data shapes, common patterns
+├── common/
+│   ├── SKILL.md                    # Common category overview
+│   ├── axis/SKILL.md              # LinearXAxis, LinearYAxis, ticks, labels
+│   ├── brush-zoom/SKILL.md        # ChartBrush, ChartZoomPan
+│   ├── color-schemes/SKILL.md     # Named palettes, ColorSchemeType
+│   ├── gradient-mask/SKILL.md     # Gradient, GradientStop, Mask, Stripes
+│   ├── gridline/SKILL.md          # GridlineSeries, Gridline, GridStripe
+│   ├── legend/SKILL.md            # DiscreteLegend, SequentialLegend
+│   ├── markers/SKILL.md           # LinearValueMarker, RadialValueMarker, MarkLine
+│   └── tooltip/SKILL.md           # ChartTooltip, TooltipArea, TooltipTemplate
+└── charts/
+    ├── SKILL.md                    # Charts category overview
+    ├── area-chart/SKILL.md         # AreaChart (standard, grouped, stacked, normalized)
+    ├── bar-chart/SKILL.md          # BarChart (+ stacked, marimekko, histogram, waterfall)
+    ├── bar-list/SKILL.md           # BarList (horizontal ranking bars)
+    ├── bubble-chart/SKILL.md       # BubbleChart (packed circles)
+    ├── funnel-chart/SKILL.md       # FunnelChart (default, layered)
+    ├── gauge/SKILL.md              # LinearGauge, RadialGauge
+    ├── heatmap/SKILL.md            # Heatmap + CalendarHeatmap
+    ├── line-chart/SKILL.md         # LineChart (line-only, no area fill)
+    ├── map/SKILL.md                # Map + MapMarker
+    ├── meter/SKILL.md              # Meter (segmented column strip)
+    ├── pie-chart/SKILL.md          # PieChart (pie, donut, exploded)
+    ├── radar-chart/SKILL.md        # RadarChart (spider, radial axes)
+    ├── sankey/SKILL.md             # Sankey (flow diagram, nodes + links)
+    ├── scatter-plot/SKILL.md       # ScatterPlot (points, bubbles, symbols)
+    ├── sparkline/SKILL.md          # Sparkline, AreaSparkline, BarSparkline, Sonar
+    ├── sunburst-chart/SKILL.md     # SunburstChart (hierarchical radial)
+    ├── tree-map/SKILL.md           # TreeMap (rectangular hierarchical)
+    ├── venn-diagram/SKILL.md       # VennDiagram (venn, euler, starEuler)
+    └── word-cloud/SKILL.md         # WordCloud (tag cloud)
+```
+
+For more details, see the [skills repository on GitHub](https://github.com/reaviz/skills).
