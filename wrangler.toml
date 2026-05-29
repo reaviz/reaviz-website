@@ -5,7 +5,11 @@ compatibility_flags = ["nodejs_compat"]
 # Cloudflare Pages output of `@cloudflare/next-on-pages` (run via `build:cloudflare`).
 pages_build_output_dir = ".vercel/output/static"
 
-# NOTE: do NOT set `NODE_ENV = "production"` here. Cloudflare applies wrangler
-# [vars] to the build environment, which makes `pnpm install` skip
-# devDependencies (cpx2, pagefind, typescript, @svgr/webpack, …) and breaks the
-# build (`cpx: not found`). Next.js already builds in production mode on its own.
+[vars]
+NODE_ENV = "production"
+# Cloudflare applies the [vars] above to the BUILD environment too, and
+# `NODE_ENV=production` makes `pnpm install` skip devDependencies — which breaks
+# the build (no typescript/tailwind/pagefind/@svgr). This override forces pnpm to
+# install devDependencies anyway, so the build keeps working while the deployed
+# worker still gets NODE_ENV=production at runtime.
+NPM_CONFIG_PRODUCTION = "false"
