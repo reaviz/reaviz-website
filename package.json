@@ -8,9 +8,9 @@
     "copy:stories": "cpx \"node_modules/reaviz/dist/stories/*.tsx\" \"src/stories/components\" -C",
     "copy:blocks": "cpx \"node_modules/reaviz/dist/blocks/*.tsx\" \"src/stories/blocks\" -C",
     "build": "next build",
-    "build:cloudflare": "node scripts/generate-story-sources.mjs && next build && npx @cloudflare/next-on-pages",
+    "build:cloudflare": "node scripts/generate-story-sources.mjs && next build && pagefind --site .next/server/app --output-path public/_pagefind && npx @cloudflare/next-on-pages",
     "preview": "npx wrangler pages dev .vercel/output/static",
-    "postinstall": "pnpm run copy:stories && pnpm run copy:blocks",
+    "postinstall": "pnpm run copy:stories && pnpm run copy:blocks && node scripts/generate-story-sources.mjs",
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
     "start": "next start",
     "lint": "next lint"
