@@ -1,5 +1,5 @@
 import { TooltipArea } from 'reaviz';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react-vite';
 import {
   FunnelSeries,
   FunnelChart,

@@ -11,7 +11,7 @@ import { Gradient } from 'reaviz';
 import { max } from 'd3-array';
 import { ChartDataShape, ColorSchemeType } from 'reaviz';
 import React from 'react';
-import { StoryFn } from '@storybook/react';
+import { StoryFn } from '@storybook/react-vite';
 
 export default {
   tags: ['snapshot'],

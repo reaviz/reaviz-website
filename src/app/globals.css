@@ -3,6 +3,20 @@
 @source './**/*.{ts,tsx}';
 @source '../../node_modules/reablocks';
 
+/*
+ * Story wrapper: scroll oversized blocks inside the
+ * wrapper instead of clipping. `safe center` keeps the block centered while it
+ * fits, but anchors it to the start on overflow so the left edge stays
+ * reachable when scrolling. !important overrides the package's x: utilities.
+ */
+.story-scroll {
+  display: flex !important;
+  justify-content: safe center !important;
+  max-width: 100% !important;
+  overflow: auto !important;
+  padding: 5rem !important;
+}
+
 
 /* Color palette */
 :root,

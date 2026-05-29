@@ -37,3 +37,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 storybook-static
+_pagefind/
+public/_story-sources.json

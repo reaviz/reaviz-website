@@ -8,11 +8,13 @@ const withNextra = nextra({
 });
 
 const nextConfig: NextConfig = withNextra({
-  output: 'export',
   reactStrictMode: true,
   images: {
     unoptimized: true,
   },
+  // ts-morph (via reablocks-docs-theme/tsdoc) is Node-only; keep it out of the
+  // RSC/edge bundler so optional `p-support` etc. don't trigger build warnings.
+  serverExternalPackages: ['ts-morph', '@ts-morph/common'],
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule: any) =>
@@ -37,6 +39,13 @@ const nextConfig: NextConfig = withNextra({
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
+
+    // ts-morph's @ts-morph/common references `source-map-support` as an
+    // optional dep; webpack warns when it can't resolve it. Stub it out.
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      'source-map-support': false,
+    };
 
     return config;
   },
