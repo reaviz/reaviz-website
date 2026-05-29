@@ -2,6 +2,7 @@
 
 @source './**/*.{ts,tsx}';
 @source '../../node_modules/reablocks';
+@source '../../node_modules/reaviz';
 
 /*
  * Story wrapper: scroll oversized blocks inside the
