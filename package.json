@@ -5,12 +5,11 @@
   "packageManager": "pnpm@9.1.2",
   "scripts": {
     "dev": "next dev",
-    "copy:stories": "cpx \"node_modules/reaviz/dist/stories/*.tsx\" \"src/stories/components\" -C",
-    "copy:blocks": "cpx \"node_modules/reaviz/dist/blocks/*.tsx\" \"src/stories/blocks\" -C",
+    "copy:stories": "node scripts/copy-stories.mjs",
     "build": "next build",
     "build:cloudflare": "node scripts/generate-story-sources.mjs && next build && pagefind --site .next/server/app --output-path public/_pagefind && npx @cloudflare/next-on-pages",
     "preview": "npx wrangler pages dev .vercel/output/static",
-    "postinstall": "pnpm run copy:stories && pnpm run copy:blocks && node scripts/generate-story-sources.mjs",
+    "postinstall": "pnpm run copy:stories && node scripts/generate-story-sources.mjs",
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
     "start": "next start",
     "lint": "next lint"
@@ -58,7 +57,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/topojson-client": "^3.1.5",
-    "cpx2": "^9.0.0",
     "eslint": "^8",
     "eslint-config-next": "^15.5.18",
     "pagefind": "^1.3.0",

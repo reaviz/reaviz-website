@@ -3,9 +3,9 @@ compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
 # Cloudflare Pages output of `@cloudflare/next-on-pages` (run via `build:cloudflare`).
-# Must be a top-level key — anything after a `[table]` header below would be parsed
-# as part of that table, so keep this above `[vars]`.
 pages_build_output_dir = ".vercel/output/static"
 
-[vars]
-NODE_ENV = "production"
+# NOTE: do NOT set `NODE_ENV = "production"` here. Cloudflare applies wrangler
+# [vars] to the build environment, which makes `pnpm install` skip
+# devDependencies (cpx2, pagefind, typescript, @svgr/webpack, …) and breaks the
+# build (`cpx: not found`). Next.js already builds in production mode on its own.
