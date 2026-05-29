@@ -37,3 +37,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 storybook-static
+_pagefind/
+public/_story-sources.json
+
+# Copied from the reaviz package at postinstall (scripts/copy-stories.mjs) —
+# generated artifacts, not source. Regenerated on every install.
+/src/stories/components/
+/src/stories/blocks/

@@ -25,7 +25,7 @@ export const BlockRenderer: FC<BlockCanvasProps> = ({
 
   return (
     <>
-      <StoryRenderer path={path} name={name} storybookKey={key}/>
+      <StoryRenderer path={path} name={name} storybookKey={key} />
     </>
   );
 };

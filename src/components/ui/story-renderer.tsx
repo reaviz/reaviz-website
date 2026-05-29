@@ -22,7 +22,7 @@ export const StoryRenderer: FC<StoryRendererProps> = ({
         .then(storyModule => ({
           default: () => (
             <BaseStoryRenderer
-              wrapperClassName="block w-fit mx-auto"
+              wrapperClassName="block w-fit mx-auto story-scroll"
               storyModule={storyModule}
               storyName={name}
               storyPath={path}

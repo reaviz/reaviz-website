@@ -2,6 +2,82 @@
 
 @source './**/*.{ts,tsx}';
 @source '../../node_modules/reablocks';
+@source '../../node_modules/reaviz';
+
+/*
+ * Story wrapper: scroll oversized blocks inside the
+ * wrapper instead of clipping. `safe center` keeps the block centered while it
+ * fits, but anchors it to the start on overflow so the left edge stays
+ * reachable when scrolling. !important overrides the package's x: utilities.
+ */
+.story-scroll {
+  display: flex !important;
+  justify-content: safe center !important;
+  max-width: 100% !important;
+  overflow: auto !important;
+  padding: 5rem !important;
+}
+
+/*
+ * Code samples / "show code".
+ * These override reablocks-docs-theme/style.css so the syntax-highlighted
+ * story source renders correctly in the PRODUCTION bundle, where the CSS
+ * cascade order differs from `next dev` and the code block otherwise picks up
+ * the wrong background / fails to wrap.
+ */
+.docblock-code-toggle,
+.docblock-code-toggle ~ button {
+  background: black !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.nextra-code,
+.rb-code {
+  color: #029cfd !important;
+}
+
+.rb-code-block {
+  margin-top: 1px;
+  background: transparent;
+}
+
+.rb-code-block code {
+  display: block !important;
+}
+
+.sbdocs-preview {
+  border-color: hsl(
+    var(--nextra-primary-hue) var(--nextra-primary-saturation) 94%/0.1
+  ) !important;
+}
+
+pre.highlighter code {
+  display: block;
+}
+
+pre {
+  background-color: hsl(
+    var(--nextra-primary-hue) var(--nextra-primary-saturation) 77%/0.1
+  );
+  box-shadow: none;
+  border-radius: 0.75rem;
+}
+
+.prismjs > div {
+  /* Handle storybook code samples running off the page */
+  white-space: pre-wrap !important;
+}
+
+/*
+ * StoryRenderer (reablocks-docs-theme): contain wide story content within the
+ * bordered preview container instead of overflowing the page.
+ */
+.story-container.story-preview > div {
+  max-width: 100%;
+  overflow-x: auto;
+}
 
 
 /* Color palette */
