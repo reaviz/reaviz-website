@@ -33,6 +33,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
       editLink="Edit this page on GitHub"
       sidebar={{ defaultMenuCollapseLevel: 2, autoCollapse: false }}
       footer={<Footer />}
+      nextThemes={{ defaultTheme: 'dark' }}
     >
       {children}
     </Layout>
